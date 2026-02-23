@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Award, Users, Trophy, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useRef } from "react";
+import heroImage from "../assets/home-page.png";
 
 export function HomePage() {
   const observerRef = useRef<IntersectionObserver | null>(null);
@@ -44,7 +45,7 @@ export function HomePage() {
           className="absolute right-[-60px] top-1/2 -translate-y-1/2 font-bebas text-[clamp(200px,28vw,420px)] text-gold/[0.04] leading-none pointer-events-none tracking-tight whitespace-nowrap"
           aria-hidden="true"
         >
-          MARU
+          <img src={heroImage} alt="MARU" />
         </div>
 
         <div className="relative z-10 px-6 lg:px-16 pt-36 pb-24 lg:pt-40 lg:pb-32 max-w-[760px]">
@@ -52,7 +53,7 @@ export function HomePage() {
           <div className="flex items-center gap-4 mb-8 opacity-0 translate-y-7 animate-[fadeUp_0.8s_0.2s_forwards]">
             <span className="w-10 h-[1.5px] bg-gold" />
             <span className="text-[11px] uppercase tracking-[0.35em] text-gold">
-              Bethpage, NY · Est. 2000
+              Bethpage, NY · Est. 2010
             </span>
           </div>
 
@@ -64,7 +65,7 @@ export function HomePage() {
           </h1>
 
           {/* Subtitle */}
-          <p className="text-base leading-[1.8] text-muted max-w-[500px] mb-14 opacity-0 translate-y-7 animate-[fadeUp_0.8s_0.6s_forwards]">
+          <p className="text-base leading-[1.8] text-white max-w-[400px] mb-14 opacity-0 translate-y-7 animate-[fadeUp_0.8s_0.6s_forwards]">
             World-class Taekwondo instruction for ages 2 to adults. Discipline, confidence, and
             black belt character — forged one class at a time at TaekwonMaru.
           </p>
@@ -77,7 +78,7 @@ export function HomePage() {
               </Button>
             </Link>
             <Link to="/programs">
-              <Button variant="ghost">See All Programs</Button>
+              <Button variant="red">See All Programs</Button>
             </Link>
           </div>
         </div>
@@ -408,7 +409,7 @@ export function HomePage() {
           </h2>
           <p className="text-base leading-[1.8] text-muted max-w-[500px] mx-auto mb-14">
             Meet the masters, train with the team, and see exactly why TaekwonMaru has been
-            Bethpage's top martial arts school for over 25 years.
+            Bethpage's top martial arts school for over 15 years.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
             <Link to="/contact">

@@ -117,9 +117,65 @@ export function AboutPage() {
             About <span className="text-gold">TaekwonMaru</span>
           </h1>
           <p className="text-lg leading-relaxed text-muted max-w-2xl mx-auto">
-            For over 25 years, TaekwonMaru has been Bethpage's premier martial arts school —
+            For over 15 years, TaekwonMaru has been Bethpage's premier martial arts school —
             building champions in sport and in life through world-class Taekwondo instruction.
           </p>
+        </div>
+      </section>
+      {/* Masters */}
+      <section className="py-24 lg:py-32 px-6 lg:px-16 bg-navy-mid border-t border-border">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16 reveal opacity-0 translate-y-9 transition-all duration-700">
+            <div className="flex items-center justify-center gap-3.5 mb-5">
+              <span className="w-8 h-px bg-gold" />
+              <span className="text-[10px] uppercase tracking-[0.35em] text-gold">
+                Expert Instruction
+              </span>
+              <span className="w-8 h-px bg-gold" />
+            </div>
+            <h2 className="font-bebas text-[clamp(44px,6vw,80px)] leading-[0.95] text-white mb-6">
+              Meet Our <span className="text-gold">Masters</span>
+            </h2>
+            <p className="text-lg text-muted max-w-2xl mx-auto">
+              World-class instructors with championship credentials, Kukkiwon certification, and a
+              genuine passion for student development.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {masters.map((master, i) => (
+              <article
+                key={master.name}
+                className="reveal opacity-0 translate-y-9 transition-all duration-700 bg-navy-light border border-border overflow-hidden hover:border-gold/40 hover:-translate-y-1"
+                style={{ transitionDelay: `${i * 100}ms` }}
+              >
+                <div className="aspect-[3/4] bg-gradient-to-br from-navy-light to-navy flex items-center justify-center border-b border-border">
+                  <img
+                    src={master.image}
+                    alt={master.name}
+                    className="w-full h-full object-cover object-top transition-all duration-500"
+                  />
+                </div>
+                <div className="p-6">
+                  <p className="text-[9px] uppercase tracking-[0.25em] text-gold mb-2">
+                    {master.rank}
+                  </p>
+                  <h3 className="font-bebas text-2xl text-white mb-4">{master.name}</h3>
+                  <ul className="space-y-2">
+                    {master.credentials.slice(0, 3).map((cred, idx) => (
+                      <li
+                        key={idx}
+                        className="text-xs text-muted leading-relaxed flex items-start gap-2"
+                      >
+                        <span className="text-gold mt-1">·</span>
+                        <span>{cred}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -182,65 +238,6 @@ export function AboutPage() {
                 15+ years of refinement.
               </p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Masters */}
-      <section className="py-24 lg:py-32 px-6 lg:px-16 bg-navy-mid border-t border-border">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16 reveal opacity-0 translate-y-9 transition-all duration-700">
-            <div className="flex items-center justify-center gap-3.5 mb-5">
-              <span className="w-8 h-px bg-gold" />
-              <span className="text-[10px] uppercase tracking-[0.35em] text-gold">
-                Expert Instruction
-              </span>
-              <span className="w-8 h-px bg-gold" />
-            </div>
-            <h2 className="font-bebas text-[clamp(44px,6vw,80px)] leading-[0.95] text-white mb-6">
-              Meet Our <span className="text-gold">Masters</span>
-            </h2>
-            <p className="text-lg text-muted max-w-2xl mx-auto">
-              World-class instructors with championship credentials, Kukkiwon certification, and a
-              genuine passion for student development.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {masters.map((master, i) => (
-              <article
-                key={master.name}
-                className="reveal opacity-0 translate-y-9 transition-all duration-700 bg-navy-light border border-border overflow-hidden hover:border-gold/40 hover:-translate-y-1"
-                style={{ transitionDelay: `${i * 100}ms` }}
-              >
-                <div className="aspect-[3/4] bg-gradient-to-br from-navy-light to-navy flex items-center justify-center border-b border-border">
-                  <div className="font-bebas text-6xl text-gold/20 tracking-wider">
-                    <img
-                      src={master.image}
-                      alt={master.name}
-                      className="w-full h-full object-cover object-center"
-                    />
-                  </div>
-                </div>
-                <div className="p-6">
-                  <p className="text-[9px] uppercase tracking-[0.25em] text-gold mb-2">
-                    {master.rank}
-                  </p>
-                  <h3 className="font-bebas text-2xl text-white mb-4">{master.name}</h3>
-                  <ul className="space-y-2">
-                    {master.credentials.slice(0, 3).map((cred, idx) => (
-                      <li
-                        key={idx}
-                        className="text-xs text-muted leading-relaxed flex items-start gap-2"
-                      >
-                        <span className="text-gold mt-1">·</span>
-                        <span>{cred}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </article>
-            ))}
           </div>
         </div>
       </section>
