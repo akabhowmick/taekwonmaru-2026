@@ -117,7 +117,7 @@ export function Footer() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              AKA Code
+              AB Codes
             </a>
             .
           </p>

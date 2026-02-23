@@ -3,63 +3,6 @@ import { ArrowRight, Award, Users, Trophy, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useRef } from "react";
 
-const programs = [
-  {
-    name: "Little Tiger",
-    age: "Ages 2–5",
-    desc: "Our Early Childhood Program — fun, respect-based classes built for tiny attention spans and big confidence gains. 30-minute sessions with a dedicated belt track.",
-  },
-  {
-    name: "Children's Class",
-    age: "Ages 6–9",
-    desc: "Longer classes with greater curriculum focus. Discipline, respect, and taekwondo fundamentals mastered early.",
-    featured: true,
-  },
-  {
-    name: "Pre-Teen",
-    age: "Ages 10–13",
-    desc: "Physical and mental development intensifies. Students can join the Junior Leader program and Black Hawk Demo Team.",
-  },
-  {
-    name: "Advanced Teen",
-    age: "Ages 14–17",
-    desc: "High school program focused on stamina, strength, and mental toughness. An outstanding extracurricular for college applications.",
-  },
-  {
-    name: "Adult",
-    age: "Ages 18+",
-    desc: "Stay fit, relieve stress, and train alongside our schools community. Perfect for parents who want to train while their kids do.",
-  },
-  {
-    name: "Sparring & Demo",
-    age: "Competition",
-    desc: "For students who want to compete and perform. Our Black Hawk Demo Team is a NYS Governors Cup champion.",
-  },
-];
-
-const whyChooseUs = [
-  {
-    icon: <Award size={28} />,
-    title: "Award-Winning",
-    desc: "5x NYS Governors Cup champions. Featured on FOX5 News.",
-  },
-  {
-    icon: <Users size={28} />,
-    title: "Expert Masters",
-    desc: "7th degree Grand Master with 25+ years training NYPD & FDNY.",
-  },
-  {
-    icon: <Trophy size={28} />,
-    title: "Proven Results",
-    desc: "Black belt character development alongside championship-level training.",
-  },
-  {
-    icon: <Calendar size={28} />,
-    title: "Family Focused",
-    desc: "Programs for ages 2–adult. Train together, grow together.",
-  },
-];
-
 export function HomePage() {
   const observerRef = useRef<IntersectionObserver | null>(null);
 
@@ -109,7 +52,7 @@ export function HomePage() {
           <div className="flex items-center gap-4 mb-8 opacity-0 translate-y-7 animate-[fadeUp_0.8s_0.2s_forwards]">
             <span className="w-10 h-[1.5px] bg-gold" />
             <span className="text-[11px] uppercase tracking-[0.35em] text-gold">
-              Bethpage, NY · Est. 2009
+              Bethpage, NY · Est. 2000
             </span>
           </div>
 
@@ -273,14 +216,145 @@ export function HomePage() {
                 {program.name}
               </h3>
               <p className="text-[13px] leading-[1.8] text-muted mb-7">{program.desc}</p>
-              <ArrowRight className="text-gold-dim group-hover:text-gold group-hover:translate-x-1.5 transition-all" />
+              <Link to="/contact" className="inline-block">
+                <ArrowRight className="text-gold-dim group-hover:text-gold group-hover:translate-x-1.5 transition-all" />
+              </Link>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Why Choose Us */}
+      {/* Video Highlights */}
       <section className="py-24 lg:py-32 px-6 lg:px-16 bg-navy-mid border-t border-border">
+        <div className="max-w-7xl mx-auto">
+          <div className="mb-16 reveal opacity-0 translate-y-9 transition-all duration-700">
+            <div className="flex items-center gap-3.5 mb-5">
+              <span className="w-8 h-px bg-gold" />
+              <span className="text-[10px] uppercase tracking-[0.35em] text-gold">
+                Watch Us Train
+              </span>
+            </div>
+            <h2 className="font-bebas text-[clamp(44px,6vw,80px)] leading-[0.95] tracking-[0.03em] text-white">
+              See Us In
+              <br />
+              <span className="text-gold">Action</span>
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-0.5">
+            {/* FOX5 Feature */}
+            <div className="reveal opacity-0 translate-y-9 transition-all duration-700 bg-navy-light border border-border overflow-hidden group hover:border-gold/40 lg:col-span-2 lg:row-span-2">
+              <div className="aspect-video lg:h-full">
+                <iframe
+                  src="https://www.youtube.com/embed/kXjyzx4wJi8"
+                  title="TaekwonMaru Featured on FOX5 News"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full border-0"
+                />
+              </div>
+              <div className="p-6 border-t border-border">
+                <span className="text-[9px] uppercase tracking-[0.25em] text-gold">
+                  Media Feature
+                </span>
+                <h3 className="font-bebas text-2xl text-white mt-2">Featured on FOX5 News</h3>
+              </div>
+            </div>
+
+            {/* Children's Classes */}
+            <div className="reveal opacity-0 translate-y-9 transition-all duration-700 delay-100 bg-navy-light border border-border overflow-hidden group hover:border-gold/40">
+              <div className="aspect-video">
+                <iframe
+                  src="https://www.youtube.com/embed/SSplA3C-nUE"
+                  title="Children's Classes at TaekwonMaru"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full border-0"
+                />
+              </div>
+              <div className="p-6 border-t border-border">
+                <span className="text-[9px] uppercase tracking-[0.25em] text-gold">Ages 6-9</span>
+                <h3 className="font-bebas text-xl text-white mt-2">Children's Classes</h3>
+              </div>
+            </div>
+
+            {/* Teen & Adult */}
+            <div className="reveal opacity-0 translate-y-9 transition-all duration-700 delay-200 bg-navy-light border border-border overflow-hidden group hover:border-gold/40">
+              <div className="aspect-video">
+                <iframe
+                  src="https://www.youtube.com/embed/uhGYAW_hvm4"
+                  title="Teen and Adult Classes at TaekwonMaru"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full border-0"
+                />
+              </div>
+              <div className="p-6 border-t border-border">
+                <span className="text-[9px] uppercase tracking-[0.25em] text-gold">Ages 14+</span>
+                <h3 className="font-bebas text-xl text-white mt-2">Teen & Adult Classes</h3>
+              </div>
+            </div>
+
+            {/* Summer Camp */}
+            <div className="reveal opacity-0 translate-y-9 transition-all duration-700 delay-100 bg-navy-light border border-border overflow-hidden group hover:border-gold/40">
+              <div className="aspect-video">
+                <iframe
+                  src="https://www.youtube.com/embed/yvk6skuwp-E"
+                  title="TaekwonMaru Summer Camp"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full border-0"
+                />
+              </div>
+              <div className="p-6 border-t border-border">
+                <span className="text-[9px] uppercase tracking-[0.25em] text-gold">
+                  Summer Program
+                </span>
+                <h3 className="font-bebas text-xl text-white mt-2">Summer Camp</h3>
+              </div>
+            </div>
+
+            {/* Birthday Party */}
+            <div className="reveal opacity-0 translate-y-9 transition-all duration-700 delay-200 bg-navy-light border border-border overflow-hidden group hover:border-gold/40">
+              <div className="aspect-video">
+                <iframe
+                  src="https://www.youtube.com/embed/E1LwJ5kS08I"
+                  title="Birthday Parties at TaekwonMaru"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full border-0"
+                />
+              </div>
+              <div className="p-6 border-t border-border">
+                <span className="text-[9px] uppercase tracking-[0.25em] text-gold">
+                  Special Events
+                </span>
+                <h3 className="font-bebas text-xl text-white mt-2">Birthday Parties</h3>
+              </div>
+            </div>
+
+            {/* KPOP Dance */}
+            <div className="reveal opacity-0 translate-y-9 transition-all duration-700 delay-300 bg-navy-light border border-border overflow-hidden group hover:border-gold/40">
+              <div className="aspect-video">
+                <iframe
+                  src="https://www.youtube.com/embed/wgeDuo1tvYU"
+                  title="KPOP Dance Classes at TaekwonMaru"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full border-0"
+                />
+              </div>
+              <div className="p-6 border-t border-border">
+                <span className="text-[9px] uppercase tracking-[0.25em] text-gold">Ages 7+</span>
+                <h3 className="font-bebas text-xl text-white mt-2">KPOP Dance</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us */}
+      <section className="py-24 lg:py-32 px-6 lg:px-16 bg-navy border-t border-border">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 reveal opacity-0 translate-y-9 transition-all duration-700">
             <div className="flex items-center justify-center gap-3.5 mb-5">
@@ -334,7 +408,7 @@ export function HomePage() {
           </h2>
           <p className="text-base leading-[1.8] text-muted max-w-[500px] mx-auto mb-14">
             Meet the masters, train with the team, and see exactly why TaekwonMaru has been
-            Bethpage's top martial arts school for over 15 years.
+            Bethpage's top martial arts school for over 25 years.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
             <Link to="/contact">
@@ -353,3 +427,60 @@ export function HomePage() {
     </div>
   );
 }
+
+const programs = [
+  {
+    name: "Little Tiger",
+    age: "Ages 2–5",
+    desc: "Our Early Childhood Program — fun, respect-based classes built for tiny attention spans and big confidence gains. 30-minute sessions with a dedicated belt track.",
+  },
+  {
+    name: "Children's Class",
+    age: "Ages 6–9",
+    desc: "Longer classes with greater curriculum focus. Discipline, respect, and taekwondo fundamentals mastered early.",
+    featured: true,
+  },
+  {
+    name: "Pre-Teen",
+    age: "Ages 10–13",
+    desc: "Physical and mental development intensifies. Students can join the Junior Leader program and Black Hawk Demo Team.",
+  },
+  {
+    name: "Advanced Teen",
+    age: "Ages 14–17",
+    desc: "High school program focused on stamina, strength, and mental toughness. An outstanding extracurricular for college applications.",
+  },
+  {
+    name: "Adult",
+    age: "Ages 18+",
+    desc: "Stay fit, relieve stress, and train alongside our schools community. Perfect for parents who want to train while their kids do.",
+  },
+  {
+    name: "Sparring & Demo",
+    age: "Competition",
+    desc: "For students who want to compete and perform. Our Black Hawk Demo Team is a NYS Governors Cup champion.",
+  },
+];
+
+const whyChooseUs = [
+  {
+    icon: <Award size={28} />,
+    title: "Award-Winning",
+    desc: "5x NYS Governors Cup champions. Featured on FOX5 News.",
+  },
+  {
+    icon: <Users size={28} />,
+    title: "Expert Masters",
+    desc: "7th degree Grand Master with 25+ years training NYPD & FDNY.",
+  },
+  {
+    icon: <Trophy size={28} />,
+    title: "Proven Results",
+    desc: "Black belt character development alongside championship-level training.",
+  },
+  {
+    icon: <Calendar size={28} />,
+    title: "Family Focused",
+    desc: "Programs for ages 2–adult. Train together, grow together.",
+  },
+];

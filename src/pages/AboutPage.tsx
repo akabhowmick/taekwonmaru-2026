@@ -1,10 +1,18 @@
 import { Award, BookOpen, Users } from "lucide-react";
 import { useEffect, useRef } from "react";
 
+import grandMasterChoiImg from "../assets/masters/grand-master-choi.jpg";
+import headMasterRinImg from "@/assets/masters/head-master-rin.jpg";
+import masterAkashImg from "@/assets/masters/master-akash.jpg";
+import masterOwenImg from "@/assets/masters/master-owen.jpg";
+import masterAmeenImg from "@/assets/masters/master-ameen.png";
+import masterAndrewImg from "@/assets/masters/master-andrew.jpg";
+
 const masters = [
   {
     name: "Grand Master Choi",
     rank: "7th Degree Black Belt",
+    image: grandMasterChoiImg,
     credentials: [
       "Masters Degree: Martial Arts Science",
       "Completed Kukkiwon Masters Education Course",
@@ -16,6 +24,7 @@ const masters = [
   {
     name: "Head Master Rin",
     rank: "5th Dan Degree Black Belt",
+    image: headMasterRinImg,
     credentials: [
       "KPOP Dance Instructor",
       "Black Hawk Demo Team Coach",
@@ -27,6 +36,7 @@ const masters = [
   {
     name: "Master Akash",
     rank: "4th Degree Black Belt",
+    image: masterAkashImg,
     credentials: [
       "Black Hawk Demo Team Leader 2018-2019",
       "TaekwonMaru Junior Leader Program Head",
@@ -38,6 +48,7 @@ const masters = [
   {
     name: "Master Owen",
     rank: "4th Degree Black Belt",
+    image: masterOwenImg,
     credentials: [
       "Black Hawk Demo Team Leader 2021, 2023, 2024",
       "St Johns University major in Radiology",
@@ -48,6 +59,7 @@ const masters = [
   {
     name: "Master Ameen",
     rank: "4th Degree Black Belt",
+    image: masterAmeenImg,
     credentials: [
       "Black Hawk Demo Team Leader 2022",
       "2018-2021, 2024 NYS 1st Place Governors Cup",
@@ -58,6 +70,7 @@ const masters = [
   {
     name: "Master Andrew",
     rank: "4th Degree Black Belt",
+    image: masterAndrewImg,
     credentials: [
       "2021, 2024 NYS 1st Place Governor's Cup Demo Team",
       "NYS Gold Medal: Sparring, Form, Board Breaking",
@@ -166,7 +179,7 @@ export function AboutPage() {
               <h3 className="font-bebas text-2xl text-white mb-3">Proven Curriculum</h3>
               <p className="text-sm text-muted leading-relaxed">
                 Kukkiwon-certified instruction following World Taekwondo Federation standards with
-                25+ years of refinement.
+                15+ years of refinement.
               </p>
             </div>
           </div>
@@ -202,10 +215,11 @@ export function AboutPage() {
               >
                 <div className="aspect-[3/4] bg-gradient-to-br from-navy-light to-navy flex items-center justify-center border-b border-border">
                   <div className="font-bebas text-6xl text-gold/20 tracking-wider">
-                    {master.name
-                      .split(" ")
-                      .map((n) => n[0])
-                      .join("")}
+                    <img
+                      src={master.image}
+                      alt={master.name}
+                      className="w-full h-full object-cover object-center"
+                    />
                   </div>
                 </div>
                 <div className="p-6">

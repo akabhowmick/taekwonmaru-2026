@@ -3,11 +3,22 @@ import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useRef } from "react";
 
+import littleTigerImg from "@/assets/programs/little-tiger.jpg";
+import childrenImg from "@/assets/programs/children.jpg";
+import preTeenImg from "@/assets/programs/pre-teen.png";
+import advancedTeenImg from "@/assets/programs/advanced-teen.png";
+import adultImg from "@/assets/programs/adult.png";
+import kpopImg from "@/assets/programs/kpop.png";
+import sparringImg from "@/assets/programs/sparring.jpg";
+import juniorLeaderImg from "@/assets/programs/junior-leader.jpg";
+import demoTeamImg from "@/assets/programs/demo-team.jpg";
+
 const allPrograms = [
   {
     name: "Little Tiger",
     age: "Ages 2–5",
     subtitle: "Early Childhood Program",
+    image: littleTigerImg,
     details: [
       "Fun, respect-based classes designed for young children",
       "30-minute sessions to maintain focus",
@@ -20,6 +31,7 @@ const allPrograms = [
     name: "Children's Class",
     age: "Ages 6–9",
     subtitle: "Foundation Building",
+    image: childrenImg,
     details: [
       "Greater curriculum focus with longer class times",
       "Emphasis on discipline, respect, and fundamentals",
@@ -32,6 +44,7 @@ const allPrograms = [
     name: "Pre-Teen",
     age: "Ages 10–13",
     subtitle: "Character Development",
+    image: preTeenImg,
     details: [
       "Enhanced physical and mental training",
       "Eligible for Junior Leader Program",
@@ -44,6 +57,7 @@ const allPrograms = [
     name: "Advanced Teen",
     age: "Ages 14–17",
     subtitle: "High Performance",
+    image: advancedTeenImg,
     details: [
       "Focus on stamina, strength, and mental toughness",
       "Excellent extracurricular for college applications",
@@ -56,6 +70,7 @@ const allPrograms = [
     name: "Adult",
     age: "Ages 18+",
     subtitle: "Fitness & Wellness",
+    image: adultImg,
     details: [
       "Stay fit and healthy through martial arts",
       "Stress relief and mental clarity",
@@ -68,6 +83,7 @@ const allPrograms = [
     name: "KPOP Dance",
     age: "Ages 7+",
     subtitle: "K-Pop Choreography",
+    image: kpopImg,
     details: [
       "Learn original choreography from BTS, NCT, SEVENTEEN, and more",
       "Taught by Head Master Rin — Poomsae Gold Medalist",
@@ -81,6 +97,7 @@ const allPrograms = [
     name: "Sparring Class",
     age: "All Belt Levels",
     subtitle: "Competition Training",
+    image: sparringImg,
     details: [
       "Controlled combat training with experienced instructors",
       "Strategic kicks, punches, and defensive maneuvers",
@@ -93,6 +110,7 @@ const allPrograms = [
     name: "Junior Leader",
     age: "Selected Students",
     subtitle: "Leadership Development",
+    image: juniorLeaderImg,
     details: [
       "Support and guide fellow students",
       "Develop leadership and mentorship skills",
@@ -105,6 +123,7 @@ const allPrograms = [
     name: "Black Hawk Demo Team",
     age: "Competitive Level",
     subtitle: "Performance & Competition",
+    image: demoTeamImg,
     details: [
       "5x NYS Governors Cup Champion",
       "High-energy performances with choreography",
@@ -183,6 +202,13 @@ export function ProgramsPage() {
                 className="reveal opacity-0 translate-y-9 transition-all duration-700 bg-navy-light border border-border p-10 hover:border-gold/40 hover:-translate-y-1"
                 style={{ transitionDelay: `${i * 80}ms` }}
               >
+                <div className="aspect-video overflow-hidden border-b border-border">
+                  <img
+                    src={program.image}
+                    alt={program.name}
+                    className="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
                 <div className="font-bebas text-sm tracking-[0.2em] text-gold mb-3">
                   {program.age}
                 </div>
@@ -243,15 +269,13 @@ export function ProgramsPage() {
             Limited Time Offer
           </div>
           <h2 className="font-bebas text-[clamp(52px,7vw,88px)] leading-[0.9] text-white mb-6">
-            Summer <span className="text-martial-red-bright">Promotion</span>
+            Winter<span className="text-martial-red-bright">Promotion</span>
           </h2>
           <div className="font-bebas text-7xl text-martial-red-bright mb-4">
             <sup className="text-3xl align-super">$</sup>199
           </div>
           <p className="text-xl text-muted mb-3">6 weeks · 2 classes per week</p>
-          <p className="text-base text-muted mb-10">
-            Includes TaekwonMaru t-shirt and training shorts
-          </p>
+          <p className="text-base text-muted mb-10">Includes TaekwonMaru t-shirt</p>
           <Link to="/contact">
             <Button variant="red" size="lg">
               Claim This Offer →
