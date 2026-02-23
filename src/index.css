@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Cinzel:wght@400;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-navy text-white font-sans font-light;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Noise overlay */
+  body::before {
+    content: '';
+    @apply fixed inset-0 bg-noise pointer-events-none z-[1000] opacity-40;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    @apply w-2;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-navy-mid;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gold-dim rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gold;
+  }
+}
