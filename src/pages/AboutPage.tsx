@@ -1,7 +1,7 @@
 import { Award, BookOpen, Users } from "lucide-react";
 import { useEffect, useRef } from "react";
 
-import grandMasterChoiImg from "@/assets/masters/grand-master-choi.jpg";
+import grandMasterChoiImg from "../assets/masters/grand-master-choi.jpg";
 import headMasterRinImg from "@/assets/masters/head-master-rin.jpg";
 import masterAkashImg from "@/assets/masters/master-akash.jpg";
 import masterOwenImg from "@/assets/masters/master-owen.jpg";
