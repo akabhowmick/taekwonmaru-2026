@@ -58,7 +58,7 @@ export function ContactPage() {
           <h1 className="font-bebas text-[clamp(56px,8vw,110px)] leading-[0.9] text-white mb-6">
             Book a <span className="text-gold">Class</span>
           </h1>
-          <p className="text-lg leading-relaxed text-muted max-w-2xl mx-auto">
+          <p className="text-lg leading-relaxed text-white max-w-2xl mx-auto">
             Ready to start your martial arts journey? Fill out the form below to schedule your $10
             trial class. We'll get back to you within 24 hours.
           </p>
@@ -75,7 +75,7 @@ export function ContactPage() {
               <div className="space-y-6">
                 <a
                   href="tel:5164331887"
-                  className="flex items-start gap-4 text-muted hover:text-gold transition-colors group"
+                  className="flex items-start gap-4 text-white hover:text-gold transition-colors group"
                 >
                   <div className="w-12 h-12 bg-navy-light border border-border rounded flex items-center justify-center flex-shrink-0 group-hover:border-gold/40 transition-colors">
                     <Phone size={20} className="text-gold" />
@@ -88,7 +88,7 @@ export function ContactPage() {
 
                 <a
                   href="mailto:usataekwonmaru@gmail.com"
-                  className="flex items-start gap-4 text-muted hover:text-gold transition-colors group"
+                  className="flex items-start gap-4 text-white hover:text-gold transition-colors group"
                 >
                   <div className="w-12 h-12 bg-navy-light border border-border rounded flex items-center justify-center flex-shrink-0 group-hover:border-gold/40 transition-colors">
                     <Mail size={20} className="text-gold" />
@@ -103,7 +103,7 @@ export function ContactPage() {
                   href="https://www.google.com/maps/place/Maru+TaeKwonDo/@40.7412438,-73.4996425,17z/data=!3m1!4b1!4m6!3m5!1s0x89c280690b8faf85:0x1445eec347bb2097!8m2!3d40.7412398!4d-73.4970622!16s%2Fg%2F1ptx7d04z?entry=ttu"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-start gap-4 text-muted hover:text-gold transition-colors group"
+                  className="flex items-start gap-4 text-white hover:text-gold transition-colors group"
                 >
                   <div className="w-12 h-12 bg-navy-light border border-border rounded flex items-center justify-center flex-shrink-0 group-hover:border-gold/40 transition-colors">
                     <MapPin size={20} className="text-gold" />
@@ -122,7 +122,7 @@ export function ContactPage() {
 
             <div className="pt-8 border-t border-border">
               <h3 className="text-xs uppercase tracking-wider text-gold mb-4">Hours</h3>
-              <div className="space-y-2 text-sm text-muted">
+              <div className="space-y-2 text-sm text-white">
                 <div className="flex justify-between">
                   <span className="text-white">Mon / Wed / Thu</span>
                   <span>3:00–9:00 PM</span>
@@ -146,7 +146,7 @@ export function ContactPage() {
           {/* Form */}
           <div className="bg-navy-light border border-border p-8 lg:p-10">
             <h2 className="font-bebas text-3xl text-white mb-2">Book Your Trial</h2>
-            <p className="text-sm text-muted mb-8">
+            <p className="text-sm text-white mb-8">
               Fill out the form and we'll contact you to schedule your $10 trial class.
             </p>
 
@@ -191,7 +191,7 @@ export function ContactPage() {
                     className="block text-xs uppercase tracking-wider text-gold mb-2"
                   >
                     Parent Name
-                    <span className="text-muted text-[10px] ml-1">(if under 18)</span>
+                    <span className="text-white text-[10px] ml-1">(if under 18)</span>
                   </label>
                   <input
                     type="text"
@@ -285,7 +285,7 @@ export function ContactPage() {
                 {isSubmitting ? "Sending..." : "Submit Request →"}
               </Button>
 
-              <p className="text-xs text-muted text-center">
+              <p className="text-xs text-white text-center">
                 We'll contact you within 24 hours to schedule your trial class.
               </p>
             </form>
@@ -313,7 +313,7 @@ export function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-bebas text-xl text-white mb-2">{step.title}</h3>
-                  <p className="text-sm text-muted leading-relaxed">{step.desc}</p>
+                  <p className="text-sm text-white leading-relaxed">{step.desc}</p>
                 </div>
               </div>
             ))}

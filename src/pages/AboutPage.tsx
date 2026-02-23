@@ -116,7 +116,7 @@ export function AboutPage() {
           <h1 className="font-bebas text-[clamp(56px,8vw,110px)] leading-[0.9] text-white mb-6">
             About <span className="text-gold">TaekwonMaru</span>
           </h1>
-          <p className="text-lg leading-relaxed text-muted max-w-2xl mx-auto">
+          <p className="text-lg leading-relaxed text-white max-w-2xl mx-auto">
             For over 15 years, TaekwonMaru has been Bethpage's premier martial arts school —
             building champions in sport and in life through world-class Taekwondo instruction.
           </p>
@@ -136,7 +136,7 @@ export function AboutPage() {
             <h2 className="font-bebas text-[clamp(44px,6vw,80px)] leading-[0.95] text-white mb-6">
               Meet Our <span className="text-gold">Masters</span>
             </h2>
-            <p className="text-lg text-muted max-w-2xl mx-auto">
+            <p className="text-lg text-white max-w-2xl mx-auto">
               World-class instructors with championship credentials, Kukkiwon certification, and a
               genuine passion for student development.
             </p>
@@ -165,7 +165,7 @@ export function AboutPage() {
                     {master.credentials.slice(0, 3).map((cred, idx) => (
                       <li
                         key={idx}
-                        className="text-xs text-muted leading-relaxed flex items-start gap-2"
+                        className="text-xs text-white leading-relaxed flex items-start gap-2"
                       >
                         <span className="text-gold mt-1">·</span>
                         <span>{cred}</span>
@@ -194,7 +194,7 @@ export function AboutPage() {
               <br />
               <span className="text-gold">Every Detail</span>
             </h2>
-            <div className="space-y-4 text-base leading-relaxed text-muted">
+            <div className="space-y-4 text-base leading-relaxed text-white">
               <p>
                 TaekwonMaru was founded on the belief that martial arts training transforms lives —
                 not just through physical technique, but through character development, discipline,
@@ -217,7 +217,7 @@ export function AboutPage() {
             <div className="bg-navy-light border border-border p-8 hover:border-gold/30 transition-colors">
               <Award className="text-gold mb-4" size={32} />
               <h3 className="font-bebas text-2xl text-white mb-3">Award-Winning Team</h3>
-              <p className="text-sm text-muted leading-relaxed">
+              <p className="text-sm text-white leading-relaxed">
                 5x NYS Governor's Cup champions. Featured on FOX5 News. Our Black Hawk Demo Team
                 represents the highest level of taekwondo performance.
               </p>
@@ -225,7 +225,7 @@ export function AboutPage() {
             <div className="bg-navy-light border border-border p-8 hover:border-gold/30 transition-colors">
               <Users className="text-gold mb-4" size={32} />
               <h3 className="font-bebas text-2xl text-white mb-3">Community Focused</h3>
-              <p className="text-sm text-muted leading-relaxed">
+              <p className="text-sm text-white leading-relaxed">
                 More than just a school — we're a family. Students train together, support each
                 other, and grow together through every belt level.
               </p>
@@ -233,7 +233,7 @@ export function AboutPage() {
             <div className="bg-navy-light border border-border p-8 hover:border-gold/30 transition-colors">
               <BookOpen className="text-gold mb-4" size={32} />
               <h3 className="font-bebas text-2xl text-white mb-3">Proven Curriculum</h3>
-              <p className="text-sm text-muted leading-relaxed">
+              <p className="text-sm text-white leading-relaxed">
                 Kukkiwon-certified instruction following World Taekwondo Federation standards with
                 15+ years of refinement.
               </p>

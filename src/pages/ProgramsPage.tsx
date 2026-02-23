@@ -25,11 +25,11 @@ const allPrograms = [
       "Dedicated belt system for clarity and progress",
       "Builds confidence through board breaking and loud, respectful answers",
     ],
-    schedule: "Mon/Wed/Thu: 3:30 PM | Sat: 10:00 AM",
+    schedule: "Mon/Wed/Thu/Fri: 3:40-4:10 PM | Sat: 10:30-11:00 AM",
   },
   {
     name: "Children's Class",
-    age: "Ages 6–9",
+    age: "Ages 6–9 (Grades 1-4)",
     subtitle: "Foundation Building",
     image: childrenImg,
     details: [
@@ -38,11 +38,11 @@ const allPrograms = [
       "Early exposure accelerates progression",
       "Maintains fun learning environment",
     ],
-    schedule: "Mon/Wed/Thu: 4:30 PM | Sat: 11:00 AM",
+    schedule: "Mon-Fri: 4:15-4:55 PM & 5:00-5:40 PM | Sat: 11:05-11:45 AM",
   },
   {
     name: "Pre-Teen",
-    age: "Ages 10–13",
+    age: "Ages 10–13 (Grades 5-8)",
     subtitle: "Character Development",
     image: preTeenImg,
     details: [
@@ -51,11 +51,12 @@ const allPrograms = [
       "Can join Black Hawk Demo Team",
       "Leadership roles and mentorship opportunities",
     ],
-    schedule: "Mon/Wed/Thu: 5:30 PM | Sat: 12:00 PM",
+    schedule:
+      "PreTeen: Mon/Tue: 5:45-6:30 PM| Teenager: Wed: 6:35-7:20 PM | Thu/Fri: 5:45-6:30 PM | Sat: 11:50 AM-12:40 PM",
   },
   {
     name: "Advanced Teen",
-    age: "Ages 14–17",
+    age: "Ages 14–17 (Grades 8-12)",
     subtitle: "High Performance",
     image: advancedTeenImg,
     details: [
@@ -64,7 +65,7 @@ const allPrograms = [
       "Stress relief and personal development",
       "Leadership opportunities through Junior Leader Program",
     ],
-    schedule: "Mon/Wed/Thu: 6:30 PM | Sat: 1:00 PM",
+    schedule: "Mon: 7:30-8:10 PM | Thu: 8:10-9:00 PM | Wed: 8:10-9:00 PM (w/ Adult)",
   },
   {
     name: "Adult",
@@ -77,7 +78,8 @@ const allPrograms = [
       "Train alongside your children",
       "Welcoming community environment",
     ],
-    schedule: "Mon/Wed/Thu: 7:30 PM | Sat: 2:00 PM",
+    schedule:
+      "Mon: 8:10-9:00 PM (Cardio) | Wed: 8:10-9:00 PM (w/ Advanced Teen) | Sat: 11:50 AM-12:40 PM",
   },
   {
     name: "KPOP Dance",
@@ -90,21 +92,34 @@ const allPrograms = [
       "4-week sessions for each song",
       "Auditions available for ONE BEAT DANCE CREW",
     ],
-    schedule: "Friday: 6:45 PM | Saturday: 1:30 PM",
+    schedule: "Friday: 6:45-7:45 PM | Saturday: 1:30-2:20 PM",
     price: "$25 trial, $80/month",
   },
   {
     name: "Sparring Class",
-    age: "All Belt Levels",
+    age: "Children & Teens",
     subtitle: "Competition Training",
     image: sparringImg,
     details: [
       "Controlled combat training with experienced instructors",
       "Strategic kicks, punches, and defensive maneuvers",
       "Develops precision, agility, and discipline",
-      "Friendly competitive environment",
+      "One class per week — consult Master Choi for details",
     ],
-    schedule: "Tuesday/Friday: 6:00 PM",
+    schedule: "Wed: 5:45-6:30 PM (Children) | Wed: 7:30-8:10 PM (Teen)",
+  },
+  {
+    name: "Demo Team",
+    age: "Competitive Level",
+    subtitle: "Performance & Competition",
+    image: demoTeamImg,
+    details: [
+      "5x NYS Governor's Cup Champion",
+      "High-energy performances with choreography",
+      "Compete in taekwondo competitions",
+      "Community performances at hospitals, schools, and events",
+    ],
+    schedule: "Thursday: 7:30-8:10 PM | Audition-based",
   },
   {
     name: "Junior Leader",
@@ -119,21 +134,7 @@ const allPrograms = [
     ],
     schedule: "By invitation — Monthly meetings",
   },
-  {
-    name: "Black Hawk Demo Team",
-    age: "Competitive Level",
-    subtitle: "Performance & Competition",
-    image: demoTeamImg,
-    details: [
-      "5x NYS Governors Cup Champion",
-      "High-energy performances with choreography",
-      "Compete in taekwondo competitions",
-      "Community performances at hospitals, schools, and events",
-    ],
-    schedule: "Audition-based — Practice 2x/week",
-  },
 ];
-
 export function ProgramsPage() {
   const observerRef = useRef<IntersectionObserver | null>(null);
 
@@ -179,7 +180,7 @@ export function ProgramsPage() {
           <h1 className="font-bebas text-[clamp(56px,8vw,110px)] leading-[0.9] text-white mb-6">
             Our <span className="text-gold">Programs</span>
           </h1>
-          <p className="text-lg leading-relaxed text-muted max-w-2xl mb-10">
+          <p className="text-lg leading-relaxed text-white max-w-2xl mb-10">
             From Little Tigers at age 2 to competitive Demo Team and adult classes — TaekwonMaru
             offers world-class instruction for every stage of life. Each program is designed to
             build discipline, confidence, and black belt character.
@@ -215,13 +216,13 @@ export function ProgramsPage() {
                 <h2 className="font-bebas text-3xl text-white leading-tight mb-2">
                   {program.name}
                 </h2>
-                <p className="text-xs uppercase tracking-wider text-muted mb-6">
+                <p className="text-xs uppercase tracking-wider text-white mb-6">
                   {program.subtitle}
                 </p>
 
                 <ul className="space-y-3 mb-8">
                   {program.details.map((detail, idx) => (
-                    <li key={idx} className="flex items-start gap-3 text-sm text-muted">
+                    <li key={idx} className="flex items-start gap-3 text-sm text-white">
                       <Check size={16} className="text-gold flex-shrink-0 mt-0.5" />
                       <span>{detail}</span>
                     </li>
@@ -230,8 +231,10 @@ export function ProgramsPage() {
 
                 <div className="pt-6 border-t border-border space-y-2">
                   <p className="text-xs uppercase tracking-wider text-gold">Schedule</p>
-                  <p className="text-sm text-muted">{program.schedule}</p>
-                  {program.price && <p className="text-sm text-muted">{program.price}</p>}
+                  {program.schedule.split("|").map((time) => {
+                    return <p className="text-sm text-white">{time}</p>;
+                  })}
+                  {program.price && <p className="text-sm text-white">{program.price}</p>}
                 </div>
               </article>
             ))}
@@ -245,7 +248,7 @@ export function ProgramsPage() {
           <h2 className="font-bebas text-[clamp(48px,6vw,80px)] leading-[0.95] text-white mb-6">
             Ready to <span className="text-gold">Start?</span>
           </h2>
-          <p className="text-lg leading-relaxed text-muted max-w-2xl mx-auto mb-12">
+          <p className="text-lg leading-relaxed text-white max-w-2xl mx-auto mb-12">
             All programs start with a $10 trial class. No commitments, no pressure — just come
             experience the TaekwonMaru difference.
           </p>
@@ -269,13 +272,13 @@ export function ProgramsPage() {
             Limited Time Offer
           </div>
           <h2 className="font-bebas text-[clamp(52px,7vw,88px)] leading-[0.9] text-white mb-6">
-            Winter<span className="text-martial-red-bright">Promotion</span>
+            Winter <span className="text-martial-red-bright">Promotion</span>
           </h2>
           <div className="font-bebas text-7xl text-martial-red-bright mb-4">
             <sup className="text-3xl align-super">$</sup>199
           </div>
-          <p className="text-xl text-muted mb-3">6 weeks · 2 classes per week</p>
-          <p className="text-base text-muted mb-10">Includes TaekwonMaru t-shirt</p>
+          <p className="text-xl text-white mb-3">6 weeks · 2 classes per week</p>
+          <p className="text-base text-white mb-10">Includes TaekwonMaru t-shirt</p>
           <Link to="/contact">
             <Button variant="red" size="lg">
               Claim This Offer →

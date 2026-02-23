@@ -36,11 +36,11 @@ export function Footer() {
             <div className="font-serif text-[22px] font-semibold text-white tracking-[0.08em] mb-4">
               Taekwon<span className="text-gold">Maru</span>
             </div>
-            <p className="text-[13px] leading-[1.8] text-muted max-w-[260px] mb-7">
+            <p className="text-[13px] leading-[1.8] text-white max-w-[260px] mb-7">
               World-class Taekwondo instruction for the whole family. Building champions in sport
               and in life since 2000.
             </p>
-            <address className="text-xs leading-[1.9] text-muted not-italic">
+            <address className="text-xs leading-[1.9] text-white not-italic">
               611 Hicksville Rd. Bethpage, NY 11714
               <br />
               <a
@@ -67,7 +67,7 @@ export function Footer() {
                 <li key={link.path}>
                   <Link
                     to={link.path}
-                    className="text-[13px] text-muted hover:text-white transition-colors"
+                    className="text-[13px] text-white hover:text-white transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -84,7 +84,7 @@ export function Footer() {
                 <li key={link.name}>
                   <Link
                     to={link.path}
-                    className="text-[13px] text-muted hover:text-white transition-colors"
+                    className="text-[13px] text-white hover:text-white transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -98,7 +98,7 @@ export function Footer() {
             <h3 className="text-[10px] uppercase tracking-[0.3em] text-gold mb-6">Hours</h3>
             <ul className="flex flex-col gap-2.5 list-none">
               {hours.map((hour) => (
-                <li key={hour.days} className="flex justify-between gap-4 text-xs text-muted">
+                <li key={hour.days} className="flex justify-between gap-4 text-xs text-white">
                   <span className="text-white">{hour.days}</span>
                   <span>{hour.time}</span>
                 </li>
@@ -109,7 +109,7 @@ export function Footer() {
 
         {/* Bottom */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 border-t border-border pt-8">
-          <p className="text-[11px] text-muted/50">
+          <p className="text-[11px] text-white/50">
             © 2026 TaekwonMaru. All rights reserved. Made by{" "}
             <a
               href="https://akashbhowmick.com/"
@@ -127,7 +127,7 @@ export function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
-              className="w-9 h-9 border border-border flex items-center justify-center text-muted hover:border-gold hover:text-gold transition-all"
+              className="w-9 h-9 border border-border flex items-center justify-center text-white hover:border-gold hover:text-gold transition-all"
             >
               <Facebook size={14} />
             </a>
@@ -136,7 +136,7 @@ export function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
-              className="w-9 h-9 border border-border flex items-center justify-center text-muted hover:border-gold hover:text-gold transition-all"
+              className="w-9 h-9 border border-border flex items-center justify-center text-white hover:border-gold hover:text-gold transition-all"
             >
               <Instagram size={14} />
             </a>

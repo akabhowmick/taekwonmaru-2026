@@ -30,7 +30,7 @@ export function HomePage() {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="relative min-h-screen flex items-center overflow-hidden">
+      <section className="relative min-h-[860px] lg:min-h-screen flex items-center overflow-hidden">
         {/* Background */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_70%_40%,rgba(12,26,60,0.9)_0%,transparent_70%),radial-gradient(ellipse_50%_80%_at_30%_60%,rgba(192,57,43,0.12)_0%,transparent_60%),linear-gradient(160deg,#060c1a_0%,#0a1428_40%,#0d1a35_100%)]" />
 
@@ -42,73 +42,73 @@ export function HomePage() {
 
         {/* Large background text */}
         <div
-          className="absolute right-[-60px] top-1/2 -translate-y-1/2 font-bebas text-[clamp(200px,28vw,420px)] text-gold/[0.04] leading-none pointer-events-none tracking-tight whitespace-nowrap"
+          className="absolute right-[-60px] top-1/2 -translate-y-1/2 font-bebas text-[clamp(200px,28vw,420px)] text-gold/[0.04] leading-none pointer-events-none tracking-tight whitespace-nowrap hidden md:block"
           aria-hidden="true"
         >
           <img src={heroImage} alt="MARU" />
         </div>
 
-        <div className="relative z-10 px-6 lg:px-16 pt-36 pb-24 lg:pt-40 lg:pb-32 max-w-[760px]">
+        <div className="relative z-10 px-6 lg:px-16 pt-28 pb-8 lg:pt-40 lg:pb-32 max-w-[760px]">
           {/* Eyebrow */}
-          <div className="flex items-center gap-4 mb-8 opacity-0 translate-y-7 animate-[fadeUp_0.8s_0.2s_forwards]">
+          <div className="flex items-center gap-3 mb-6 lg:mb-8 opacity-0 translate-y-7 animate-[fadeUp_0.8s_0.2s_forwards]">
             <span className="w-10 h-[1.5px] bg-gold" />
-            <span className="text-[11px] uppercase tracking-[0.35em] text-gold">
+            <span className="text-[10px] lg:text-[11px] uppercase tracking-[0.3em] lg:tracking-[0.35em] text-gold">
               Bethpage, NY · Est. 2010
             </span>
           </div>
 
           {/* Title */}
-          <h1 className="font-bebas text-[clamp(64px,9vw,130px)] leading-[0.92] tracking-[0.02em] text-white mb-7 opacity-0 translate-y-7 animate-[fadeUp_0.8s_0.4s_forwards]">
+          <h1 className="font-bebas text-[clamp(54px,9vw,130px)] leading-[0.92] tracking-[0.02em] text-white mb-5 lg:mb-7 opacity-0 translate-y-7 animate-[fadeUp_0.8s_0.4s_forwards]">
             Train Hard.
             <br />
             <span className="text-gold">Rise Far.</span>
           </h1>
 
           {/* Subtitle */}
-          <p className="text-base leading-[1.8] text-white max-w-[400px] mb-14 opacity-0 translate-y-7 animate-[fadeUp_0.8s_0.6s_forwards]">
+          <p className="text-[15px] lg:text-base leading-[1.65] lg:leading-[1.8] text-white max-w-[400px] mb-9 lg:mb-14 opacity-0 translate-y-7 animate-[fadeUp_0.8s_0.6s_forwards]">
             World-class Taekwondo instruction for ages 2 to adults. Discipline, confidence, and
             black belt character — forged one class at a time at TaekwonMaru.
           </p>
 
           {/* Actions */}
-          <div className="flex flex-wrap items-center gap-6 opacity-0 translate-y-7 animate-[fadeUp_0.8s_0.8s_forwards]">
+          <div className="flex flex-wrap items-center gap-3 lg:gap-6 opacity-0 translate-y-7 animate-[fadeUp_0.8s_0.8s_forwards]">
             <Link to="/contact">
               <Button variant="primary" size="lg">
                 Book a $10 Trial Class →
               </Button>
             </Link>
-            <Link to="/programs">
+            <Link className="hidden md:block" to="/programs">
               <Button variant="red">See All Programs</Button>
             </Link>
           </div>
         </div>
 
         {/* Trust bar */}
-        <div className="absolute bottom-12 left-6 right-6 lg:left-16 lg:right-16 flex flex-wrap items-center gap-6 lg:gap-12 border-t border-border pt-7 opacity-0 animate-[fadeUp_0.8s_1.1s_forwards]">
+        <div className="hidden relative z-10 mt-5 px-6 lg:px-16 lg:absolute lg:bottom-12 lg:left-16 lg:right-16 md:flex md:flex-wrap items-start md:items-center gap-x-6 gap-y-5 lg:gap-12 border-t border-border pt-5 lg:pt-7 opacity-0 animate-[fadeUp_0.8s_1.1s_forwards]">
           <div className="flex flex-col gap-1">
-            <span className="font-bebas text-4xl text-gold leading-none">25+</span>
-            <span className="text-[10px] uppercase tracking-[0.2em] text-muted">
+            <span className="font-bebas text-3xl lg:text-4xl text-gold leading-none">25+</span>
+            <span className="text-[10px] uppercase tracking-[0.2em] text-white">
               Years of Excellence
             </span>
           </div>
-          <div className="hidden md:block w-px h-10 bg-border" />
+          <div className="hidden lg:block w-px h-10 bg-border" />
           <div className="flex flex-col gap-1">
-            <span className="font-bebas text-4xl text-gold leading-none">7th</span>
-            <span className="text-[10px] uppercase tracking-[0.2em] text-muted">
+            <span className="font-bebas text-3xl lg:text-4xl text-gold leading-none">7th</span>
+            <span className="text-[10px] uppercase tracking-[0.2em] text-white">
               Degree Grand Master
             </span>
           </div>
-          <div className="hidden md:block w-px h-10 bg-border" />
+          <div className="hidden lg:block w-px h-10 bg-border" />
           <div className="flex flex-col gap-1">
-            <span className="font-bebas text-4xl text-gold leading-none">1st</span>
-            <span className="text-[10px] uppercase tracking-[0.2em] text-muted">
+            <span className="font-bebas text-3xl lg:text-4xl text-gold leading-none">1st</span>
+            <span className="text-[10px] uppercase tracking-[0.2em] text-white">
               Place NYS Gov. Cup '24
             </span>
           </div>
-          <div className="hidden md:block w-px h-10 bg-border" />
+          <div className="hidden lg:block w-px h-10 bg-border" />
           <div className="flex flex-col gap-1">
-            <span className="font-bebas text-4xl text-gold leading-none">9</span>
-            <span className="text-[10px] uppercase tracking-[0.2em] text-muted">
+            <span className="font-bebas text-3xl lg:text-4xl text-gold leading-none">9</span>
+            <span className="text-[10px] uppercase tracking-[0.2em] text-white">
               Programs & Classes
             </span>
           </div>
@@ -155,7 +155,7 @@ export function HomePage() {
               <br />
               is only $10.
             </h2>
-            <p className="text-[15px] leading-[1.8] text-muted max-w-[520px]">
+            <p className="text-[15px] leading-[1.8] text-white max-w-[520px]">
               Come meet our masters, train with our students, and experience TaekwonMaru firsthand.
               One class is all it takes to see the difference a great school makes.
             </p>
@@ -164,7 +164,7 @@ export function HomePage() {
             <div className="font-bebas text-[100px] text-gold leading-none mb-2">
               <sup className="text-4xl align-super">$</sup>10
             </div>
-            <p className="text-[11px] uppercase tracking-[0.2em] text-muted mb-6">
+            <p className="text-[11px] uppercase tracking-[0.2em] text-white mb-6">
               Trial Class · Any Age Group
             </p>
             <Link to="/contact">
@@ -216,7 +216,7 @@ export function HomePage() {
               <h3 className="font-bebas text-[32px] text-white leading-none mb-4">
                 {program.name}
               </h3>
-              <p className="text-[13px] leading-[1.8] text-muted mb-7">{program.desc}</p>
+              <p className="text-[13px] leading-[1.8] text-white mb-7">{program.desc}</p>
               <Link to="/contact" className="inline-block">
                 <ArrowRight className="text-gold-dim group-hover:text-gold group-hover:translate-x-1.5 transition-all" />
               </Link>
@@ -383,7 +383,7 @@ export function HomePage() {
                   {item.icon}
                 </div>
                 <h3 className="font-bebas text-2xl text-white mb-3">{item.title}</h3>
-                <p className="text-sm leading-relaxed text-muted">{item.desc}</p>
+                <p className="text-sm leading-relaxed text-white">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -407,7 +407,7 @@ export function HomePage() {
             <br />
             <span className="text-gold">$10.</span>
           </h2>
-          <p className="text-base leading-[1.8] text-muted max-w-[500px] mx-auto mb-14">
+          <p className="text-base leading-[1.8] text-white max-w-[500px] mx-auto mb-14">
             Meet the masters, train with the team, and see exactly why TaekwonMaru has been
             Bethpage's top martial arts school for over 15 years.
           </p>
