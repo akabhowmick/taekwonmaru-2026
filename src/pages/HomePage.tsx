@@ -75,7 +75,7 @@ export function HomePage() {
           <div className="flex items-center gap-4 mb-8 animate-[fadeUp_0.6s_ease-out_forwards]">
             <span className="w-10 h-[1.5px] bg-gold" />
             <span className="text-[11px] uppercase tracking-[0.35em] text-gold">
-              Bethpage, NY · Est. 2000
+              Bethpage, NY · Est. 2010
             </span>
           </div>
 
@@ -99,14 +99,14 @@ export function HomePage() {
                 Book a $10 Trial Class →
               </Button>
             </Link>
-            <Link to="/programs">
-              <Button variant="ghost">See All Programs</Button>
+            <Link aria-label={`Read over our programs`} to="/programs">
+              <Button variant="red">See All Programs</Button>
             </Link>
           </div>
         </div>
 
         {/* Trust bar */}
-        <div className="absolute bottom-12 left-6 right-6 lg:left-16 lg:right-16 flex flex-wrap items-center gap-6 lg:gap-12 border-t border-border pt-7">
+        <div className="hidden absolute bottom-12 left-6 right-6 lg:left-16 lg:right-16 md:flex flex-wrap items-center gap-6 lg:gap-12 border-t border-border pt-7">
           <div className="flex flex-col gap-1">
             <span className="font-bebas text-4xl text-gold leading-none">25+</span>
             <span className="text-[10px] uppercase tracking-[0.2em] text-muted">
@@ -211,7 +211,7 @@ export function HomePage() {
               <br />
               <span className="text-gold">Program</span>
             </h2>
-            <Link to="/programs">
+            <Link aria-label={`Read over our programs`} to="/programs">
               <Button variant="ghost">View All Programs →</Button>
             </Link>
           </div>
@@ -239,7 +239,11 @@ export function HomePage() {
                 {program.name}
               </h3>
               <p className="text-[13px] leading-[1.8] text-muted mb-7">{program.desc}</p>
-              <Link to="/contact" className="inline-block">
+              <Link
+                aria-label="Go to the contact page to schedule a trial class!"
+                to="/contact"
+                className="inline-block"
+              >
                 <ArrowRight className="text-gold-dim group-hover:text-gold group-hover:translate-x-1.5 transition-all" />
               </Link>
             </div>

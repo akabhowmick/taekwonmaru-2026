@@ -38,7 +38,7 @@ export function Footer() {
             </div>
             <p className="text-[13px] leading-[1.8] text-white max-w-[260px] mb-7">
               World-class Taekwondo instruction for the whole family. Building champions in sport
-              and in life since 2000.
+              and in life since 2010.
             </p>
             <address className="text-xs leading-[1.9] text-white not-italic">
               611 Hicksville Rd. Bethpage, NY 11714

@@ -33,7 +33,7 @@ export function AboutPage() {
         <div className="relative z-10 max-w-4xl mx-auto text-center">
           <div className="flex items-center justify-center gap-3.5 mb-6">
             <span className="w-10 h-[1.5px] bg-gold" />
-            <span className="text-[11px] uppercase tracking-[0.35em] text-gold">Since 2000</span>
+            <span className="text-[11px] uppercase tracking-[0.35em] text-gold">Since 2010</span>
             <span className="w-10 h-[1.5px] bg-gold" />
           </div>
           <h1 className="font-bebas text-[clamp(56px,8vw,110px)] leading-[0.9] text-white mb-6">
