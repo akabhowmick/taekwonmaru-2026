@@ -94,7 +94,7 @@ export function HomePage() {
 
           {/* Actions */}
           <div className="flex flex-wrap items-center gap-6">
-            <Link to="/contact">
+            <Link aria-label="Go to the contact page to schedule a trial class!" to="/contact">
               <Button variant="primary" size="lg">
                 Book a $10 Trial Class →
               </Button>
@@ -189,7 +189,7 @@ export function HomePage() {
             <p className="text-[11px] uppercase tracking-[0.2em] text-muted mb-6">
               Trial Class · Any Age Group
             </p>
-            <Link to="/contact">
+            <Link aria-label="Go to the contact page to schedule a trial class!" to="/contact">
               <Button variant="red" size="lg" className="w-full lg:w-auto">
                 Claim Your Trial Spot →
               </Button>
@@ -479,7 +479,7 @@ export function HomePage() {
             Bethpage's top martial arts school for over 25 years.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
-            <Link to="/contact">
+            <Link aria-label="Go to the contact page to schedule a trial class!" to="/contact">
               <Button variant="primary" size="lg">
                 Book Your Trial Class →
               </Button>

@@ -109,7 +109,7 @@ export function Footer() {
 
         {/* Bottom */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 border-t border-border pt-8">
-          <p className="text-[11px] text-white/50">
+          <p className="text-[14px] text-white">
             © 2026 TaekwonMaru. All rights reserved. Made by{" "}
             <a
               href="https://akashbhowmick.com/"
