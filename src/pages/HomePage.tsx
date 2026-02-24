@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Award, Users, Trophy, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useEffect, useRef } from "react";
-import heroImage from "../assets/home-page.png";
+import { useEffect, useRef, useState } from "react";
 
 export function HomePage() {
   const observerRef = useRef<IntersectionObserver | null>(null);
+  const [videosLoaded, setVideosLoaded] = useState(false);
 
   useEffect(() => {
     observerRef.current = new IntersectionObserver(
@@ -14,10 +14,11 @@ export function HomePage() {
           if (entry.isIntersecting) {
             entry.target.classList.add("opacity-100", "translate-y-0");
             entry.target.classList.remove("opacity-0", "translate-y-9");
+            observerRef.current?.unobserve(entry.target); // Stop observing once visible
           }
         });
       },
-      { threshold: 0.1 },
+      { threshold: 0.1, rootMargin: "50px" },
     );
 
     document.querySelectorAll(".reveal").forEach((el) => {
@@ -27,10 +28,31 @@ export function HomePage() {
     return () => observerRef.current?.disconnect();
   }, []);
 
+  useEffect(() => {
+    const videoObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setVideosLoaded(true);
+            videoObserver.disconnect();
+          }
+        });
+      },
+      { rootMargin: "200px" },
+    );
+
+    const videoSection = document.getElementById("video-section");
+    if (videoSection) {
+      videoObserver.observe(videoSection);
+    }
+
+    return () => videoObserver.disconnect();
+  }, []);
+
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="relative min-h-[860px] lg:min-h-screen flex items-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center overflow-hidden">
         {/* Background */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_70%_40%,rgba(12,26,60,0.9)_0%,transparent_70%),radial-gradient(ellipse_50%_80%_at_30%_60%,rgba(192,57,43,0.12)_0%,transparent_60%),linear-gradient(160deg,#060c1a_0%,#0a1428_40%,#0d1a35_100%)]" />
 
@@ -42,73 +64,73 @@ export function HomePage() {
 
         {/* Large background text */}
         <div
-          className="absolute right-[-60px] top-1/2 -translate-y-1/2 font-bebas text-[clamp(200px,28vw,420px)] text-gold/[0.04] leading-none pointer-events-none tracking-tight whitespace-nowrap hidden md:block"
+          className="absolute right-[-60px] top-1/2 -translate-y-1/2 font-bebas text-[clamp(200px,28vw,420px)] text-gold/[0.04] leading-none pointer-events-none tracking-tight whitespace-nowrap"
           aria-hidden="true"
         >
-          <img src={heroImage} alt="MARU" />
+          MARU
         </div>
 
-        <div className="relative z-10 px-6 lg:px-16 pt-28 pb-8 lg:pt-40 lg:pb-32 max-w-[760px]">
+        <div className="relative z-10 px-6 lg:px-16 pt-36 pb-24 lg:pt-40 lg:pb-32 max-w-[760px]">
           {/* Eyebrow */}
-          <div className="flex items-center gap-3 mb-6 lg:mb-8 opacity-0 translate-y-7 animate-[fadeUp_0.8s_0.2s_forwards]">
+          <div className="flex items-center gap-4 mb-8 animate-[fadeUp_0.6s_ease-out_forwards]">
             <span className="w-10 h-[1.5px] bg-gold" />
-            <span className="text-[10px] lg:text-[11px] uppercase tracking-[0.3em] lg:tracking-[0.35em] text-gold">
-              Bethpage, NY · Est. 2010
+            <span className="text-[11px] uppercase tracking-[0.35em] text-gold">
+              Bethpage, NY · Est. 2000
             </span>
           </div>
 
           {/* Title */}
-          <h1 className="font-bebas text-[clamp(54px,9vw,130px)] leading-[0.92] tracking-[0.02em] text-white mb-5 lg:mb-7 opacity-0 translate-y-7 animate-[fadeUp_0.8s_0.4s_forwards]">
+          <h1 className="font-bebas text-[clamp(64px,9vw,130px)] leading-[0.92] tracking-[0.02em] text-white mb-7">
             Train Hard.
             <br />
             <span className="text-gold">Rise Far.</span>
           </h1>
 
           {/* Subtitle */}
-          <p className="text-[15px] lg:text-base leading-[1.65] lg:leading-[1.8] text-white max-w-[400px] mb-9 lg:mb-14 opacity-0 translate-y-7 animate-[fadeUp_0.8s_0.6s_forwards]">
+          <p className="text-base leading-[1.8] text-muted max-w-[500px] mb-14">
             World-class Taekwondo instruction for ages 2 to adults. Discipline, confidence, and
             black belt character — forged one class at a time at TaekwonMaru.
           </p>
 
           {/* Actions */}
-          <div className="flex flex-wrap items-center gap-3 lg:gap-6 opacity-0 translate-y-7 animate-[fadeUp_0.8s_0.8s_forwards]">
+          <div className="flex flex-wrap items-center gap-6">
             <Link to="/contact">
               <Button variant="primary" size="lg">
                 Book a $10 Trial Class →
               </Button>
             </Link>
-            <Link className="hidden md:block" to="/programs">
-              <Button variant="red">See All Programs</Button>
+            <Link to="/programs">
+              <Button variant="ghost">See All Programs</Button>
             </Link>
           </div>
         </div>
 
         {/* Trust bar */}
-        <div className="hidden relative z-10 mt-5 px-6 lg:px-16 lg:absolute lg:bottom-12 lg:left-16 lg:right-16 md:flex md:flex-wrap items-start md:items-center gap-x-6 gap-y-5 lg:gap-12 border-t border-border pt-5 lg:pt-7 opacity-0 animate-[fadeUp_0.8s_1.1s_forwards]">
+        <div className="absolute bottom-12 left-6 right-6 lg:left-16 lg:right-16 flex flex-wrap items-center gap-6 lg:gap-12 border-t border-border pt-7">
           <div className="flex flex-col gap-1">
-            <span className="font-bebas text-3xl lg:text-4xl text-gold leading-none">25+</span>
-            <span className="text-[10px] uppercase tracking-[0.2em] text-white">
+            <span className="font-bebas text-4xl text-gold leading-none">25+</span>
+            <span className="text-[10px] uppercase tracking-[0.2em] text-muted">
               Years of Excellence
             </span>
           </div>
-          <div className="hidden lg:block w-px h-10 bg-border" />
+          <div className="hidden md:block w-px h-10 bg-border" />
           <div className="flex flex-col gap-1">
-            <span className="font-bebas text-3xl lg:text-4xl text-gold leading-none">7th</span>
-            <span className="text-[10px] uppercase tracking-[0.2em] text-white">
+            <span className="font-bebas text-4xl text-gold leading-none">7th</span>
+            <span className="text-[10px] uppercase tracking-[0.2em] text-muted">
               Degree Grand Master
             </span>
           </div>
-          <div className="hidden lg:block w-px h-10 bg-border" />
+          <div className="hidden md:block w-px h-10 bg-border" />
           <div className="flex flex-col gap-1">
-            <span className="font-bebas text-3xl lg:text-4xl text-gold leading-none">1st</span>
-            <span className="text-[10px] uppercase tracking-[0.2em] text-white">
+            <span className="font-bebas text-4xl text-gold leading-none">1st</span>
+            <span className="text-[10px] uppercase tracking-[0.2em] text-muted">
               Place NYS Gov. Cup '24
             </span>
           </div>
-          <div className="hidden lg:block w-px h-10 bg-border" />
+          <div className="hidden md:block w-px h-10 bg-border" />
           <div className="flex flex-col gap-1">
-            <span className="font-bebas text-3xl lg:text-4xl text-gold leading-none">9</span>
-            <span className="text-[10px] uppercase tracking-[0.2em] text-white">
+            <span className="font-bebas text-4xl text-gold leading-none">9</span>
+            <span className="text-[10px] uppercase tracking-[0.2em] text-muted">
               Programs & Classes
             </span>
           </div>
@@ -155,7 +177,7 @@ export function HomePage() {
               <br />
               is only $10.
             </h2>
-            <p className="text-[15px] leading-[1.8] text-white max-w-[520px]">
+            <p className="text-[15px] leading-[1.8] text-muted max-w-[520px]">
               Come meet our masters, train with our students, and experience TaekwonMaru firsthand.
               One class is all it takes to see the difference a great school makes.
             </p>
@@ -164,7 +186,7 @@ export function HomePage() {
             <div className="font-bebas text-[100px] text-gold leading-none mb-2">
               <sup className="text-4xl align-super">$</sup>10
             </div>
-            <p className="text-[11px] uppercase tracking-[0.2em] text-white mb-6">
+            <p className="text-[11px] uppercase tracking-[0.2em] text-muted mb-6">
               Trial Class · Any Age Group
             </p>
             <Link to="/contact">
@@ -216,7 +238,7 @@ export function HomePage() {
               <h3 className="font-bebas text-[32px] text-white leading-none mb-4">
                 {program.name}
               </h3>
-              <p className="text-[13px] leading-[1.8] text-white mb-7">{program.desc}</p>
+              <p className="text-[13px] leading-[1.8] text-muted mb-7">{program.desc}</p>
               <Link to="/contact" className="inline-block">
                 <ArrowRight className="text-gold-dim group-hover:text-gold group-hover:translate-x-1.5 transition-all" />
               </Link>
@@ -226,7 +248,10 @@ export function HomePage() {
       </section>
 
       {/* Video Highlights */}
-      <section className="py-24 lg:py-32 px-6 lg:px-16 bg-navy-mid border-t border-border">
+      <section
+        id="video-section"
+        className="py-24 lg:py-32 px-6 lg:px-16 bg-navy-mid border-t border-border"
+      >
         <div className="max-w-7xl mx-auto">
           <div className="mb-16 reveal opacity-0 translate-y-9 transition-all duration-700">
             <div className="flex items-center gap-3.5 mb-5">
@@ -245,14 +270,21 @@ export function HomePage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-0.5">
             {/* FOX5 Feature */}
             <div className="reveal opacity-0 translate-y-9 transition-all duration-700 bg-navy-light border border-border overflow-hidden group hover:border-gold/40 lg:col-span-2 lg:row-span-2">
-              <div className="aspect-video lg:h-full">
-                <iframe
-                  src="https://www.youtube.com/embed/kXjyzx4wJi8"
-                  title="TaekwonMaru Featured on FOX5 News"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="w-full h-full border-0"
-                />
+              <div className="aspect-video lg:h-full bg-navy-light">
+                {videosLoaded ? (
+                  <iframe
+                    src="https://www.youtube-nocookie.com/embed/kXjyzx4wJi8"
+                    title="TaekwonMaru Featured on FOX5 News"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    loading="lazy"
+                    className="w-full h-full border-0"
+                  />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center">
+                    <span className="text-gold">Loading video...</span>
+                  </div>
+                )}
               </div>
               <div className="p-6 border-t border-border">
                 <span className="text-[9px] uppercase tracking-[0.25em] text-gold">
@@ -264,14 +296,21 @@ export function HomePage() {
 
             {/* Children's Classes */}
             <div className="reveal opacity-0 translate-y-9 transition-all duration-700 delay-100 bg-navy-light border border-border overflow-hidden group hover:border-gold/40">
-              <div className="aspect-video">
-                <iframe
-                  src="https://www.youtube.com/embed/SSplA3C-nUE"
-                  title="Children's Classes at TaekwonMaru"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="w-full h-full border-0"
-                />
+              <div className="aspect-video bg-navy-light">
+                {videosLoaded ? (
+                  <iframe
+                    src="https://www.youtube-nocookie.com/embed/SSplA3C-nUE"
+                    title="Children's Classes at TaekwonMaru"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    loading="lazy"
+                    className="w-full h-full border-0"
+                  />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center">
+                    <span className="text-gold">Loading...</span>
+                  </div>
+                )}
               </div>
               <div className="p-6 border-t border-border">
                 <span className="text-[9px] uppercase tracking-[0.25em] text-gold">Ages 6-9</span>
@@ -281,14 +320,21 @@ export function HomePage() {
 
             {/* Teen & Adult */}
             <div className="reveal opacity-0 translate-y-9 transition-all duration-700 delay-200 bg-navy-light border border-border overflow-hidden group hover:border-gold/40">
-              <div className="aspect-video">
-                <iframe
-                  src="https://www.youtube.com/embed/uhGYAW_hvm4"
-                  title="Teen and Adult Classes at TaekwonMaru"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="w-full h-full border-0"
-                />
+              <div className="aspect-video bg-navy-light">
+                {videosLoaded ? (
+                  <iframe
+                    src="https://www.youtube-nocookie.com/embed/uhGYAW_hvm4"
+                    title="Teen and Adult Classes at TaekwonMaru"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    loading="lazy"
+                    className="w-full h-full border-0"
+                  />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center">
+                    <span className="text-gold">Loading...</span>
+                  </div>
+                )}
               </div>
               <div className="p-6 border-t border-border">
                 <span className="text-[9px] uppercase tracking-[0.25em] text-gold">Ages 14+</span>
@@ -298,14 +344,21 @@ export function HomePage() {
 
             {/* Summer Camp */}
             <div className="reveal opacity-0 translate-y-9 transition-all duration-700 delay-100 bg-navy-light border border-border overflow-hidden group hover:border-gold/40">
-              <div className="aspect-video">
-                <iframe
-                  src="https://www.youtube.com/embed/yvk6skuwp-E"
-                  title="TaekwonMaru Summer Camp"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="w-full h-full border-0"
-                />
+              <div className="aspect-video bg-navy-light">
+                {videosLoaded ? (
+                  <iframe
+                    src="https://www.youtube-nocookie.com/embed/yvk6skuwp-E"
+                    title="TaekwonMaru Summer Camp"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    loading="lazy"
+                    className="w-full h-full border-0"
+                  />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center">
+                    <span className="text-gold">Loading...</span>
+                  </div>
+                )}
               </div>
               <div className="p-6 border-t border-border">
                 <span className="text-[9px] uppercase tracking-[0.25em] text-gold">
@@ -317,14 +370,21 @@ export function HomePage() {
 
             {/* Birthday Party */}
             <div className="reveal opacity-0 translate-y-9 transition-all duration-700 delay-200 bg-navy-light border border-border overflow-hidden group hover:border-gold/40">
-              <div className="aspect-video">
-                <iframe
-                  src="https://www.youtube.com/embed/E1LwJ5kS08I"
-                  title="Birthday Parties at TaekwonMaru"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="w-full h-full border-0"
-                />
+              <div className="aspect-video bg-navy-light">
+                {videosLoaded ? (
+                  <iframe
+                    src="https://www.youtube-nocookie.com/embed/E1LwJ5kS08I"
+                    title="Birthday Parties at TaekwonMaru"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    loading="lazy"
+                    className="w-full h-full border-0"
+                  />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center">
+                    <span className="text-gold">Loading...</span>
+                  </div>
+                )}
               </div>
               <div className="p-6 border-t border-border">
                 <span className="text-[9px] uppercase tracking-[0.25em] text-gold">
@@ -336,14 +396,21 @@ export function HomePage() {
 
             {/* KPOP Dance */}
             <div className="reveal opacity-0 translate-y-9 transition-all duration-700 delay-300 bg-navy-light border border-border overflow-hidden group hover:border-gold/40">
-              <div className="aspect-video">
-                <iframe
-                  src="https://www.youtube.com/embed/wgeDuo1tvYU"
-                  title="KPOP Dance Classes at TaekwonMaru"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="w-full h-full border-0"
-                />
+              <div className="aspect-video bg-navy-light">
+                {videosLoaded ? (
+                  <iframe
+                    src="https://www.youtube-nocookie.com/embed/wgeDuo1tvYU"
+                    title="KPOP Dance Classes at TaekwonMaru"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    loading="lazy"
+                    className="w-full h-full border-0"
+                  />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center">
+                    <span className="text-gold">Loading...</span>
+                  </div>
+                )}
               </div>
               <div className="p-6 border-t border-border">
                 <span className="text-[9px] uppercase tracking-[0.25em] text-gold">Ages 7+</span>
@@ -383,7 +450,7 @@ export function HomePage() {
                   {item.icon}
                 </div>
                 <h3 className="font-bebas text-2xl text-white mb-3">{item.title}</h3>
-                <p className="text-sm leading-relaxed text-white">{item.desc}</p>
+                <p className="text-sm leading-relaxed text-muted">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -407,9 +474,9 @@ export function HomePage() {
             <br />
             <span className="text-gold">$10.</span>
           </h2>
-          <p className="text-base leading-[1.8] text-white max-w-[500px] mx-auto mb-14">
+          <p className="text-base leading-[1.8] text-muted max-w-[500px] mx-auto mb-14">
             Meet the masters, train with the team, and see exactly why TaekwonMaru has been
-            Bethpage's top martial arts school for over 15 years.
+            Bethpage's top martial arts school for over 25 years.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
             <Link to="/contact">
@@ -434,12 +501,12 @@ const programs = [
     name: "Little Tiger",
     age: "Ages 2–5",
     desc: "Our Early Childhood Program — fun, respect-based classes built for tiny attention spans and big confidence gains. 30-minute sessions with a dedicated belt track.",
+    featured: true,
   },
   {
     name: "Children's Class",
     age: "Ages 6–9",
     desc: "Longer classes with greater curriculum focus. Discipline, respect, and taekwondo fundamentals mastered early.",
-    featured: true,
   },
   {
     name: "Pre-Teen",
@@ -454,7 +521,7 @@ const programs = [
   {
     name: "Adult",
     age: "Ages 18+",
-    desc: "Stay fit, relieve stress, and train alongside our schools community. Perfect for parents who want to train while their kids do.",
+    desc: "Stay fit, relieve stress, and train alongside our school's community. Perfect for parents who want to train while their kids do.",
   },
   {
     name: "Sparring & Demo",
