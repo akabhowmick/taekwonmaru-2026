@@ -113,7 +113,7 @@ export function Footer() {
             © 2026 TaekwonMaru. All rights reserved. Made by{" "}
             <a
               href="https://akashbhowmick.com/"
-              className="text-gold hover:text-gold-light transition-colors"
+              className="text-gold-light transition-colors"
               target="_blank"
               rel="noopener noreferrer"
             >
