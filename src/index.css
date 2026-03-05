@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Cinzel:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Cinzel:wght@400;600&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -13,14 +13,44 @@
   }
   html {
     scroll-behavior: smooth;
+    /* Increase base font size on large screens */
+    font-size: 16px;
+  }
+
+  @media (min-width: 1920px) {
+    html {
+      font-size: 18px;
+    }
+  }
+
+  @media (min-width: 2560px) {
+    html {
+      font-size: 20px;
+    }
+  }
+
+  /* Accessible link styles */
+  a:focus-visible {
+    @apply outline-none ring-2 ring-gold ring-offset-2 ring-offset-navy rounded;
+  }
+
+  /* Ensure links have underlines or clear visual distinction */
+  a:not([class*="btn"]):not([class*="nav"]):not([aria-label]) {
+    @apply underline underline-offset-2;
   }
 }
 
 @layer components {
-  /* Noise overlay */
+  /* Simplified noise - much better performance */
   body::before {
-    content: '';
-    @apply fixed inset-0 bg-noise pointer-events-none z-[1000] opacity-40;
+    content: "";
+    @apply fixed inset-0 pointer-events-none z-[1000] opacity-10;
+    background-image: radial-gradient(
+      circle at 1px 1px,
+      rgba(201, 168, 76, 0.15) 1px,
+      transparent 0
+    );
+    background-size: 40px 40px;
   }
 
   /* Custom scrollbar */
@@ -35,5 +65,35 @@
   }
   ::-webkit-scrollbar-thumb:hover {
     @apply bg-gold;
+  }
+
+  /* Max-width container for large screens */
+  .container-wide {
+    @apply max-w-[1600px] 3xl:max-w-[1800px] 4xl:max-w-[2200px] mx-auto;
+  }
+}
+
+@layer utilities {
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  .not-sr-only {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
   }
 }

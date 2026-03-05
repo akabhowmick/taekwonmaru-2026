@@ -7,9 +7,8 @@ export function cn(...inputs: ClassValue[]) {
 import grandMasterChoiImg from "@/assets/masters/grand-master-choi.jpg";
 import headMasterRinImg from "@/assets/masters/head-master-rin.jpg";
 import masterAkashImg from "@/assets/masters/master-akash.jpg";
-import masterOwenImg from "@/assets/masters/master-owen.jpg";
-import masterAmeenImg from "@/assets/masters/master-ameen.png";
 import masterAndrewImg from "@/assets/masters/master-andrew.jpg";
+import masterGreg from "@/assets/masters/greg.png";
 
 export const masters = [
   {
@@ -49,25 +48,13 @@ export const masters = [
     ],
   },
   {
-    name: "Master Owen",
-    rank: "4th Degree Black Belt",
-    image: masterOwenImg,
+    name: "Master Greg",
+    rank: "5th Degree Black Belt",
+    image: masterGreg,
     credentials: [
-      "Black Hawk Demo Team Leader 2021, 2023, 2024",
-      "St Johns University major in Radiology",
-      "2018-2021, 2024 NYS 1st Place Governors Cup",
-      "President Award Scholarship Recipient",
-    ],
-  },
-  {
-    name: "Master Ameen",
-    rank: "4th Degree Black Belt",
-    image: masterAmeenImg,
-    credentials: [
-      "Black Hawk Demo Team Leader 2022",
-      "2018-2021, 2024 NYS 1st Place Governors Cup",
-      "NYS Gold Medal: Sparring, Form, Board Breaking",
-      "Certified Lifeguard",
+      "Advanced Self Defense Tactics Instructor Police and Correctional Officers - 1996",
+      "3rd Dan Degree Hap Ki-Do 3rd Degree; World Ki-Do Federation. 1994",
+      "Pan-Am Junior and Masters TKD Championship; Silver Medal. 1993",
     ],
   },
   {
