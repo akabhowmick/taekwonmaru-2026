@@ -14,15 +14,11 @@ const events = [
     ],
   },
   {
-    title: "February Events",
-    details: [
-      "Feb 16–17: No Class (School Holiday)",
-      "Feb 9–21: Buddy Week — Bring a Friend!",
-      "Feb 23: School closed (Snow day)",
-    ],
+    title: "March Events",
+    details: ["Mar 09: NBA Brooklyn Nets Performance", "Mar 11: Photo Day", ""],
   },
   {
-    title: "Winter Promotion",
+    title: "Limited Time Promotion",
     details: ["$199 for 6 weeks · 2 classes/week", "Includes free TaekwonMaru t-shirt"],
   },
 ];
@@ -71,7 +67,7 @@ const weeklySchedule = [
       { time: "5:00 PM", name: "Children", age: "6-9" },
       { time: "5:45 PM", name: "Teenager", age: "10-13" },
       { time: "6:35 PM", name: "LT & Children", age: "2-9" },
-      { time: "7:30 PM", name: "Demo Team", age: "Competition" },
+      { time: "7:20 PM", name: "Demo Team", age: "Competition" },
       { time: "8:10 PM", name: "Advanced Teenager", age: "14-17" },
     ],
   },
