@@ -87,7 +87,7 @@ export function HomePage() {
           </h1>
 
           {/* Subtitle */}
-          <p className="text-base leading-[1.8] text-muted max-w-[500px] mb-14">
+          <p className="text-base leading-[1.8] text-white max-w-[500px] mb-14">
             World-class Taekwondo instruction for ages 3 to adults. Discipline, confidence, and
             black belt character — forged one class at a time at TaekwonMaru.
           </p>
@@ -109,28 +109,28 @@ export function HomePage() {
         <div className="hidden absolute bottom-12 left-6 right-6 lg:left-16 lg:right-16 3xl:left-32 3xl:right-32 md:flex flex-wrap items-center gap-6 lg:gap-12 border-t border-border pt-7">
           <div className="flex flex-col gap-1">
             <span className="font-bebas text-4xl text-gold leading-none">25+</span>
-            <span className="text-sm uppercase tracking-[0.2em] text-muted">
+            <span className="text-sm uppercase tracking-[0.2em] text-white">
               Years of Excellence
             </span>
           </div>
           <div className="hidden md:block w-px h-10 bg-border" />
           <div className="flex flex-col gap-1">
             <span className="font-bebas text-4xl text-gold leading-none">7th</span>
-            <span className="text-sm uppercase tracking-[0.2em] text-muted">
+            <span className="text-sm uppercase tracking-[0.2em] text-white">
               Degree Grand Master
             </span>
           </div>
           <div className="hidden md:block w-px h-10 bg-border" />
           <div className="flex flex-col gap-1">
             <span className="font-bebas text-4xl text-gold leading-none">1st</span>
-            <span className="text-sm uppercase tracking-[0.2em] text-muted">
+            <span className="text-sm uppercase tracking-[0.2em] text-white">
               Place NYS Gov. Cup '24
             </span>
           </div>
           <div className="hidden md:block w-px h-10 bg-border" />
           <div className="flex flex-col gap-1">
             <span className="font-bebas text-4xl text-gold leading-none">9</span>
-            <span className="text-sm uppercase tracking-[0.2em] text-muted">
+            <span className="text-sm uppercase tracking-[0.2em] text-white">
               Programs & Classes
             </span>
           </div>
@@ -178,7 +178,7 @@ export function HomePage() {
                 <br />
                 is only $10.
               </h2>
-              <p className="text-sm leading-[1.8] text-muted max-w-[520px]">
+              <p className="text-sm leading-[1.8] text-white max-w-[520px]">
                 Come meet our masters, train with our students, and experience TaekwonMaru
                 firsthand. One class is all it takes to see the difference a great school makes.
               </p>
@@ -187,7 +187,7 @@ export function HomePage() {
               <div className="font-bebas text-[6.25rem] text-gold leading-none mb-2">
                 <sup className="text-4xl align-super">$</sup>10
               </div>
-              <p className="text-sm uppercase tracking-[0.2em] text-muted mb-6">
+              <p className="text-sm uppercase tracking-[0.2em] text-white mb-6">
                 Trial Class · Any Age Group
               </p>
               <Link aria-label="Go to the contact page to schedule a trial class!" to="/contact">
@@ -239,7 +239,7 @@ export function HomePage() {
                   {program.age}
                 </div>
                 <h3 className="font-bebas text-3xl text-white leading-none mb-4">{program.name}</h3>
-                <p className="text-sm leading-[1.8] text-muted mb-7">{program.desc}</p>
+                <p className="text-sm leading-[1.8] text-white mb-7">{program.desc}</p>
                 <Link
                   aria-label="Go to the contact page to schedule a trial class!"
                   to="/contact"
@@ -450,7 +450,7 @@ export function HomePage() {
                   {item.icon}
                 </div>
                 <h3 className="font-bebas text-2xl text-white mb-3">{item.title}</h3>
-                <p className="text-sm leading-relaxed text-muted">{item.desc}</p>
+                <p className="text-sm leading-relaxed text-white">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -474,7 +474,7 @@ export function HomePage() {
             <br />
             <span className="text-gold">$10.</span>
           </h2>
-          <p className="text-base leading-[1.8] text-muted max-w-[500px] mx-auto mb-14">
+          <p className="text-base leading-[1.8] text-white max-w-[500px] mx-auto mb-14">
             Meet the masters, train with the team, and see exactly why TaekwonMaru has been
             Bethpage's top martial arts school for over 25 years.
           </p>

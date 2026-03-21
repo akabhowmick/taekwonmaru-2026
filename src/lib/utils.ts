@@ -68,3 +68,12 @@ export const masters = [
     ],
   },
 ];
+
+export const CLASS_OPTIONS = [
+  "Little Tiger (2-5)",
+  "Children (6-9)",
+  "Pre-Teen (10-13)",
+  "Advanced Teen (14-17)",
+  "Adults (18+)",
+  "Kpop Dance Class (7+)",
+];
