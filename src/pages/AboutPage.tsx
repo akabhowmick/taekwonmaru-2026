@@ -1,3 +1,4 @@
+import { MasterCard } from "@/components/About/MasterCard";
 import { masters } from "@/lib/utils";
 import { Award, BookOpen, Users } from "lucide-react";
 import { useEffect, useRef } from "react";
@@ -47,6 +48,7 @@ export function AboutPage() {
           </p>
         </div>
       </section>
+
       {/* Masters */}
       <section className="py-24 lg:py-32 px-6 lg:px-16 3xl:px-32 bg-navy-mid border-t border-border">
         <div className="container-wide">
@@ -69,36 +71,7 @@ export function AboutPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {masters.map((master, i) => (
-              <article
-                key={master.name}
-                className="reveal opacity-0 translate-y-9 transition-all duration-700 bg-navy-light border border-border overflow-hidden hover:border-gold/40 hover:-translate-y-1"
-                style={{ transitionDelay: `${i * 100}ms` }}
-              >
-                <div className="aspect-[3/4] bg-gradient-to-br from-navy-light to-navy flex items-center justify-center border-b border-border">
-                  <img
-                    src={master.image}
-                    alt={`${master.name}, ${master.rank}`}
-                    className="w-full h-full object-cover object-top transition-all duration-500"
-                  />
-                </div>
-                <div className="p-6">
-                  <p className="text-base 2xl:text-xl uppercase tracking-[0.25em] text-gold mb-2">
-                    {master.rank}
-                  </p>
-                  <h3 className="font-bebas text-2xl text-white mb-4">{master.name}</h3>
-                  <ul className="space-y-2">
-                    {master.credentials.slice(0, 3).map((cred, idx) => (
-                      <li
-                        key={idx}
-                        className="text-base 2xl:text-xl text-white leading-relaxed flex items-start gap-2"
-                      >
-                        <span className="text-gold mt-1">·</span>
-                        <span>{cred}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </article>
+              <MasterCard key={master.name} master={master} delay={i * 100} />
             ))}
           </div>
         </div>
