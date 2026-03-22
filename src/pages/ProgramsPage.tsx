@@ -16,7 +16,7 @@ import demoTeamImg from "@/assets/programs/demo-team.jpg";
 const allPrograms = [
   {
     name: "Little Tiger",
-    age: "Ages 2–5",
+    age: "Ages 3–5",
     subtitle: "Early Childhood Program",
     image: littleTigerImg,
     details: [
@@ -161,10 +161,10 @@ export function ProgramsPage() {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="relative pt-36 pb-24 lg:pt-48 lg:pb-32 px-6 lg:px-16 bg-gradient-to-br from-navy via-navy-mid to-navy-light overflow-hidden">
+      <section className="relative pt-36 pb-24 lg:pt-48 lg:pb-32 px-6 lg:px-16 3xl:px-32 bg-gradient-to-br from-navy via-navy-mid to-navy-light overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(201,168,76,0.08)_0%,transparent_50%)]" />
         <div
-          className="absolute right-[-40px] top-1/2 -translate-y-1/2 font-bebas text-[clamp(180px,20vw,320px)] text-gold/[0.03] leading-none pointer-events-none"
+          className="absolute right-[-40px] top-1/2 -translate-y-1/2 font-bebas text-[clamp(11.25rem,20vw,20rem)] text-gold/[0.03] leading-none pointer-events-none"
           aria-hidden="true"
         >
           TRAIN
@@ -173,11 +173,9 @@ export function ProgramsPage() {
         <div className="relative z-10 max-w-3xl">
           <div className="flex items-center gap-3.5 mb-6">
             <span className="w-10 h-[1.5px] bg-gold" />
-            <span className="text-[11px] uppercase tracking-[0.35em] text-gold">
-              Find Your Path
-            </span>
+            <span className="text-sm uppercase tracking-[0.35em] text-gold">Find Your Path</span>
           </div>
-          <h1 className="font-bebas text-[clamp(56px,8vw,110px)] leading-[0.9] text-white mb-6">
+          <h1 className="font-bebas text-[clamp(3.5rem,8vw,6.875rem)] leading-[0.9] text-white mb-6">
             Our <span className="text-gold">Programs</span>
           </h1>
           <p className="text-lg leading-relaxed text-white max-w-2xl mb-10">
@@ -185,7 +183,7 @@ export function ProgramsPage() {
             offers world-class instruction for every stage of life. Each program is designed to
             build discipline, confidence, and black belt character.
           </p>
-          <Link to="/contact">
+          <Link to="/contact" aria-label="Go to the contact page to book a $10 trial class">
             <Button variant="primary" size="lg">
               Book a $10 Trial Class →
             </Button>
@@ -194,8 +192,8 @@ export function ProgramsPage() {
       </section>
 
       {/* Programs Grid */}
-      <section className="py-24 lg:py-32 px-6 lg:px-16 bg-navy">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-24 lg:py-32 px-6 lg:px-16 3xl:px-32 bg-navy">
+        <div className="container-wide">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-0.5">
             {allPrograms.map((program, i) => (
               <article
@@ -206,7 +204,7 @@ export function ProgramsPage() {
                 <div className="aspect-video overflow-hidden border-b border-border">
                   <img
                     src={program.image}
-                    alt={program.name}
+                    alt={`${program.name} — ${program.subtitle}`}
                     className="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-500"
                   />
                 </div>
@@ -216,7 +214,7 @@ export function ProgramsPage() {
                 <h2 className="font-bebas text-3xl text-white leading-tight mb-2">
                   {program.name}
                 </h2>
-                <p className="text-xs uppercase tracking-wider text-white mb-6">
+                <p className="text-sm uppercase tracking-wider text-white mb-6">
                   {program.subtitle}
                 </p>
 
@@ -230,9 +228,13 @@ export function ProgramsPage() {
                 </ul>
 
                 <div className="pt-6 border-t border-border space-y-2">
-                  <p className="text-xs uppercase tracking-wider text-gold">Schedule</p>
-                  {program.schedule.split("|").map((time) => {
-                    return <p className="text-sm text-white">{time}</p>;
+                  <p className="text-sm uppercase tracking-wider text-gold">Schedule</p>
+                  {program.schedule.split("|").map((time, idx) => {
+                    return (
+                      <p key={idx} className="text-sm text-white">
+                        {time.trim()}
+                      </p>
+                    );
                   })}
                   {program.price && <p className="text-sm text-white">{program.price}</p>}
                 </div>
@@ -243,9 +245,9 @@ export function ProgramsPage() {
       </section>
 
       {/* Pricing CTA */}
-      <section className="py-24 lg:py-32 px-6 lg:px-16 bg-navy-mid border-t border-border">
-        <div className="max-w-5xl mx-auto text-center reveal opacity-0 translate-y-9 transition-all duration-700">
-          <h2 className="font-bebas text-[clamp(48px,6vw,80px)] leading-[0.95] text-white mb-6">
+      <section className="py-24 lg:py-32 px-6 lg:px-16 3xl:px-32 bg-navy-mid border-t border-border">
+        <div className="max-w-5xl 3xl:max-w-3xl mx-auto text-center reveal opacity-0 translate-y-9 transition-all duration-700">
+          <h2 className="font-bebas text-[clamp(3rem,6vw,5rem)] leading-[0.95] text-white mb-6">
             Ready to <span className="text-gold">Start?</span>
           </h2>
           <p className="text-lg leading-relaxed text-white max-w-2xl mx-auto mb-12">
@@ -253,12 +255,12 @@ export function ProgramsPage() {
             experience the TaekwonMaru difference.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
-            <Link to="/contact">
+            <Link to="/contact" aria-label="Go to the contact page to book your trial class">
               <Button variant="primary" size="lg">
                 Book Your Trial →
               </Button>
             </Link>
-            <Link to="/schedule">
+            <Link to="/schedule" aria-label="View the full class schedule">
               <Button variant="ghost">View Full Schedule</Button>
             </Link>
           </div>
@@ -266,12 +268,12 @@ export function ProgramsPage() {
       </section>
 
       {/* Summer Promo */}
-      <section className="py-24 lg:py-32 px-6 lg:px-16 bg-gradient-to-br from-martial-red/20 via-navy to-navy-light border-t border-martial-red/20">
+      <section className="py-24 lg:py-32 px-6 lg:px-16 3xl:px-32 bg-gradient-to-br from-martial-red/20 via-navy to-navy-light border-t border-martial-red/20">
         <div className="max-w-4xl mx-auto text-center reveal opacity-0 translate-y-9 transition-all duration-700">
-          <div className="inline-block bg-martial-red text-white text-xs uppercase tracking-wider px-4 py-2 mb-6">
+          <div className="inline-block bg-martial-red text-white text-sm uppercase tracking-wider px-4 py-2 mb-6">
             Limited Time Offer
           </div>
-          <h2 className="font-bebas text-[clamp(52px,7vw,88px)] leading-[0.9] text-white mb-6">
+          <h2 className="font-bebas text-[clamp(3.25rem,7vw,5.5rem)] leading-[0.9] text-white mb-6">
             Winter <span className="text-martial-red-bright">Promotion</span>
           </h2>
           <div className="font-bebas text-7xl text-martial-red-bright mb-4">
@@ -279,7 +281,7 @@ export function ProgramsPage() {
           </div>
           <p className="text-xl text-white mb-3">6 weeks · 2 classes per week</p>
           <p className="text-base text-white mb-10">Includes TaekwonMaru t-shirt</p>
-          <Link to="/contact">
+          <Link to="/contact" aria-label="Go to the contact page to claim the winter promotion">
             <Button variant="red" size="lg">
               Claim This Offer →
             </Button>

@@ -13,19 +13,18 @@
   }
   html {
     scroll-behavior: smooth;
-    /* Increase base font size on large screens */
-    font-size: 16px;
+    font-size: 1rem;
   }
 
   @media (min-width: 1920px) {
     html {
-      font-size: 18px;
+      font-size: 1.125rem;
     }
   }
 
   @media (min-width: 2560px) {
     html {
-      font-size: 20px;
+      font-size: 1.25rem;
     }
   }
 

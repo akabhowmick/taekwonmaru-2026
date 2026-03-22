@@ -118,15 +118,15 @@ export function SchedulePage() {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="relative pt-36 pb-24 lg:pt-48 lg:pb-32 px-6 lg:px-16 bg-gradient-to-br from-navy via-navy-mid to-navy-light overflow-hidden">
+      <section className="relative pt-36 pb-24 lg:pt-48 lg:pb-32 px-6 lg:px-16 3xl:px-32 bg-gradient-to-br from-navy via-navy-mid to-navy-light overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(201,168,76,0.08)_0%,transparent_50%)]" />
         <div className="relative z-10 max-w-4xl mx-auto text-center">
           <div className="flex items-center justify-center gap-3.5 mb-6">
             <span className="w-10 h-[1.5px] bg-gold" />
-            <span className="text-[11px] uppercase tracking-[0.35em] text-gold">Plan Ahead</span>
+            <span className="text-sm uppercase tracking-[0.35em] text-gold">Plan Ahead</span>
             <span className="w-10 h-[1.5px] bg-gold" />
           </div>
-          <h1 className="font-bebas text-[clamp(56px,8vw,110px)] leading-[0.9] text-white mb-6">
+          <h1 className="font-bebas text-[clamp(3.5rem,8vw,6.875rem)] leading-[0.9] text-white mb-6">
             Class <span className="text-gold">Schedule</span>
           </h1>
           <p className="text-lg leading-relaxed text-white max-w-2xl mx-auto mb-10">
@@ -141,14 +141,14 @@ export function SchedulePage() {
       </section>
 
       {/* Upcoming Events */}
-      <section className="py-24 lg:py-32 px-6 lg:px-16 bg-navy">
-        <div className="max-w-6xl mx-auto">
+      <section className="py-24 lg:py-32 px-6 lg:px-16 3xl:px-32 bg-navy">
+        <div className="container-wide">
           <div className="mb-12 reveal opacity-0 translate-y-9 transition-all duration-700">
             <div className="flex items-center gap-3.5 mb-5">
               <span className="w-8 h-px bg-gold" />
-              <span className="text-[10px] uppercase tracking-[0.35em] text-gold">This Month</span>
+              <span className="text-sm uppercase tracking-[0.35em] text-gold">This Month</span>
             </div>
-            <h2 className="font-bebas text-[clamp(44px,5vw,64px)] leading-[0.95] text-white">
+            <h2 className="font-bebas text-[clamp(2.75rem,5vw,4rem)] leading-[0.95] text-white">
               Upcoming <span className="text-gold">Events</span>
             </h2>
           </div>
@@ -186,16 +186,14 @@ export function SchedulePage() {
       </section>
 
       {/* Weekly Schedule */}
-      <section className="py-24 lg:py-32 px-6 lg:px-16 bg-navy-mid border-t border-border">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-24 lg:py-32 px-6 lg:px-16 3xl:px-32 bg-navy-mid border-t border-border">
+        <div className="container-wide">
           <div className="mb-12 reveal opacity-0 translate-y-9 transition-all duration-700">
             <div className="flex items-center gap-3.5 mb-5">
               <span className="w-8 h-px bg-gold" />
-              <span className="text-[10px] uppercase tracking-[0.35em] text-gold">
-                Full Schedule
-              </span>
+              <span className="text-sm uppercase tracking-[0.35em] text-gold">Full Schedule</span>
             </div>
-            <h2 className="font-bebas text-[clamp(44px,5vw,64px)] leading-[0.95] text-white">
+            <h2 className="font-bebas text-[clamp(2.75rem,5vw,4rem)] leading-[0.95] text-white">
               Weekly <span className="text-gold">Classes</span>
             </h2>
           </div>
@@ -209,7 +207,7 @@ export function SchedulePage() {
               >
                 <div className="bg-gold/10 border-b border-gold/20 p-5">
                   <h3 className="font-bebas text-2xl text-gold flex items-center gap-2">
-                    <Calendar size={20} />
+                    <Calendar size={20} aria-hidden="true" />
                     {day.day}
                   </h3>
                 </div>
@@ -219,10 +217,14 @@ export function SchedulePage() {
                       key={idx}
                       className="flex items-start gap-3 pb-4 border-b border-border last:border-0 last:pb-0"
                     >
-                      <Clock size={14} className="text-gold flex-shrink-0 mt-1" />
+                      <Clock
+                        size={14}
+                        className="text-gold flex-shrink-0 mt-1"
+                        aria-hidden="true"
+                      />
                       <div className="flex-1 min-w-0">
                         <p className="text-sm font-medium text-white mb-0.5">{cls.time}</p>
-                        <p className="text-xs text-white">
+                        <p className="text-sm text-white">
                           {cls.name} · {cls.age}
                         </p>
                       </div>
@@ -236,15 +238,15 @@ export function SchedulePage() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 lg:py-32 px-6 lg:px-16 bg-navy border-t border-border">
+      <section className="py-24 lg:py-32 px-6 lg:px-16 3xl:px-32 bg-navy border-t border-border">
         <div className="max-w-3xl mx-auto text-center reveal opacity-0 translate-y-9 transition-all duration-700">
-          <h2 className="font-bebas text-[clamp(48px,6vw,72px)] leading-[0.95] text-white mb-6">
+          <h2 className="font-bebas text-[clamp(3rem,6vw,4.5rem)] leading-[0.95] text-white mb-6">
             Ready to <span className="text-gold">Join?</span>
           </h2>
           <p className="text-lg text-white mb-10">
             Book your $10 trial class and experience TaekwonMaru firsthand.
           </p>
-          <Link to="/contact">
+          <Link to="/contact" aria-label="Go to the contact page to book your trial class">
             <Button variant="primary" size="lg">
               Book Your Trial Class →
             </Button>

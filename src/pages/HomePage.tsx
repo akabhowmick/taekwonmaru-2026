@@ -64,23 +64,23 @@ export function HomePage() {
 
         {/* Large background text */}
         <div
-          className="absolute right-[-60px] top-1/2 -translate-y-1/2 font-bebas text-[clamp(200px,28vw,420px)] text-gold/[0.04] leading-none pointer-events-none tracking-tight whitespace-nowrap"
+          className="absolute right-[-60px] top-1/2 -translate-y-1/2 font-bebas text-[clamp(12.5rem,28vw,26.25rem)] text-gold/[0.04] leading-none pointer-events-none tracking-tight whitespace-nowrap"
           aria-hidden="true"
         >
           MARU
         </div>
 
-        <div className="relative z-10 px-6 lg:px-16 pt-36 pb-24 lg:pt-40 lg:pb-32 max-w-[760px]">
+        <div className="relative z-10 px-6 lg:px-16 3xl:px-32 pt-36 pb-24 lg:pt-40 lg:pb-32 max-w-[760px] 3xl:max-w-[900px]">
           {/* Eyebrow */}
           <div className="flex items-center gap-4 mb-8 animate-[fadeUp_0.6s_ease-out_forwards]">
             <span className="w-10 h-[1.5px] bg-gold" />
-            <span className="text-[11px] uppercase tracking-[0.35em] text-gold">
+            <span className="text-sm uppercase tracking-[0.35em] text-gold">
               Bethpage, NY · Est. 2010
             </span>
           </div>
 
           {/* Title */}
-          <h1 className="font-bebas text-[clamp(64px,9vw,130px)] leading-[0.92] tracking-[0.02em] text-white mb-7">
+          <h1 className="font-bebas text-[clamp(4rem,9vw,8.125rem)] leading-[0.92] tracking-[0.02em] text-white mb-7">
             Train Hard.
             <br />
             <span className="text-gold">Rise Far.</span>
@@ -88,7 +88,7 @@ export function HomePage() {
 
           {/* Subtitle */}
           <p className="text-base leading-[1.8] text-muted max-w-[500px] mb-14">
-            World-class Taekwondo instruction for ages 2 to adults. Discipline, confidence, and
+            World-class Taekwondo instruction for ages 3 to adults. Discipline, confidence, and
             black belt character — forged one class at a time at TaekwonMaru.
           </p>
 
@@ -106,31 +106,31 @@ export function HomePage() {
         </div>
 
         {/* Trust bar */}
-        <div className="hidden absolute bottom-12 left-6 right-6 lg:left-16 lg:right-16 md:flex flex-wrap items-center gap-6 lg:gap-12 border-t border-border pt-7">
+        <div className="hidden absolute bottom-12 left-6 right-6 lg:left-16 lg:right-16 3xl:left-32 3xl:right-32 md:flex flex-wrap items-center gap-6 lg:gap-12 border-t border-border pt-7">
           <div className="flex flex-col gap-1">
             <span className="font-bebas text-4xl text-gold leading-none">25+</span>
-            <span className="text-[10px] uppercase tracking-[0.2em] text-muted">
+            <span className="text-sm uppercase tracking-[0.2em] text-muted">
               Years of Excellence
             </span>
           </div>
           <div className="hidden md:block w-px h-10 bg-border" />
           <div className="flex flex-col gap-1">
             <span className="font-bebas text-4xl text-gold leading-none">7th</span>
-            <span className="text-[10px] uppercase tracking-[0.2em] text-muted">
+            <span className="text-sm uppercase tracking-[0.2em] text-muted">
               Degree Grand Master
             </span>
           </div>
           <div className="hidden md:block w-px h-10 bg-border" />
           <div className="flex flex-col gap-1">
             <span className="font-bebas text-4xl text-gold leading-none">1st</span>
-            <span className="text-[10px] uppercase tracking-[0.2em] text-muted">
+            <span className="text-sm uppercase tracking-[0.2em] text-muted">
               Place NYS Gov. Cup '24
             </span>
           </div>
           <div className="hidden md:block w-px h-10 bg-border" />
           <div className="flex flex-col gap-1">
             <span className="font-bebas text-4xl text-gold leading-none">9</span>
-            <span className="text-[10px] uppercase tracking-[0.2em] text-muted">
+            <span className="text-sm uppercase tracking-[0.2em] text-muted">
               Programs & Classes
             </span>
           </div>
@@ -142,22 +142,22 @@ export function HomePage() {
         <div className="flex animate-marquee whitespace-nowrap">
           {[...Array(2)].map((_, i) => (
             <div key={i} className="flex">
-              <span className="font-bebas text-[15px] tracking-[0.15em] text-navy px-10">
+              <span className="font-bebas text-sm tracking-[0.15em] text-navy px-10">
                 Little Tigers <span className="text-navy/40">·</span>
               </span>
-              <span className="font-bebas text-[15px] tracking-[0.15em] text-navy px-10">
+              <span className="font-bebas text-sm tracking-[0.15em] text-navy px-10">
                 Children's Classes <span className="text-navy/40">·</span>
               </span>
-              <span className="font-bebas text-[15px] tracking-[0.15em] text-navy px-10">
+              <span className="font-bebas text-sm tracking-[0.15em] text-navy px-10">
                 Teen Programs <span className="text-navy/40">·</span>
               </span>
-              <span className="font-bebas text-[15px] tracking-[0.15em] text-navy px-10">
+              <span className="font-bebas text-sm tracking-[0.15em] text-navy px-10">
                 Adult Classes <span className="text-navy/40">·</span>
               </span>
-              <span className="font-bebas text-[15px] tracking-[0.15em] text-navy px-10">
+              <span className="font-bebas text-sm tracking-[0.15em] text-navy px-10">
                 KPOP Dance <span className="text-navy/40">·</span>
               </span>
-              <span className="font-bebas text-[15px] tracking-[0.15em] text-navy px-10">
+              <span className="font-bebas text-sm tracking-[0.15em] text-navy px-10">
                 Demo Team <span className="text-navy/40">·</span>
               </span>
             </div>
@@ -166,105 +166,105 @@ export function HomePage() {
       </div>
 
       {/* Trial CTA Band */}
-      <section className="bg-gradient-to-r from-navy-light to-[#0d1f40] border-t border-b border-border py-20 lg:py-24 px-6 lg:px-16">
-        <div className="grid lg:grid-cols-[1fr_auto] gap-12 lg:gap-16 items-center reveal opacity-0 translate-y-9 transition-all duration-700">
-          <div>
-            <p className="text-[10px] uppercase tracking-[0.35em] text-gold mb-4">Start Here</p>
-            <h2 className="font-bebas text-[clamp(42px,5vw,72px)] leading-[0.95] text-white mb-5">
-              Your child's
-              <br />
-              <strong className="text-gold font-normal">first class</strong>
-              <br />
-              is only $10.
-            </h2>
-            <p className="text-[15px] leading-[1.8] text-muted max-w-[520px]">
-              Come meet our masters, train with our students, and experience TaekwonMaru firsthand.
-              One class is all it takes to see the difference a great school makes.
-            </p>
-          </div>
-          <div className="text-center flex-shrink-0">
-            <div className="font-bebas text-[100px] text-gold leading-none mb-2">
-              <sup className="text-4xl align-super">$</sup>10
+      <section className="bg-gradient-to-r from-navy-light to-[#0d1f40] border-t border-b border-border py-20 lg:py-24 px-6 lg:px-16 3xl:px-32">
+        <div className="max-w-7xl 3xl:max-w-[1600px] mx-auto">
+          <div className="grid lg:grid-cols-[1fr_auto] gap-12 lg:gap-16 items-center reveal opacity-0 translate-y-9 transition-all duration-700">
+            <div>
+              <p className="text-sm uppercase tracking-[0.35em] text-gold mb-4">Start Here</p>
+              <h2 className="font-bebas text-[clamp(2.625rem,5vw,4.5rem)] leading-[0.95] text-white mb-5">
+                Your child's
+                <br />
+                <strong className="text-gold font-normal">first class</strong>
+                <br />
+                is only $10.
+              </h2>
+              <p className="text-sm leading-[1.8] text-muted max-w-[520px]">
+                Come meet our masters, train with our students, and experience TaekwonMaru
+                firsthand. One class is all it takes to see the difference a great school makes.
+              </p>
             </div>
-            <p className="text-[11px] uppercase tracking-[0.2em] text-muted mb-6">
-              Trial Class · Any Age Group
-            </p>
-            <Link aria-label="Go to the contact page to schedule a trial class!" to="/contact">
-              <Button variant="red" size="lg" className="w-full lg:w-auto">
-                Claim Your Trial Spot →
-              </Button>
-            </Link>
+            <div className="text-center flex-shrink-0">
+              <div className="font-bebas text-[6.25rem] text-gold leading-none mb-2">
+                <sup className="text-4xl align-super">$</sup>10
+              </div>
+              <p className="text-sm uppercase tracking-[0.2em] text-muted mb-6">
+                Trial Class · Any Age Group
+              </p>
+              <Link aria-label="Go to the contact page to schedule a trial class!" to="/contact">
+                <Button variant="red" size="lg" className="w-full lg:w-auto">
+                  Claim Your Trial Spot →
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Programs Preview */}
-      <section className="py-24 lg:py-32 px-6 lg:px-16 bg-navy">
-        <div className="mb-16 reveal opacity-0 translate-y-9 transition-all duration-700">
-          <div className="flex items-center gap-3.5 mb-5">
-            <span className="w-8 h-px bg-gold" />
-            <span className="text-[10px] uppercase tracking-[0.35em] text-gold">For Every Age</span>
-          </div>
-          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-8">
-            <h2 className="font-bebas text-[clamp(44px,6vw,80px)] leading-[0.95] tracking-[0.03em] text-white">
-              Find Your
-              <br />
-              <span className="text-gold">Program</span>
-            </h2>
-            <Link aria-label={`Read over our programs`} to="/programs">
-              <Button variant="ghost">View All Programs →</Button>
-            </Link>
-          </div>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-0.5">
-          {programs.map((program, i) => (
-            <div
-              key={program.name}
-              className={`reveal opacity-0 translate-y-9 transition-all duration-700 bg-navy-light border border-border p-11 relative overflow-hidden group hover:border-gold/40 hover:-translate-y-1 ${
-                program.featured ? "md:col-span-2 lg:col-span-1" : ""
-              }`}
-              style={{ transitionDelay: `${i * 120}ms` }}
-            >
-              <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-gold to-transparent scale-x-0 origin-left transition-transform duration-400 group-hover:scale-x-100" />
-              {program.featured && (
-                <div className="inline-block bg-gold text-navy text-[9px] uppercase tracking-[0.25em] px-3 py-1 mb-5">
-                  Most Popular
-                </div>
-              )}
-              <div className="font-bebas text-[13px] tracking-[0.2em] text-gold mb-4">
-                {program.age}
-              </div>
-              <h3 className="font-bebas text-[32px] text-white leading-none mb-4">
-                {program.name}
-              </h3>
-              <p className="text-[13px] leading-[1.8] text-muted mb-7">{program.desc}</p>
-              <Link
-                aria-label="Go to the contact page to schedule a trial class!"
-                to="/contact"
-                className="inline-block"
-              >
-                <ArrowRight className="text-gold-dim group-hover:text-gold group-hover:translate-x-1.5 transition-all" />
+      <section className="py-24 lg:py-32 px-6 lg:px-16 3xl:px-32 bg-navy">
+        <div className="container-wide">
+          <div className="mb-16 reveal opacity-0 translate-y-9 transition-all duration-700">
+            <div className="flex items-center gap-3.5 mb-5">
+              <span className="w-8 h-px bg-gold" />
+              <span className="text-sm uppercase tracking-[0.35em] text-gold">For Every Age</span>
+            </div>
+            <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-8">
+              <h2 className="font-bebas text-[clamp(2.75rem,6vw,5rem)] leading-[0.95] tracking-[0.03em] text-white">
+                Find Your
+                <br />
+                <span className="text-gold">Program</span>
+              </h2>
+              <Link aria-label={`Read over our programs`} to="/programs">
+                <Button variant="ghost">View All Programs →</Button>
               </Link>
             </div>
-          ))}
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-0.5">
+            {programs.map((program, i) => (
+              <div
+                key={program.name}
+                className={`reveal opacity-0 translate-y-9 transition-all duration-700 bg-navy-light border border-border p-11 relative overflow-hidden group hover:border-gold/40 hover:-translate-y-1 ${
+                  program.featured ? "md:col-span-2 lg:col-span-1" : ""
+                }`}
+                style={{ transitionDelay: `${i * 120}ms` }}
+              >
+                <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-gold to-transparent scale-x-0 origin-left transition-transform duration-400 group-hover:scale-x-100" />
+                {program.featured && (
+                  <div className="inline-block bg-gold text-navy text-sm uppercase tracking-[0.25em] px-3 py-1 mb-5">
+                    Most Popular
+                  </div>
+                )}
+                <div className="font-bebas text-sm tracking-[0.2em] text-gold mb-4">
+                  {program.age}
+                </div>
+                <h3 className="font-bebas text-3xl text-white leading-none mb-4">{program.name}</h3>
+                <p className="text-sm leading-[1.8] text-muted mb-7">{program.desc}</p>
+                <Link
+                  aria-label="Go to the contact page to schedule a trial class!"
+                  to="/contact"
+                  className="inline-block"
+                >
+                  <ArrowRight className="text-gold-dim group-hover:text-gold group-hover:translate-x-1.5 transition-all" />
+                </Link>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Video Highlights */}
       <section
         id="video-section"
-        className="py-24 lg:py-32 px-6 lg:px-16 bg-navy-mid border-t border-border"
+        className="py-24 lg:py-32 px-6 lg:px-16 3xl:px-32 bg-navy-mid border-t border-border"
       >
-        <div className="max-w-7xl mx-auto">
+        <div className="container-wide">
           <div className="mb-16 reveal opacity-0 translate-y-9 transition-all duration-700">
             <div className="flex items-center gap-3.5 mb-5">
               <span className="w-8 h-px bg-gold" />
-              <span className="text-[10px] uppercase tracking-[0.35em] text-gold">
-                Watch Us Train
-              </span>
+              <span className="text-sm uppercase tracking-[0.35em] text-gold">Watch Us Train</span>
             </div>
-            <h2 className="font-bebas text-[clamp(44px,6vw,80px)] leading-[0.95] tracking-[0.03em] text-white">
+            <h2 className="font-bebas text-[clamp(2.75rem,6vw,5rem)] leading-[0.95] tracking-[0.03em] text-white">
               See Us In
               <br />
               <span className="text-gold">Action</span>
@@ -291,9 +291,7 @@ export function HomePage() {
                 )}
               </div>
               <div className="p-6 border-t border-border">
-                <span className="text-[9px] uppercase tracking-[0.25em] text-gold">
-                  Media Feature
-                </span>
+                <span className="text-sm uppercase tracking-[0.25em] text-gold">Media Feature</span>
                 <h3 className="font-bebas text-2xl text-white mt-2">Featured on FOX5 News</h3>
               </div>
             </div>
@@ -317,7 +315,7 @@ export function HomePage() {
                 )}
               </div>
               <div className="p-6 border-t border-border">
-                <span className="text-[9px] uppercase tracking-[0.25em] text-gold">Ages 6-9</span>
+                <span className="text-sm uppercase tracking-[0.25em] text-gold">Ages 6-9</span>
                 <h3 className="font-bebas text-xl text-white mt-2">Children's Classes</h3>
               </div>
             </div>
@@ -341,7 +339,7 @@ export function HomePage() {
                 )}
               </div>
               <div className="p-6 border-t border-border">
-                <span className="text-[9px] uppercase tracking-[0.25em] text-gold">Ages 14+</span>
+                <span className="text-sm uppercase tracking-[0.25em] text-gold">Ages 14+</span>
                 <h3 className="font-bebas text-xl text-white mt-2">Teen & Adult Classes</h3>
               </div>
             </div>
@@ -365,7 +363,7 @@ export function HomePage() {
                 )}
               </div>
               <div className="p-6 border-t border-border">
-                <span className="text-[9px] uppercase tracking-[0.25em] text-gold">
+                <span className="text-sm uppercase tracking-[0.25em] text-gold">
                   Summer Program
                 </span>
                 <h3 className="font-bebas text-xl text-white mt-2">Summer Camp</h3>
@@ -391,7 +389,7 @@ export function HomePage() {
                 )}
               </div>
               <div className="p-6 border-t border-border">
-                <span className="text-[9px] uppercase tracking-[0.25em] text-gold">
+                <span className="text-sm uppercase tracking-[0.25em] text-gold">
                   Special Events
                 </span>
                 <h3 className="font-bebas text-xl text-white mt-2">Birthday Parties</h3>
@@ -417,7 +415,7 @@ export function HomePage() {
                 )}
               </div>
               <div className="p-6 border-t border-border">
-                <span className="text-[9px] uppercase tracking-[0.25em] text-gold">Ages 7+</span>
+                <span className="text-sm uppercase tracking-[0.25em] text-gold">Ages 7+</span>
                 <h3 className="font-bebas text-xl text-white mt-2">KPOP Dance</h3>
               </div>
             </div>
@@ -426,17 +424,15 @@ export function HomePage() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-24 lg:py-32 px-6 lg:px-16 bg-navy border-t border-border">
-        <div className="max-w-6xl mx-auto">
+      <section className="py-24 lg:py-32 px-6 lg:px-16 3xl:px-32 bg-navy border-t border-border">
+        <div className="container-wide">
           <div className="text-center mb-16 reveal opacity-0 translate-y-9 transition-all duration-700">
             <div className="flex items-center justify-center gap-3.5 mb-5">
               <span className="w-8 h-px bg-gold" />
-              <span className="text-[10px] uppercase tracking-[0.35em] text-gold">
-                Why TaekwonMaru
-              </span>
+              <span className="text-sm uppercase tracking-[0.35em] text-gold">Why TaekwonMaru</span>
               <span className="w-8 h-px bg-gold" />
             </div>
-            <h2 className="font-bebas text-[clamp(44px,6vw,80px)] leading-[0.95] tracking-[0.03em] text-white">
+            <h2 className="font-bebas text-[clamp(2.75rem,6vw,5rem)] leading-[0.95] tracking-[0.03em] text-white">
               Champion-Level
               <br />
               <span className="text-gold">Training</span>
@@ -462,18 +458,18 @@ export function HomePage() {
       </section>
 
       {/* Final CTA */}
-      <section className="relative py-32 lg:py-40 px-6 lg:px-16 bg-gradient-to-br from-[#060e20] via-[#0a1428] to-[#0d1835] border-t border-border text-center overflow-hidden">
+      <section className="relative py-32 lg:py-40 px-6 lg:px-16 3xl:px-32 bg-gradient-to-br from-[#060e20] via-[#0a1428] to-[#0d1835] border-t border-border text-center overflow-hidden">
         <div
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-bebas text-[clamp(120px,18vw,280px)] text-gold/[0.03] whitespace-nowrap pointer-events-none tracking-[0.05em]"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-bebas text-[clamp(7.5rem,18vw,17.5rem)] text-gold/[0.03] whitespace-nowrap pointer-events-none tracking-[0.05em]"
           aria-hidden="true"
         >
           TKD
         </div>
         <div className="relative z-10 max-w-2xl mx-auto reveal opacity-0 translate-y-9 transition-all duration-700">
-          <p className="text-[10px] uppercase tracking-[0.35em] text-gold mb-6">
+          <p className="text-sm uppercase tracking-[0.35em] text-gold mb-6">
             Your journey starts now
           </p>
-          <h2 className="font-bebas text-[clamp(56px,8vw,120px)] leading-[0.9] text-white mb-7">
+          <h2 className="font-bebas text-[clamp(3.5rem,8vw,7.5rem)] leading-[0.9] text-white mb-7">
             First Class.
             <br />
             <span className="text-gold">$10.</span>
@@ -503,7 +499,7 @@ export function HomePage() {
 const programs = [
   {
     name: "Little Tiger",
-    age: "Ages 2–5",
+    age: "Ages 3–5",
     desc: "Our Early Childhood Program — fun, respect-based classes built for tiny attention spans and big confidence gains. 30-minute sessions with a dedicated belt track.",
     featured: true,
   },
@@ -553,6 +549,6 @@ const whyChooseUs = [
   {
     icon: <Calendar size={28} />,
     title: "Family Focused",
-    desc: "Programs for ages 2–adult. Train together, grow together.",
+    desc: "Programs for ages 3–adult. Train together, grow together.",
   },
 ];

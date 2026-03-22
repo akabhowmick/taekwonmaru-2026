@@ -31,8 +31,9 @@ export function Navigation() {
 
   return (
     <nav
+      aria-label="Main navigation"
       className={cn(
-        "fixed top-0 left-0 right-0 z-[200] flex items-center justify-between px-6 py-3.5 transition-all duration-400 lg:px-16 lg:py-5",
+        "fixed top-0 left-0 right-0 z-[200] flex items-center justify-between px-6 py-3.5 transition-all duration-400 lg:px-16 3xl:px-32 lg:py-5",
         mobileNavBase,
         isScrolled && "lg:py-3.5",
       )}
@@ -41,19 +42,19 @@ export function Navigation() {
         <div className="w-11 h-11 border-[1.5px] border-gold rounded-full flex items-center justify-center font-serif text-base text-gold flex-shrink-0 transition-colors group-hover:bg-gold/10">
           <img src={logo} alt="TM" />
         </div>
-        <span className="font-serif text-[17px] font-semibold text-white tracking-[0.08em] ">
+        <span className="font-serif text-base font-semibold text-white tracking-[0.08em]">
           Taekwon<span className="text-gold">Maru</span>
         </span>
       </Link>
 
       {/* Desktop Nav */}
-      <ul className="hidden lg:flex items-center gap-9 list-none" role="navigation">
+      <ul className="hidden lg:flex items-center gap-9 list-none">
         {navLinks.map((link) => (
           <li key={link.path}>
             <Link
               to={link.path}
               className={cn(
-                "text-xs uppercase tracking-[0.18em] transition-colors hover:text-gold",
+                "text-sm uppercase tracking-[0.18em] transition-colors hover:text-gold",
                 location.pathname === link.path ? "text-gold" : "text-white",
               )}
             >
@@ -84,7 +85,7 @@ export function Navigation() {
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="lg:hidden fixed inset-0 top-[70px] bg-navy backdrop-blur-xl z-[190] animate-in fade-in duration-300">
-          <ul className=" bg-navy flex flex-col gap-2 p-6" role="navigation">
+          <ul className="bg-navy flex flex-col gap-2 p-6" aria-label="Mobile navigation menu">
             {navLinks.map((link) => (
               <li key={link.path}>
                 <Link

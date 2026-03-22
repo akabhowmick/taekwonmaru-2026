@@ -22,9 +22,15 @@ function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
+      <a
+        href="#main-content"
+        className="skip-link sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[300] focus:px-4 focus:py-2 focus:bg-gold focus:text-navy focus:font-semibold focus:rounded focus:outline-none"
+      >
+        Skip to main content
+      </a>
       <div className="min-h-screen flex flex-col">
         <Navigation />
-        <main className="flex-1">
+        <main id="main-content" className="flex-1" tabIndex={-1}>
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
