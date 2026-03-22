@@ -33,7 +33,7 @@ export function AboutPage() {
         <div className="relative z-10 max-w-4xl mx-auto text-center">
           <div className="flex items-center justify-center gap-3.5 mb-6">
             <span className="w-10 h-[1.5px] bg-gold" />
-            <span className="text-sm uppercase tracking-[0.35em] text-gold">Since 2010</span>
+            <span className="text-base uppercase tracking-[0.35em] text-gold">Since 2010</span>
             <span className="w-10 h-[1.5px] bg-gold" />
           </div>
           <h1 className="font-bebas text-[clamp(3.5rem,8vw,6.875rem)] leading-[0.9] text-white mb-6">
@@ -51,7 +51,7 @@ export function AboutPage() {
           <div className="text-center mb-16 reveal opacity-0 translate-y-9 transition-all duration-700">
             <div className="flex items-center justify-center gap-3.5 mb-5">
               <span className="w-8 h-px bg-gold" />
-              <span className="text-sm uppercase tracking-[0.35em] text-gold">
+              <span className="text-base uppercase tracking-[0.35em] text-gold">
                 Expert Instruction
               </span>
               <span className="w-8 h-px bg-gold" />
@@ -80,7 +80,7 @@ export function AboutPage() {
                   />
                 </div>
                 <div className="p-6">
-                  <p className="text-sm uppercase tracking-[0.25em] text-gold mb-2">
+                  <p className="text-base uppercase tracking-[0.25em] text-gold mb-2">
                     {master.rank}
                   </p>
                   <h3 className="font-bebas text-2xl text-white mb-4">{master.name}</h3>
@@ -88,7 +88,7 @@ export function AboutPage() {
                     {master.credentials.slice(0, 3).map((cred, idx) => (
                       <li
                         key={idx}
-                        className="text-sm text-white leading-relaxed flex items-start gap-2"
+                        className="text-base text-white leading-relaxed flex items-start gap-2"
                       >
                         <span className="text-gold mt-1">·</span>
                         <span>{cred}</span>
@@ -108,14 +108,16 @@ export function AboutPage() {
           <div className="reveal opacity-0 translate-y-9 transition-all duration-700">
             <div className="flex items-center gap-3.5 mb-5">
               <span className="w-8 h-px bg-gold" />
-              <span className="text-sm uppercase tracking-[0.35em] text-gold">Our Philosophy</span>
+              <span className="text-base uppercase tracking-[0.35em] text-gold">
+                Our Philosophy
+              </span>
             </div>
             <h2 className="font-bebas text-[clamp(2.75rem,5vw,4rem)] leading-[0.95] text-white mb-6">
               Excellence in
               <br />
               <span className="text-gold">Every Detail</span>
             </h2>
-            <div className="space-y-4 text-base leading-relaxed text-white">
+            <div className="space-y-4 text-xl leading-relaxed text-white">
               <p>
                 TaekwonMaru was founded on the belief that martial arts training transforms lives —
                 not just through physical technique, but through character development, discipline,
@@ -138,7 +140,7 @@ export function AboutPage() {
             <div className="bg-navy-light border border-border p-8 hover:border-gold/30 transition-colors">
               <Award className="text-gold mb-4" size={32} />
               <h3 className="font-bebas text-2xl text-white mb-3">Award-Winning Team</h3>
-              <p className="text-sm text-white leading-relaxed">
+              <p className="text-base text-white leading-relaxed">
                 5x NYS Governor's Cup champions. Featured on FOX5 News. Our Black Hawk Demo Team
                 represents the highest level of taekwondo performance.
               </p>
@@ -146,7 +148,7 @@ export function AboutPage() {
             <div className="bg-navy-light border border-border p-8 hover:border-gold/30 transition-colors">
               <Users className="text-gold mb-4" size={32} />
               <h3 className="font-bebas text-2xl text-white mb-3">Community Focused</h3>
-              <p className="text-sm text-white leading-relaxed">
+              <p className="text-base text-white leading-relaxed">
                 More than just a school — we're a family. Students train together, support each
                 other, and grow together through every belt level.
               </p>
@@ -154,7 +156,7 @@ export function AboutPage() {
             <div className="bg-navy-light border border-border p-8 hover:border-gold/30 transition-colors">
               <BookOpen className="text-gold mb-4" size={32} />
               <h3 className="font-bebas text-2xl text-white mb-3">Proven Curriculum</h3>
-              <p className="text-sm text-white leading-relaxed">
+              <p className="text-base text-white leading-relaxed">
                 Kukkiwon-certified instruction following World Taekwondo Federation standards with
                 15+ years of refinement.
               </p>

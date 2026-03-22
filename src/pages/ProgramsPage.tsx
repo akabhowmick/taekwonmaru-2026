@@ -2,139 +2,9 @@ import { Link } from "react-router-dom";
 import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useRef } from "react";
+import { PageHero } from "@/components/PageHero";
+import { allPrograms } from "@/lib/programPageInfo";
 
-import littleTigerImg from "@/assets/programs/little-tiger.jpg";
-import childrenImg from "@/assets/programs/children.jpg";
-import preTeenImg from "@/assets/programs/pre-teen.png";
-import advancedTeenImg from "@/assets/programs/advanced-teen.png";
-import adultImg from "@/assets/programs/adult.png";
-import kpopImg from "@/assets/programs/kpop.png";
-import sparringImg from "@/assets/programs/sparring.jpg";
-import juniorLeaderImg from "@/assets/programs/junior-leader.jpg";
-import demoTeamImg from "@/assets/programs/demo-team.jpg";
-
-const allPrograms = [
-  {
-    name: "Little Tiger",
-    age: "Ages 3–5",
-    subtitle: "Early Childhood Program",
-    image: littleTigerImg,
-    details: [
-      "Fun, respect-based classes designed for young children",
-      "30-minute sessions to maintain focus",
-      "Dedicated belt system for clarity and progress",
-      "Builds confidence through board breaking and loud, respectful answers",
-    ],
-    schedule: "Mon/Wed/Thu/Fri: 3:40-4:10 PM | Sat: 10:30-11:00 AM",
-  },
-  {
-    name: "Children's Class",
-    age: "Ages 6–9 (Grades 1-4)",
-    subtitle: "Foundation Building",
-    image: childrenImg,
-    details: [
-      "Greater curriculum focus with longer class times",
-      "Emphasis on discipline, respect, and fundamentals",
-      "Early exposure accelerates progression",
-      "Maintains fun learning environment",
-    ],
-    schedule: "Mon-Fri: 4:15-4:55 PM & 5:00-5:40 PM | Sat: 11:05-11:45 AM",
-  },
-  {
-    name: "Pre-Teen",
-    age: "Ages 10–13 (Grades 5-8)",
-    subtitle: "Character Development",
-    image: preTeenImg,
-    details: [
-      "Enhanced physical and mental training",
-      "Eligible for Junior Leader Program",
-      "Can join Black Hawk Demo Team",
-      "Leadership roles and mentorship opportunities",
-    ],
-    schedule:
-      "PreTeen: Mon/Tue: 5:45-6:30 PM| Teenager: Wed: 6:35-7:20 PM | Thu/Fri: 5:45-6:30 PM | Sat: 11:50 AM-12:40 PM",
-  },
-  {
-    name: "Advanced Teen",
-    age: "Ages 14–17 (Grades 8-12)",
-    subtitle: "High Performance",
-    image: advancedTeenImg,
-    details: [
-      "Focus on stamina, strength, and mental toughness",
-      "Excellent extracurricular for college applications",
-      "Stress relief and personal development",
-      "Leadership opportunities through Junior Leader Program",
-    ],
-    schedule: "Mon: 7:30-8:10 PM | Thu: 8:10-9:00 PM | Wed: 8:10-9:00 PM (w/ Adult)",
-  },
-  {
-    name: "Adult",
-    age: "Ages 18+",
-    subtitle: "Fitness & Wellness",
-    image: adultImg,
-    details: [
-      "Stay fit and healthy through martial arts",
-      "Stress relief and mental clarity",
-      "Train alongside your children",
-      "Welcoming community environment",
-    ],
-    schedule:
-      "Mon: 8:10-9:00 PM (Cardio) | Wed: 8:10-9:00 PM (w/ Advanced Teen) | Sat: 11:50 AM-12:40 PM",
-  },
-  {
-    name: "KPOP Dance",
-    age: "Ages 7+",
-    subtitle: "K-Pop Choreography",
-    image: kpopImg,
-    details: [
-      "Learn original choreography from BTS, NCT, SEVENTEEN, and more",
-      "Taught by Head Master Rin — Poomsae Gold Medalist",
-      "4-week sessions for each song",
-      "Auditions available for ONE BEAT DANCE CREW",
-    ],
-    schedule: "Friday: 6:45-7:45 PM | Saturday: 1:30-2:20 PM",
-    price: "$25 trial, $80/month",
-  },
-  {
-    name: "Sparring Class",
-    age: "Children & Teens",
-    subtitle: "Competition Training",
-    image: sparringImg,
-    details: [
-      "Controlled combat training with experienced instructors",
-      "Strategic kicks, punches, and defensive maneuvers",
-      "Develops precision, agility, and discipline",
-      "One class per week — consult Master Choi for details",
-    ],
-    schedule: "Wed: 5:45-6:30 PM (Children) | Wed: 7:30-8:10 PM (Teen)",
-  },
-  {
-    name: "Demo Team",
-    age: "Competitive Level",
-    subtitle: "Performance & Competition",
-    image: demoTeamImg,
-    details: [
-      "5x NYS Governor's Cup Champion",
-      "High-energy performances with choreography",
-      "Compete in taekwondo competitions",
-      "Community performances at hospitals, schools, and events",
-    ],
-    schedule: "Thursday: 7:30-8:10 PM | Audition-based",
-  },
-  {
-    name: "Junior Leader",
-    age: "Selected Students",
-    subtitle: "Leadership Development",
-    image: juniorLeaderImg,
-    details: [
-      "Support and guide fellow students",
-      "Develop leadership and mentorship skills",
-      "Exemplify discipline and commitment",
-      "Foster positive learning environment",
-    ],
-    schedule: "By invitation — Monthly meetings",
-  },
-];
 export function ProgramsPage() {
   const observerRef = useRef<IntersectionObserver | null>(null);
 
@@ -161,35 +31,17 @@ export function ProgramsPage() {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="relative pt-36 pb-24 lg:pt-48 lg:pb-32 px-6 lg:px-16 3xl:px-32 bg-gradient-to-br from-navy via-navy-mid to-navy-light overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(201,168,76,0.08)_0%,transparent_50%)]" />
-        <div
-          className="absolute right-[-40px] top-1/2 -translate-y-1/2 font-bebas text-[clamp(11.25rem,20vw,20rem)] text-gold/[0.03] leading-none pointer-events-none"
-          aria-hidden="true"
-        >
-          TRAIN
-        </div>
-
-        <div className="relative z-10 max-w-3xl">
-          <div className="flex items-center gap-3.5 mb-6">
-            <span className="w-10 h-[1.5px] bg-gold" />
-            <span className="text-sm uppercase tracking-[0.35em] text-gold">Find Your Path</span>
-          </div>
-          <h1 className="font-bebas text-[clamp(3.5rem,8vw,6.875rem)] leading-[0.9] text-white mb-6">
+      <PageHero
+        eyebrow="For Every Age"
+        title={
+          <>
             Our <span className="text-gold">Programs</span>
-          </h1>
-          <p className="text-lg leading-relaxed text-white max-w-2xl mb-10">
-            From Little Tigers at age 2 to competitive Demo Team and adult classes — TaekwonMaru
-            offers world-class instruction for every stage of life. Each program is designed to
-            build discipline, confidence, and black belt character.
-          </p>
-          <Link to="/contact" aria-label="Go to the contact page to book a $10 trial class">
-            <Button variant="primary" size="lg">
-              Book a $10 Trial Class →
-            </Button>
-          </Link>
-        </div>
-      </section>
+          </>
+        }
+        subtitle="From Little Tigers to adult black belts — there's a class for every age and skill level at TaekwonMaru."
+        centered
+        glow="left"
+      />
 
       {/* Programs Grid */}
       <section className="py-24 lg:py-32 px-6 lg:px-16 3xl:px-32 bg-navy">
@@ -208,19 +60,19 @@ export function ProgramsPage() {
                     className="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-500"
                   />
                 </div>
-                <div className="font-bebas text-sm tracking-[0.2em] text-gold mb-3">
+                <div className="font-bebas text-base tracking-[0.2em] text-gold mb-3">
                   {program.age}
                 </div>
                 <h2 className="font-bebas text-3xl text-white leading-tight mb-2">
                   {program.name}
                 </h2>
-                <p className="text-sm uppercase tracking-wider text-white mb-6">
+                <p className="text-base uppercase tracking-wider text-white mb-6">
                   {program.subtitle}
                 </p>
 
                 <ul className="space-y-3 mb-8">
                   {program.details.map((detail, idx) => (
-                    <li key={idx} className="flex items-start gap-3 text-sm text-white">
+                    <li key={idx} className="flex items-start gap-3 text-base text-white">
                       <Check size={16} className="text-gold flex-shrink-0 mt-0.5" />
                       <span>{detail}</span>
                     </li>
@@ -228,15 +80,15 @@ export function ProgramsPage() {
                 </ul>
 
                 <div className="pt-6 border-t border-border space-y-2">
-                  <p className="text-sm uppercase tracking-wider text-gold">Schedule</p>
+                  <p className="text-base uppercase tracking-wider text-gold">Schedule</p>
                   {program.schedule.split("|").map((time, idx) => {
                     return (
-                      <p key={idx} className="text-sm text-white">
+                      <p key={idx} className="text-base text-white">
                         {time.trim()}
                       </p>
                     );
                   })}
-                  {program.price && <p className="text-sm text-white">{program.price}</p>}
+                  {program.price && <p className="text-base text-white">{program.price}</p>}
                 </div>
               </article>
             ))}
@@ -270,7 +122,7 @@ export function ProgramsPage() {
       {/* Summer Promo */}
       <section className="py-24 lg:py-32 px-6 lg:px-16 3xl:px-32 bg-gradient-to-br from-martial-red/20 via-navy to-navy-light border-t border-martial-red/20">
         <div className="max-w-4xl mx-auto text-center reveal opacity-0 translate-y-9 transition-all duration-700">
-          <div className="inline-block bg-martial-red text-white text-sm uppercase tracking-wider px-4 py-2 mb-6">
+          <div className="inline-block bg-martial-red text-white text-base uppercase tracking-wider px-4 py-2 mb-6">
             Limited Time Offer
           </div>
           <h2 className="font-bebas text-[clamp(3.25rem,7vw,5.5rem)] leading-[0.9] text-white mb-6">
@@ -280,7 +132,7 @@ export function ProgramsPage() {
             <sup className="text-3xl align-super">$</sup>199
           </div>
           <p className="text-xl text-white mb-3">6 weeks · 2 classes per week</p>
-          <p className="text-base text-white mb-10">Includes TaekwonMaru t-shirt</p>
+          <p className="text-xl text-white mb-10">Includes TaekwonMaru t-shirt</p>
           <Link to="/contact" aria-label="Go to the contact page to claim the winter promotion">
             <Button variant="red" size="lg">
               Claim This Offer →

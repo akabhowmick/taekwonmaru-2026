@@ -13,14 +13,14 @@ export function FullTrialForm() {
   return (
     <div className="bg-navy-light border border-border p-8 lg:p-10">
       <h2 className="font-bebas text-3xl text-white mb-2">Book Your Trial</h2>
-      <p className="text-sm text-white mb-8">
+      <p className="text-base text-white mb-8">
         Fill out the form and we'll contact you to schedule your $10 trial class.
       </p>
 
       {submitStatus === "success" && (
         <div
           role="alert"
-          className="bg-green-500/10 border border-green-500/30 text-green-400 p-4 rounded mb-6 text-sm"
+          className="bg-green-500/10 border border-green-500/30 text-green-400 p-4 rounded mb-6 text-base"
         >
           Thank you! We've received your request and will contact you shortly.
         </div>
@@ -28,7 +28,7 @@ export function FullTrialForm() {
       {submitStatus === "error" && (
         <div
           role="alert"
-          className="bg-red-500/10 border border-red-500/30 text-red-400 p-4 rounded mb-6 text-sm"
+          className="bg-red-500/10 border border-red-500/30 text-red-400 p-4 rounded mb-6 text-base"
         >
           Something went wrong. Please try again or call us directly.
         </div>
@@ -45,7 +45,7 @@ export function FullTrialForm() {
           <div>
             <label
               htmlFor="full_student_name"
-              className="block text-sm uppercase tracking-wider text-gold mb-2"
+              className="block text-base uppercase tracking-wider text-gold mb-2"
             >
               Student Name *
             </label>
@@ -54,22 +54,22 @@ export function FullTrialForm() {
               id="full_student_name"
               name="student_name"
               required
-              className="w-full bg-navy border border-border text-white px-4 py-3 text-sm focus:outline-none focus:border-gold transition-colors"
+              className="w-full bg-navy border border-border text-white px-4 py-3 text-base focus:outline-none focus:border-gold transition-colors"
             />
           </div>
           <div>
             <label
               htmlFor="full_parent_name"
-              className="block text-sm uppercase tracking-wider text-gold mb-2"
+              className="block text-base uppercase tracking-wider text-gold mb-2"
             >
               Parent Name
-              <span className="text-white/60 text-sm ml-1">(if under 18)</span>
+              <span className="text-white/60 text-base ml-1">(if under 18)</span>
             </label>
             <input
               type="text"
               id="full_parent_name"
               name="parent_name"
-              className="w-full bg-navy border border-border text-white px-4 py-3 text-sm focus:outline-none focus:border-gold transition-colors"
+              className="w-full bg-navy border border-border text-white px-4 py-3 text-base focus:outline-none focus:border-gold transition-colors"
             />
           </div>
         </div>
@@ -79,7 +79,7 @@ export function FullTrialForm() {
           <div>
             <label
               htmlFor="full_email"
-              className="block text-sm uppercase tracking-wider text-gold mb-2"
+              className="block text-base uppercase tracking-wider text-gold mb-2"
             >
               Email *
             </label>
@@ -88,13 +88,13 @@ export function FullTrialForm() {
               id="full_email"
               name="email"
               required
-              className="w-full bg-navy border border-border text-white px-4 py-3 text-sm focus:outline-none focus:border-gold transition-colors"
+              className="w-full bg-navy border border-border text-white px-4 py-3 text-base focus:outline-none focus:border-gold transition-colors"
             />
           </div>
           <div>
             <label
               htmlFor="full_phone"
-              className="block text-sm uppercase tracking-wider text-gold mb-2"
+              className="block text-base uppercase tracking-wider text-gold mb-2"
             >
               Phone *
             </label>
@@ -105,7 +105,7 @@ export function FullTrialForm() {
               required
               pattern="[0-9]{10}"
               placeholder="1234567890"
-              className="w-full bg-navy border border-border text-white px-4 py-3 text-sm focus:outline-none focus:border-gold transition-colors"
+              className="w-full bg-navy border border-border text-white px-4 py-3 text-base focus:outline-none focus:border-gold transition-colors"
             />
           </div>
         </div>
@@ -115,7 +115,7 @@ export function FullTrialForm() {
           <div>
             <label
               htmlFor="full_class_interest"
-              className="block text-sm uppercase tracking-wider text-gold mb-2"
+              className="block text-base uppercase tracking-wider text-gold mb-2"
             >
               Class of Interest *
             </label>
@@ -123,7 +123,7 @@ export function FullTrialForm() {
               id="full_class_interest"
               name="class_interest"
               required
-              className="w-full bg-navy border border-border text-white px-4 py-3 text-sm focus:outline-none focus:border-gold transition-colors"
+              className="w-full bg-navy border border-border text-white px-4 py-3 text-base focus:outline-none focus:border-gold transition-colors"
             >
               {CLASS_OPTIONS.map((option) => (
                 <option key={option} value={option}>
@@ -135,7 +135,7 @@ export function FullTrialForm() {
           <div>
             <label
               htmlFor="full_age"
-              className="block text-sm uppercase tracking-wider text-gold mb-2"
+              className="block text-base uppercase tracking-wider text-gold mb-2"
             >
               Student Age *
             </label>
@@ -147,7 +147,7 @@ export function FullTrialForm() {
               min={2}
               max={99}
               placeholder="e.g. 8"
-              className="w-full bg-navy border border-border text-white px-4 py-3 text-sm focus:outline-none focus:border-gold transition-colors"
+              className="w-full bg-navy border border-border text-white px-4 py-3 text-base focus:outline-none focus:border-gold transition-colors"
             />
           </div>
         </div>
@@ -156,7 +156,7 @@ export function FullTrialForm() {
         <div>
           <label
             htmlFor="full_message"
-            className="block text-sm uppercase tracking-wider text-gold mb-2"
+            className="block text-base uppercase tracking-wider text-gold mb-2"
           >
             Message
           </label>
@@ -164,7 +164,7 @@ export function FullTrialForm() {
             id="full_message"
             name="message"
             rows={4}
-            className="w-full bg-navy border border-border text-white px-4 py-3 text-sm focus:outline-none focus:border-gold transition-colors resize-none"
+            className="w-full bg-navy border border-border text-white px-4 py-3 text-base focus:outline-none focus:border-gold transition-colors resize-none"
             placeholder="Any questions or special requests?"
           />
         </div>
@@ -179,7 +179,7 @@ export function FullTrialForm() {
           {isSubmitting ? "Sending..." : "Submit Request →"}
         </Button>
 
-        <p className="text-sm text-white text-center">
+        <p className="text-base text-white text-center">
           We'll contact you within 24 hours to schedule your trial class.
         </p>
       </form>

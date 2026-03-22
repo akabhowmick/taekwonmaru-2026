@@ -39,10 +39,10 @@ export function Navigation() {
       )}
     >
       <Link to="/" className="flex items-center gap-3.5 group" aria-label="TaekwonMaru Home">
-        <div className="w-11 h-11 border-[1.5px] border-gold rounded-full flex items-center justify-center font-serif text-base text-gold flex-shrink-0 transition-colors group-hover:bg-gold/10">
+        <div className="w-11 h-11 border-[1.5px] border-gold rounded-full flex items-center justify-center font-serif text-xl text-gold flex-shrink-0 transition-colors group-hover:bg-gold/10">
           <img src={logo} alt="TM" />
         </div>
-        <span className="font-serif text-base font-semibold text-white tracking-[0.08em]">
+        <span className="font-serif text-xl font-semibold text-white tracking-[0.08em]">
           Taekwon<span className="text-gold">Maru</span>
         </span>
       </Link>
@@ -54,7 +54,7 @@ export function Navigation() {
             <Link
               to={link.path}
               className={cn(
-                "text-sm uppercase tracking-[0.18em] transition-colors hover:text-gold",
+                "text-base uppercase tracking-[0.18em] transition-colors hover:text-gold",
                 location.pathname === link.path ? "text-gold" : "text-white",
               )}
             >
