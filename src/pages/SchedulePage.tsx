@@ -35,7 +35,9 @@ export function SchedulePage() {
         <div className="relative z-10 max-w-4xl mx-auto text-center">
           <div className="flex items-center justify-center gap-3.5 mb-6">
             <span className="w-10 h-[1.5px] bg-gold" />
-            <span className="text-base uppercase tracking-[0.35em] text-gold">Plan Ahead</span>
+            <span className="text-base 2xl:text-xl uppercase tracking-[0.35em] text-gold">
+              Plan Ahead
+            </span>
             <span className="w-10 h-[1.5px] bg-gold" />
           </div>
           <h1 className="font-bebas text-[clamp(3.5rem,8vw,6.875rem)] leading-[0.9] text-white mb-6">
@@ -45,7 +47,7 @@ export function SchedulePage() {
             Find the perfect class time for your family. Classes run Monday through Saturday with
             programs for all ages and skill levels.
           </p>
-          <div className="flex items-center justify-center gap-2 text-base text-white">
+          <div className="flex items-center justify-center gap-2 text-base 2xl:text-xl text-white">
             <MapPin size={16} className="text-gold" />
             <span>611 Hicksville Rd. Bethpage, NY 11714</span>
           </div>
@@ -58,7 +60,9 @@ export function SchedulePage() {
           <div className="mb-12 reveal opacity-0 translate-y-9 transition-all duration-700">
             <div className="flex items-center gap-3.5 mb-5">
               <span className="w-8 h-px bg-gold" />
-              <span className="text-base uppercase tracking-[0.35em] text-gold">This Month</span>
+              <span className="text-base 2xl:text-xl uppercase tracking-[0.35em] text-gold">
+                This Month
+              </span>
             </div>
             <h2 className="font-bebas text-[clamp(2.75rem,5vw,4rem)] leading-[0.95] text-white">
               Upcoming <span className="text-gold">Events</span>
@@ -84,7 +88,7 @@ export function SchedulePage() {
                   {event.details.map((detail, idx) => (
                     <p
                       key={idx}
-                      className="text-base text-white leading-relaxed flex items-start gap-2"
+                      className="text-base 2xl:text-xl text-white leading-relaxed flex items-start gap-2"
                     >
                       <span className="text-gold mt-1">·</span>
                       <span>{detail}</span>
@@ -103,7 +107,9 @@ export function SchedulePage() {
           <div className="mb-12 reveal opacity-0 translate-y-9 transition-all duration-700">
             <div className="flex items-center gap-3.5 mb-5">
               <span className="w-8 h-px bg-gold" />
-              <span className="text-base uppercase tracking-[0.35em] text-gold">Full Schedule</span>
+              <span className="text-base 2xl:text-xl uppercase tracking-[0.35em] text-gold">
+                Full Schedule
+              </span>
             </div>
             <h2 className="font-bebas text-[clamp(2.75rem,5vw,4rem)] leading-[0.95] text-white">
               Weekly <span className="text-gold">Classes</span>
@@ -135,8 +141,10 @@ export function SchedulePage() {
                         aria-hidden="true"
                       />
                       <div className="flex-1 min-w-0">
-                        <p className="text-base font-medium text-white mb-0.5">{cls.time}</p>
-                        <p className="text-base text-white">
+                        <p className="text-base 2xl:text-xl font-medium text-white mb-0.5">
+                          {cls.time}
+                        </p>
+                        <p className="text-base 2xl:text-xl text-white">
                           {cls.name} · {cls.age}
                         </p>
                       </div>

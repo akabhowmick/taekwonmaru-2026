@@ -14,7 +14,9 @@ export function ProgramsPreview() {
         <div className="mb-16 reveal opacity-0 translate-y-9 transition-all duration-700">
           <div className="flex items-center gap-3.5 mb-5">
             <span className="w-8 h-px bg-gold" />
-            <span className="text-base uppercase tracking-[0.35em] text-gold">For Every Age</span>
+            <span className="text-base 2xl:text-xl uppercase tracking-[0.35em] text-gold">
+              For Every Age
+            </span>
           </div>
           <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-8">
             <h2 className="font-bebas text-[clamp(2.75rem,6vw,5rem)] leading-[0.95] tracking-[0.03em] text-white">
@@ -38,16 +40,12 @@ export function ProgramsPreview() {
               style={{ transitionDelay: `${i * 120}ms` }}
             >
               <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-gold to-transparent scale-x-0 origin-left transition-transform duration-400 group-hover:scale-x-100" />
-              {program.featured && (
-                <div className="inline-block bg-gold text-navy text-base uppercase tracking-[0.25em] px-3 py-1 mb-5">
-                  Most Popular
-                </div>
-              )}
-              <div className="font-bebas text-base tracking-[0.2em] text-gold mb-4">
+
+              <div className="font-bebas text-base 2xl:text-xl tracking-[0.2em] text-gold mb-4">
                 {program.age}
               </div>
               <h3 className="font-bebas text-3xl text-white leading-none mb-4">{program.name}</h3>
-              <p className="text-base leading-[1.8] text-white mb-7">{program.desc}</p>
+              <p className="text-lg 2xl:text-xl leading-[1.8] text-white mb-7">{program.desc}</p>
               <Link
                 aria-label="Go to the contact page to schedule a trial class!"
                 to="/contact"
@@ -55,6 +53,14 @@ export function ProgramsPreview() {
               >
                 <ArrowRight className="text-gold-dim group-hover:text-gold group-hover:translate-x-1.5 transition-all" />
               </Link>
+              <div className="mt-4">
+                {" "}
+                {program.featured && (
+                  <div className="inline-block bg-gold text-navy text-base 2xl:text-xl uppercase tracking-[0.25em] px-3 py-1 mb-5">
+                    Most Popular
+                  </div>
+                )}
+              </div>
             </div>
           ))}
         </div>

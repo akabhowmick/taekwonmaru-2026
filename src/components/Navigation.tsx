@@ -54,7 +54,7 @@ export function Navigation() {
             <Link
               to={link.path}
               className={cn(
-                "text-base uppercase tracking-[0.18em] transition-colors hover:text-gold",
+                "text-base 2xl:text-xl uppercase tracking-[0.18em] transition-colors hover:text-gold",
                 location.pathname === link.path ? "text-gold" : "text-white",
               )}
             >

@@ -15,7 +15,7 @@ export function ContactInfoPanel() {
               <Phone size={20} className="text-gold" aria-hidden="true" />
             </div>
             <div>
-              <p className="text-base uppercase tracking-wider text-gold mb-1">Phone</p>
+              <p className="text-base 2xl:text-xl uppercase tracking-wider text-gold mb-1">Phone</p>
               <p className="text-xl text-white">(516) 433-1887</p>
             </div>
           </a>
@@ -29,7 +29,7 @@ export function ContactInfoPanel() {
               <Mail size={20} className="text-gold" aria-hidden="true" />
             </div>
             <div>
-              <p className="text-base uppercase tracking-wider text-gold mb-1">Email</p>
+              <p className="text-base 2xl:text-xl uppercase tracking-wider text-gold mb-1">Email</p>
               <p className="text-xl text-white break-all">usataekwonmaru@gmail.com</p>
             </div>
           </a>
@@ -45,7 +45,9 @@ export function ContactInfoPanel() {
               <MapPin size={20} className="text-gold" aria-hidden="true" />
             </div>
             <div>
-              <p className="text-base uppercase tracking-wider text-gold mb-1">Location</p>
+              <p className="text-base 2xl:text-xl uppercase tracking-wider text-gold mb-1">
+                Location
+              </p>
               <p className="text-xl text-white">
                 611 Hicksville Rd.
                 <br />
@@ -57,8 +59,8 @@ export function ContactInfoPanel() {
       </div>
 
       <div className="pt-8 border-t border-border">
-        <h3 className="text-base uppercase tracking-wider text-gold mb-4">Hours</h3>
-        <div className="space-y-2 text-base text-white">
+        <h3 className="text-base 2xl:text-xl uppercase tracking-wider text-gold mb-4">Hours</h3>
+        <div className="space-y-2 text-base 2xl:text-xl text-white">
           <div className="flex justify-between">
             <span className="text-white">Mon / Wed / Thu</span>
             <span>3:00–9:00 PM</span>

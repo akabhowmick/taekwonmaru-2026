@@ -9,16 +9,6 @@ const trustStats = [
   { value: "9", label: "Programs & Classes" },
 ];
 
-/**
- * HomeHero
- *
- * Layout: flex-col with two rows:
- *   1. flex-1 main content area (2-col on desktop: text | form)
- *   2. trust bar — in normal flow at the bottom, never overlaps content
- *
- * On mobile: form is hidden, two CTA buttons are shown instead.
- * On desktop: form replaces the CTA buttons on the right column.
- */
 export function HomeHero() {
   return (
     <section className="relative min-h-screen flex flex-col overflow-hidden">
@@ -46,7 +36,7 @@ export function HomeHero() {
           <div>
             <div className="flex items-center gap-4 mb-8 animate-[fadeUp_0.6s_ease-out_forwards]">
               <span className="w-10 h-[1.5px] bg-gold" />
-              <span className="text-base uppercase tracking-[0.35em] text-gold">
+              <span className="text-base 2xl:text-xl uppercase tracking-[0.35em] text-gold">
                 Bethpage, NY · Est. 2010
               </span>
             </div>
@@ -77,7 +67,7 @@ export function HomeHero() {
             {/* Desktop secondary CTA below form column */}
             <div className="hidden lg:flex items-center gap-6">
               <Link aria-label="Read over our programs" to="/programs">
-                <Button variant="ghost">See All Programs →</Button>
+                <Button variant="red">See All Programs →</Button>
               </Link>
             </div>
           </div>
@@ -96,7 +86,9 @@ export function HomeHero() {
             {i > 0 && <div key={`divider-${i}`} className="hidden md:block w-px h-10 bg-border" />}
             <div key={stat.label} className="flex flex-col gap-1">
               <span className="font-bebas text-4xl text-gold leading-none">{stat.value}</span>
-              <span className="text-base uppercase tracking-[0.2em] text-white">{stat.label}</span>
+              <span className="text-base 2xl:text-xl uppercase tracking-[0.2em] text-white">
+                {stat.label}
+              </span>
             </div>
           </>
         ))}

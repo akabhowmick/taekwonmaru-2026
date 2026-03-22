@@ -15,7 +15,7 @@ export function FinalCta() {
         TKD
       </div>
       <div className="relative z-10 max-w-2xl mx-auto reveal opacity-0 translate-y-9 transition-all duration-700">
-        <p className="text-base uppercase tracking-[0.35em] text-gold mb-6">
+        <p className="text-base 2xl:text-xl uppercase tracking-[0.35em] text-gold mb-6">
           Your journey starts now
         </p>
         <h2 className="font-bebas text-[clamp(3.5rem,8vw,7.5rem)] leading-[0.9] text-white mb-7">
@@ -25,7 +25,7 @@ export function FinalCta() {
         </h2>
         <p className="text-xl leading-[1.8] text-white max-w-[500px] mx-auto mb-14">
           Meet the masters, train with the team, and see exactly why TaekwonMaru has been Bethpage's
-          top martial arts school for over 25 years.
+          top martial arts school for over 15 years.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
           <Link aria-label="Go to the contact page to schedule a trial class!" to="/contact">

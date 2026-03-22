@@ -60,19 +60,22 @@ export function ProgramsPage() {
                     className="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-500"
                   />
                 </div>
-                <div className="font-bebas text-base tracking-[0.2em] text-gold mb-3">
+                <div className="font-bebas text-base 2xl:text-xl tracking-[0.2em] text-gold mb-3">
                   {program.age}
                 </div>
                 <h2 className="font-bebas text-3xl text-white leading-tight mb-2">
                   {program.name}
                 </h2>
-                <p className="text-base uppercase tracking-wider text-white mb-6">
+                <p className="text-base 2xl:text-xl uppercase tracking-wider text-white mb-6">
                   {program.subtitle}
                 </p>
 
                 <ul className="space-y-3 mb-8">
                   {program.details.map((detail, idx) => (
-                    <li key={idx} className="flex items-start gap-3 text-base text-white">
+                    <li
+                      key={idx}
+                      className="flex items-start gap-3 text-base 2xl:text-xl text-white"
+                    >
                       <Check size={16} className="text-gold flex-shrink-0 mt-0.5" />
                       <span>{detail}</span>
                     </li>
@@ -80,15 +83,19 @@ export function ProgramsPage() {
                 </ul>
 
                 <div className="pt-6 border-t border-border space-y-2">
-                  <p className="text-base uppercase tracking-wider text-gold">Schedule</p>
+                  <p className="text-base 2xl:text-xl uppercase tracking-wider text-gold">
+                    Schedule
+                  </p>
                   {program.schedule.split("|").map((time, idx) => {
                     return (
-                      <p key={idx} className="text-base text-white">
+                      <p key={idx} className="text-base 2xl:text-xl text-white">
                         {time.trim()}
                       </p>
                     );
                   })}
-                  {program.price && <p className="text-base text-white">{program.price}</p>}
+                  {program.price && (
+                    <p className="text-base 2xl:text-xl text-white">{program.price}</p>
+                  )}
                 </div>
               </article>
             ))}
@@ -122,7 +129,7 @@ export function ProgramsPage() {
       {/* Summer Promo */}
       <section className="py-24 lg:py-32 px-6 lg:px-16 3xl:px-32 bg-gradient-to-br from-martial-red/20 via-navy to-navy-light border-t border-martial-red/20">
         <div className="max-w-4xl mx-auto text-center reveal opacity-0 translate-y-9 transition-all duration-700">
-          <div className="inline-block bg-martial-red text-white text-base uppercase tracking-wider px-4 py-2 mb-6">
+          <div className="inline-block bg-martial-red text-white text-base 2xl:text-xl uppercase tracking-wider px-4 py-2 mb-6">
             Limited Time Offer
           </div>
           <h2 className="font-bebas text-[clamp(3.25rem,7vw,5.5rem)] leading-[0.9] text-white mb-6">

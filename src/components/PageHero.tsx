@@ -46,7 +46,9 @@ export function PageHero({
             }`}
           >
             <span className="w-10 h-[1.5px] bg-gold" />
-            <span className="text-sm uppercase tracking-[0.35em] text-gold">{eyebrow}</span>
+            <span className="text-base 2xl:text-xl uppercase tracking-[0.35em] text-gold">
+              {eyebrow}
+            </span>
             <span className="w-10 h-[1.5px] bg-gold" />
           </div>
 

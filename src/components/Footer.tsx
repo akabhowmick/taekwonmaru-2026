@@ -37,11 +37,11 @@ export function Footer() {
               <div className="font-serif text-2xl font-semibold text-white tracking-[0.08em] mb-4">
                 Taekwon<span className="text-gold">Maru</span>
               </div>
-              <p className="text-sm leading-[1.8] text-white max-w-[260px] mb-7">
+              <p className="text-base 2xl:text-xl leading-[1.8] text-white max-w-[260px] mb-7">
                 World-class Taekwondo instruction for the whole family. Building champions in sport
                 and in life since 2010.
               </p>
-              <address className="text-sm leading-[1.9] text-white not-italic">
+              <address className="text-base 2xl:text-xl leading-[1.9] text-white not-italic">
                 611 Hicksville Rd. Bethpage, NY 11714
                 <br />
                 <a
@@ -64,13 +64,15 @@ export function Footer() {
 
             {/* Navigate */}
             <div>
-              <h3 className="text-sm uppercase tracking-[0.3em] text-gold mb-6">Navigate</h3>
+              <h3 className="text-base 2xl:text-xl uppercase tracking-[0.3em] text-gold mb-6">
+                Navigate
+              </h3>
               <ul className="flex flex-col gap-3 list-none">
                 {footerLinks.navigate.map((link) => (
                   <li key={link.path}>
                     <Link
                       to={link.path}
-                      className="text-sm text-white hover:text-white transition-colors"
+                      className="text-base 2xl:text-xl text-white hover:text-white transition-colors"
                     >
                       {link.name}
                     </Link>
@@ -81,13 +83,15 @@ export function Footer() {
 
             {/* Programs */}
             <div>
-              <h3 className="text-sm uppercase tracking-[0.3em] text-gold mb-6">Programs</h3>
+              <h3 className="text-base 2xl:text-xl uppercase tracking-[0.3em] text-gold mb-6">
+                Programs
+              </h3>
               <ul className="flex flex-col gap-3 list-none">
                 {footerLinks.programs.map((link) => (
                   <li key={link.name}>
                     <Link
                       to={link.path}
-                      className="text-sm text-white hover:text-white transition-colors"
+                      className="text-base 2xl:text-xl text-white hover:text-white transition-colors"
                     >
                       {link.name}
                     </Link>
@@ -98,10 +102,15 @@ export function Footer() {
 
             {/* Hours */}
             <div>
-              <h3 className="text-sm uppercase tracking-[0.3em] text-gold mb-6">Hours</h3>
+              <h3 className="text-base 2xl:text-xl uppercase tracking-[0.3em] text-gold mb-6">
+                Hours
+              </h3>
               <ul className="flex flex-col gap-2.5 list-none">
                 {hours.map((hour) => (
-                  <li key={hour.days} className="flex justify-between gap-4 text-sm text-white">
+                  <li
+                    key={hour.days}
+                    className="flex justify-between gap-4 text-base 2xl:text-xl text-white"
+                  >
                     <span className="text-white">{hour.days}</span>
                     <span>{hour.time}</span>
                   </li>
@@ -112,7 +121,7 @@ export function Footer() {
 
           {/* Bottom */}
           <div className="flex flex-col md:flex-row items-center justify-between gap-6 border-t border-border pt-8">
-            <p className="text-sm text-white">
+            <p className="text-base 2xl:text-xl text-white">
               © 2026 TaekwonMaru. All rights reserved. Made by{" "}
               <a
                 href="https://akashbhowmick.com/"

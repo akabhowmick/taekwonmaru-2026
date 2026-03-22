@@ -4,13 +4,13 @@ export const programs = [
   {
     name: "Little Tiger",
     age: "Ages 3–5",
-    desc: "Our Early Childhood Program — fun, respect-based classes built for tiny attention spans and big confidence gains. 30-minute sessions with a dedicated belt track.",
-    featured: true,
+    desc: "Our Early Childhood Program — fun, respect-based classes built for tiny attention spans and big confidence gains.",
   },
   {
     name: "Children's Class",
     age: "Ages 6–9",
     desc: "Longer classes with greater curriculum focus. Discipline, respect, and taekwondo fundamentals mastered early.",
+    featured: true,
   },
   {
     name: "Pre-Teen",
@@ -20,7 +20,7 @@ export const programs = [
   {
     name: "Advanced Teen",
     age: "Ages 14–17",
-    desc: "High school program focused on stamina, strength, and mental toughness. An outstanding extracurricular for college applications.",
+    desc: "High school program focused on stamina, strength, and fortitude. An outstanding extracurricular for college applications.",
   },
   {
     name: "Adult",

@@ -85,7 +85,9 @@ export function VideoHighlights() {
         <div className="mb-16 reveal opacity-0 translate-y-9 transition-all duration-700">
           <div className="flex items-center gap-3.5 mb-5">
             <span className="w-8 h-px bg-gold" />
-            <span className="text-base uppercase tracking-[0.35em] text-gold">Watch Us Train</span>
+            <span className="text-base 2xl:text-xl uppercase tracking-[0.35em] text-gold">
+              Watch Us Train
+            </span>
           </div>
           <h2 className="font-bebas text-[clamp(2.75rem,6vw,5rem)] leading-[0.95] tracking-[0.03em] text-white">
             See Us In
@@ -101,7 +103,9 @@ export function VideoHighlights() {
               className={`reveal opacity-0 translate-y-9 transition-all duration-700 bg-navy-light border border-border overflow-hidden group hover:border-gold/40 ${video.span}`}
               style={{ transitionDelay: `${(i % 3) * 100}ms` }}
             >
-              <div className={`bg-navy-light ${video.span ? "aspect-video lg:h-full" : "aspect-video"}`}>
+              <div
+                className={`bg-navy-light ${video.span ? "aspect-video lg:h-full" : "aspect-video"}`}
+              >
                 {loaded ? (
                   <iframe
                     src={video.src}
@@ -118,7 +122,9 @@ export function VideoHighlights() {
                 )}
               </div>
               <div className="p-6 border-t border-border">
-                <span className="text-base uppercase tracking-[0.25em] text-gold">{video.label}</span>
+                <span className="text-base 2xl:text-xl uppercase tracking-[0.25em] text-gold">
+                  {video.label}
+                </span>
                 <h3 className={`font-bebas text-white mt-2 ${video.span ? "text-2xl" : "text-xl"}`}>
                   {video.heading}
                 </h3>

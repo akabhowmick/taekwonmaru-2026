@@ -64,7 +64,7 @@ export function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-bebas text-xl text-white mb-2">{step.title}</h3>
-                  <p className="text-base text-white leading-relaxed">{step.desc}</p>
+                  <p className="text-base 2xl:text-xl text-white leading-relaxed">{step.desc}</p>
                 </div>
               </div>
             ))}

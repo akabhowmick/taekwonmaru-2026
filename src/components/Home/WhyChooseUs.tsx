@@ -11,7 +11,9 @@ export function WhyChooseUs() {
         <div className="text-center mb-16 reveal opacity-0 translate-y-9 transition-all duration-700">
           <div className="flex items-center justify-center gap-3.5 mb-5">
             <span className="w-8 h-px bg-gold" />
-            <span className="text-base uppercase tracking-[0.35em] text-gold">Why TaekwonMaru</span>
+            <span className="text-base 2xl:text-xl uppercase tracking-[0.35em] text-gold">
+              Why TaekwonMaru
+            </span>
             <span className="w-8 h-px bg-gold" />
           </div>
           <h2 className="font-bebas text-[clamp(2.75rem,6vw,5rem)] leading-[0.95] tracking-[0.03em] text-white">
@@ -32,7 +34,7 @@ export function WhyChooseUs() {
                 {item.icon}
               </div>
               <h3 className="font-bebas text-2xl text-white mb-3">{item.title}</h3>
-              <p className="text-base leading-relaxed text-white">{item.desc}</p>
+              <p className="text-base 2xl:text-xl leading-relaxed text-white">{item.desc}</p>
             </div>
           ))}
         </div>

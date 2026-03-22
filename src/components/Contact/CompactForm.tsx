@@ -13,12 +13,12 @@ export function CompactTrialForm() {
   return (
     <div className="bg-navy/80 backdrop-blur-sm border border-border p-8">
       <h2 className="font-bebas text-2xl text-white mb-1">Book Your Trial</h2>
-      <p className="text-base text-white mb-6">$10 trial · Any program · All ages</p>
+      <p className="text-base 2xl:text-xl text-white mb-6">$10 trial · Any program · All ages</p>
 
       {submitStatus === "success" && (
         <div
           role="alert"
-          className="bg-green-500/10 border border-green-500/30 text-green-400 p-3 rounded mb-4 text-base"
+          className="bg-green-500/10 border border-green-500/30 text-green-400 p-3 rounded mb-4 text-base 2xl:text-xl"
         >
           Sent! We'll contact you within 24 hours.
         </div>
@@ -26,7 +26,7 @@ export function CompactTrialForm() {
       {submitStatus === "error" && (
         <div
           role="alert"
-          className="bg-red-500/10 border border-red-500/30 text-red-400 p-3 rounded mb-4 text-base"
+          className="bg-red-500/10 border border-red-500/30 text-red-400 p-3 rounded mb-4 text-base 2xl:text-xl"
         >
           Something went wrong. Please try again or call us.
         </div>
@@ -43,7 +43,7 @@ export function CompactTrialForm() {
           <div>
             <label
               htmlFor="compact_student_name"
-              className="block text-xs uppercase tracking-wider text-gold mb-1.5"
+              className="block text-base 2xl:text-xl uppercase tracking-wider text-gold mb-1.5"
             >
               Student Name *
             </label>
@@ -52,13 +52,13 @@ export function CompactTrialForm() {
               id="compact_student_name"
               name="student_name"
               required
-              className="w-full bg-navy border border-border text-white px-3 py-2.5 text-base focus:outline-none focus:border-gold transition-colors"
+              className="w-full bg-navy border border-border text-white px-3 py-2.5 text-base 2xl:text-xl focus:outline-none focus:border-gold transition-colors"
             />
           </div>
           <div>
             <label
               htmlFor="compact_parent_name"
-              className="block text-xs uppercase tracking-wider text-gold mb-1.5"
+              className="block text-base 2xl:text-xl uppercase tracking-wider text-gold mb-1.5"
             >
               Parent Name
               <span className="text-white/60 ml-1">(if under 18)</span>
@@ -67,7 +67,7 @@ export function CompactTrialForm() {
               type="text"
               id="compact_parent_name"
               name="parent_name"
-              className="w-full bg-navy border border-border text-white px-3 py-2.5 text-base focus:outline-none focus:border-gold transition-colors"
+              className="w-full bg-navy border border-border text-white px-3 py-2.5 text-base 2xl:text-xl focus:outline-none focus:border-gold transition-colors"
             />
           </div>
         </div>
@@ -77,7 +77,7 @@ export function CompactTrialForm() {
           <div>
             <label
               htmlFor="compact_email"
-              className="block text-xs uppercase tracking-wider text-gold mb-1.5"
+              className="block text-base 2xl:text-xl uppercase tracking-wider text-gold mb-1.5"
             >
               Email *
             </label>
@@ -86,13 +86,13 @@ export function CompactTrialForm() {
               id="compact_email"
               name="email"
               required
-              className="w-full bg-navy border border-border text-white px-3 py-2.5 text-base focus:outline-none focus:border-gold transition-colors"
+              className="w-full bg-navy border border-border text-white px-3 py-2.5 text-base 2xl:text-xl focus:outline-none focus:border-gold transition-colors"
             />
           </div>
           <div>
             <label
               htmlFor="compact_phone"
-              className="block text-xs uppercase tracking-wider text-gold mb-1.5"
+              className="block text-base 2xl:text-xl uppercase tracking-wider text-gold mb-1.5"
             >
               Phone *
             </label>
@@ -103,7 +103,7 @@ export function CompactTrialForm() {
               required
               pattern="[0-9]{10}"
               placeholder="1234567890"
-              className="w-full bg-navy border border-border text-white px-3 py-2.5 text-base focus:outline-none focus:border-gold transition-colors"
+              className="w-full bg-navy border border-border text-white px-3 py-2.5 text-base 2xl:text-xl focus:outline-none focus:border-gold transition-colors"
             />
           </div>
         </div>
@@ -113,7 +113,7 @@ export function CompactTrialForm() {
           <div>
             <label
               htmlFor="compact_class_interest"
-              className="block text-xs uppercase tracking-wider text-gold mb-1.5"
+              className="block text-base 2xl:text-xl uppercase tracking-wider text-gold mb-1.5"
             >
               Class *
             </label>
@@ -121,7 +121,7 @@ export function CompactTrialForm() {
               id="compact_class_interest"
               name="class_interest"
               required
-              className="w-full bg-navy border border-border text-white px-3 py-2.5 text-base focus:outline-none focus:border-gold transition-colors"
+              className="w-full bg-navy border border-border text-white px-3 py-2.5 text-base 2xl:text-xl focus:outline-none focus:border-gold transition-colors"
             >
               {CLASS_OPTIONS.map((option) => (
                 <option key={option} value={option}>
@@ -133,7 +133,7 @@ export function CompactTrialForm() {
           <div>
             <label
               htmlFor="compact_age"
-              className="block text-xs uppercase tracking-wider text-gold mb-1.5"
+              className="block text-base 2xl:text-xl uppercase tracking-wider text-gold mb-1.5"
             >
               Student Age *
             </label>
@@ -145,7 +145,7 @@ export function CompactTrialForm() {
               min={2}
               max={99}
               placeholder="e.g. 8"
-              className="w-full bg-navy border border-border text-white px-3 py-2.5 text-base focus:outline-none focus:border-gold transition-colors"
+              className="w-full bg-navy border border-border text-white px-3 py-2.5 text-base 2xl:text-xl focus:outline-none focus:border-gold transition-colors"
             />
           </div>
         </div>
@@ -154,7 +154,7 @@ export function CompactTrialForm() {
         <div>
           <label
             htmlFor="compact_message"
-            className="block text-xs uppercase tracking-wider text-gold mb-1.5"
+            className="block text-base 2xl:text-xl uppercase tracking-wider text-gold mb-1.5"
           >
             Message
           </label>
@@ -162,7 +162,7 @@ export function CompactTrialForm() {
             id="compact_message"
             name="message"
             rows={3}
-            className="w-full bg-navy border border-border text-white px-3 py-2.5 text-base focus:outline-none focus:border-gold transition-colors resize-none"
+            className="w-full bg-navy border border-border text-white px-3 py-2.5 text-base 2xl:text-xl focus:outline-none focus:border-gold transition-colors resize-none"
             placeholder="Any questions or special requests?"
           />
         </div>
