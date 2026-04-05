@@ -4,9 +4,9 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-import grandMasterChoiImg from "@/assets/masters/grand-master-choi.jpg";
-import headMasterRinImg from "@/assets/masters/head-master-rin.jpg";
-import masterAkashImg from "@/assets/masters/master-akash.jpg";
+import grandMasterChoiImg from "@/assets/masters/grand-master-choi-1.png";
+import headMasterRinImg from "@/assets/masters/head-master-rin.png";
+import masterAkashImg from "@/assets/masters/master-akash.png";
 import masterAndrewImg from "@/assets/masters/master-andrew.jpg";
 import masterGreg from "@/assets/masters/greg.png";
 
