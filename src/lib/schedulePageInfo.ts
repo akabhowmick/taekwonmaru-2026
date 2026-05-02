@@ -9,8 +9,12 @@ export const events = [
     ],
   },
   {
-    title: "March Events",
-    details: ["Mar 09: NBA Brooklyn Nets Performance", "Mar 11: Photo Day", ""],
+    title: "May Events",
+    details: [
+      "May 02: Family Class",
+      "May 05: Movie Night (No regular classes)",
+      "May 25: Memorial Day (No Classes)",
+    ],
   },
   {
     title: "Limited Time Promotion",
@@ -28,7 +32,6 @@ export const weeklySchedule = [
       { time: "5:45 - 6:30 PM", name: "Pre-Teen", age: "10-13" },
       { time: "6:35 - 7:15 PM", name: "LT & Children", age: "3-9" },
       { time: "7:20 - 8:10 PM", name: "Advanced Teen", age: "14-17" },
-      { time: "8:10 - 9:00 PM", name: "Adult Cardio", age: "18+" },
     ],
   },
   {
