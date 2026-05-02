@@ -3,9 +3,9 @@ export const events = [
     title: "KPOP Dance Class",
     details: [
       "Friday 6:45–7:45 PM",
-      "Jennie/With the IE & Seventeen/Worth It",
+      "LNGSHOT - Moonwalkin’",
       "Saturday 1:30–2:20 PM",
-      "Boynextdoor/Hollywood Action",
+      "TXT - STICK WITH YOU ",
     ],
   },
   {
