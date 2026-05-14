@@ -13,7 +13,7 @@ export function CompactTrialForm() {
   return (
     <div className="bg-navy/80 backdrop-blur-sm border border-border p-8">
       <h2 className="font-bebas text-2xl text-white mb-1">Book Your Trial</h2>
-      <p className="text-base 2xl:text-xl text-white mb-6">$10 trial · Any program · All ages</p>
+      <p className="text-base 2xl:text-xl text-white mb-6">$69 trial · Any program · All ages</p>
 
       {submitStatus === "success" && (
         <div
@@ -174,7 +174,7 @@ export function CompactTrialForm() {
           disabled={isSubmitting}
           className="w-full"
         >
-          {isSubmitting ? "Sending..." : "Book My $10 Trial →"}
+          {isSubmitting ? "Sending..." : "Book My $69 Trial →"}
         </Button>
       </form>
     </div>

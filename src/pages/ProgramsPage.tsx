@@ -110,7 +110,7 @@ export function ProgramsPage() {
             Ready to <span className="text-gold">Start?</span>
           </h2>
           <p className="text-lg leading-relaxed text-white max-w-2xl mx-auto mb-12">
-            All programs start with a $10 trial class. No commitments, no pressure — just come
+            All programs start with a $69 Trial Program. No commitments, no pressure — just come
             experience the TaekwonMaru difference.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-5">

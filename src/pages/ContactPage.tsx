@@ -9,7 +9,7 @@ const steps = [
   },
   {
     title: "Schedule Your Trial",
-    desc: "We will contact you within 24 hours to schedule your $10 trial class at a convenient time.",
+    desc: "We will contact you within 24 hours to schedule your $69 Trial Program at a convenient time.",
   },
   {
     title: "Take the Class",
@@ -32,7 +32,7 @@ export function ContactPage() {
             Book a <span className="text-gold">Class</span>
           </>
         }
-        subtitle="Ready to start your martial arts journey? Fill out the form to schedule your $10 trial class. We'll get back to you within 24 hours."
+        subtitle="Ready to start your martial arts journey? Fill out the form to schedule your $69 Trial Program. We'll get back to you within 24 hours."
         glow="right"
       />
 

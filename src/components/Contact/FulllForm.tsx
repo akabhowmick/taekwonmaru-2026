@@ -14,7 +14,7 @@ export function FullTrialForm() {
     <div className="bg-navy-light border border-border p-8 lg:p-10">
       <h2 className="font-bebas text-3xl text-white mb-2">Book Your Trial</h2>
       <p className="text-base 2xl:text-xl text-white mb-8">
-        Fill out the form and we'll contact you to schedule your $10 trial class.
+        Fill out the form and we'll contact you to schedule your $69 Trial Program.
       </p>
 
       {submitStatus === "success" && (

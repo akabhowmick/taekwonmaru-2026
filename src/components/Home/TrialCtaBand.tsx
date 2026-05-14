@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 /**
  * TrialCtaBand
- * Full-width band highlighting the $10 trial offer.
+ * Full-width band highlighting the $69 trial offer.
  */
 export function TrialCtaBand() {
   return (

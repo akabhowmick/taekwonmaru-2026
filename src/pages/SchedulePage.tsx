@@ -164,7 +164,7 @@ export function SchedulePage() {
             Ready to <span className="text-gold">Join?</span>
           </h2>
           <p className="text-lg text-white mb-10">
-            Book your $10 trial class and experience TaekwonMaru firsthand.
+            Book your $69 Trial Program and experience TaekwonMaru firsthand.
           </p>
           <Link to="/contact" aria-label="Go to the contact page to book your trial class">
             <Button variant="primary" size="lg">

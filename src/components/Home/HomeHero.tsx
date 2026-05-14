@@ -56,7 +56,7 @@ export function HomeHero() {
             <div className="flex flex-wrap items-center gap-6 lg:hidden">
               <Link aria-label="Go to the contact page to schedule a trial class!" to="/contact">
                 <Button variant="primary" size="lg">
-                  Book a $10 Trial Class →
+                  Book a $69 Trial Program →
                 </Button>
               </Link>
               <Link aria-label="Read over our programs" to="/programs">
