@@ -17,9 +17,9 @@ export function TrialCtaBand() {
             <h2 className="font-bebas text-[clamp(2.625rem,5vw,4.5rem)] leading-[0.95] text-white mb-5">
               Your child's
               <br />
-              <strong className="text-gold font-normal">first class</strong>
+              <strong className="text-gold font-normal">first program</strong>
               <br />
-              is only $10.
+              is only $69.
             </h2>
             <p className="text-base 2xl:text-xl leading-[1.8] text-white max-w-[520px]">
               Come meet our masters, train with our students, and experience TaekwonMaru firsthand.
@@ -28,11 +28,15 @@ export function TrialCtaBand() {
           </div>
           <div className="text-center flex-shrink-0">
             <div className="font-bebas text-[6.25rem] text-gold leading-none mb-2">
-              <sup className="text-4xl align-super">$</sup>10
+              <sup className="text-4xl align-super">$</sup>69
             </div>
             <p className="text-base 2xl:text-xl uppercase tracking-[0.2em] text-white mb-6">
-              Trial Class · Any Age Group
+              3 weeks · 2 classes/week · Free T-Shirt
             </p>
+            <p className="text-base 2xl:text-xl uppercase tracking-[0.2em] text-white mb-6">
+              Any Age Group
+            </p>
+
             <Link aria-label="Go to the contact page to schedule a trial class!" to="/contact">
               <Button variant="red" size="lg" className="w-full lg:w-auto">
                 Claim Your Trial Spot →

@@ -35,8 +35,8 @@ export function HomePage() {
       <HomeHero />
       <ProgramsMarquee />
       <TrialCtaBand />
-      <ProgramsPreview />
       <VideoHighlights />
+      <ProgramsPreview />
       <WhyChooseUs />
       <FinalCta />
     </div>

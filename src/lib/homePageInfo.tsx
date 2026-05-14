@@ -10,7 +10,6 @@ export const programs = [
     name: "Children's Class",
     age: "Ages 6–9",
     desc: "Longer classes with greater curriculum focus. Discipline, respect, and taekwondo fundamentals mastered early.",
-    featured: true,
   },
   {
     name: "Pre-Teen",
@@ -43,7 +42,7 @@ export const whyChooseUs = [
   {
     icon: <Users size={28} />,
     title: "Expert Masters",
-    desc: "7th degree Grand Master with 25+ years training NYPD & FDNY.",
+    desc: "7th Degree Grand Master Choi, 5th Degree Head Master Rin, and 4th Degree Masters Akash and Andrew",
   },
   {
     icon: <Trophy size={28} />,
