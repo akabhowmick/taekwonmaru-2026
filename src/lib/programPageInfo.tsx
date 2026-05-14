@@ -1,8 +1,8 @@
-import littleTigerImg from "@/assets/programs/little-tiger.jpg";
-import childrenImg from "@/assets/programs/children.jpg";
-import preTeenImg from "@/assets/programs/pre-teen.png";
-import advancedTeenImg from "@/assets/programs/advanced-teen.png";
-import adultImg from "@/assets/programs/adult.png";
+import littleTigerImg from "@/assets/programs/ChatGPT little-tiger.png";
+import childrenImg from "@/assets/programs/ChatGPT children.png";
+import preTeenImg from "@/assets/programs/ChatGPT pre-teen.png";
+import advancedTeenImg from "@/assets/programs/ChatGPT adv-teen.png";
+import adultImg from "@/assets/programs/ChatGPT adults.png";
 import kpopImg from "@/assets/programs/kpop.png";
 import sparringImg from "@/assets/programs/sparring.jpg";
 import juniorLeaderImg from "@/assets/programs/junior-leader.jpg";
@@ -91,19 +91,6 @@ export const allPrograms = [
     price: "$25 trial, $80/month",
   },
   {
-    name: "Sparring Class",
-    age: "Children & Teens",
-    subtitle: "Competition Training",
-    image: sparringImg,
-    details: [
-      "Controlled combat training with experienced instructors",
-      "Strategic kicks, punches, and defensive maneuvers",
-      "Develops precision, agility, and discipline",
-      "One class per week — consult Master Choi for details",
-    ],
-    schedule: "Wed: 5:45-6:30 PM (Children) | Wed: 7:30-8:10 PM (Teen)",
-  },
-  {
     name: "Demo Team",
     age: "Competitive Level",
     subtitle: "Performance & Competition",
@@ -115,6 +102,19 @@ export const allPrograms = [
       "Community performances at hospitals, schools, and events",
     ],
     schedule: "Thursday: 7:30-8:10 PM | Audition-based",
+  },
+  {
+    name: "Sparring Class",
+    age: "Children & Teens",
+    subtitle: "Competition Training",
+    image: sparringImg,
+    details: [
+      "Controlled combat training with experienced instructors",
+      "Strategic kicks, punches, and defensive maneuvers",
+      "Develops precision, agility, and discipline",
+      "One class per week — consult Master Choi for details",
+    ],
+    schedule: "Wed: 5:45-6:30 PM (Children) | Wed: 7:30-8:10 PM (Teen)",
   },
   {
     name: "Junior Leader",

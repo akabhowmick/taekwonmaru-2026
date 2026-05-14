@@ -46,14 +46,29 @@ export function ProgramsPage() {
       {/* Programs Grid */}
       <section className="py-24 lg:py-32 px-6 lg:px-16 3xl:px-32 bg-navy">
         <div className="container-wide">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-0.5">
-            {allPrograms.map((program, i) => (
+          {/* 6-col desktop grid:
+              Row 1 — 3 portrait cards (indices 0-2)
+              Row 2 — 2 portrait cards centered (indices 3-4)
+              Row 3 — 2 landscape cards (indices 5-6)
+              Row 4 — 2 landscape cards (indices 7-8) */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-0.5">
+            {allPrograms.map((program, i) => {
+              const isPortrait = i < 5;
+              const colClass =
+                i < 3
+                  ? "lg:col-span-2"
+                  : i === 3
+                    ? "lg:col-start-2 lg:col-span-2"
+                    : i === 4
+                      ? "lg:col-start-4 lg:col-span-2"
+                      : "lg:col-span-3";
+              return (
               <article
                 key={program.name}
-                className="reveal opacity-0 translate-y-9 transition-all duration-700 bg-navy-light border border-border p-10 hover:border-gold/40 hover:-translate-y-1"
+                className={`reveal opacity-0 translate-y-9 transition-all duration-700 bg-navy-light border border-border p-10 hover:border-gold/40 hover:-translate-y-1 ${colClass}`}
                 style={{ transitionDelay: `${i * 80}ms` }}
               >
-                <div className="aspect-video overflow-hidden border-b border-border">
+                <div className={`${isPortrait ? "aspect-[4/5]" : "aspect-video"} overflow-hidden border-b border-border`}>
                   <img
                     src={program.image}
                     alt={`${program.name} — ${program.subtitle}`}
@@ -98,7 +113,8 @@ export function ProgramsPage() {
                   )}
                 </div>
               </article>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
