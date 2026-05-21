@@ -34,9 +34,7 @@ export function ProgramsPreview() {
           {programs.map((program, i) => (
             <div
               key={program.name}
-              className={`reveal opacity-0 translate-y-9 transition-all duration-700 bg-navy-light border border-border p-11 relative overflow-hidden group hover:border-gold/40 hover:-translate-y-1 ${
-                program.featured ? "md:col-span-2 lg:col-span-1" : ""
-              }`}
+              className={`reveal opacity-0 translate-y-9 transition-all duration-700 bg-navy-light border border-border p-11 relative overflow-hidden group hover:border-gold/40 hover:-translate-y-1 `}
               style={{ transitionDelay: `${i * 120}ms` }}
             >
               <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-gold to-transparent scale-x-0 origin-left transition-transform duration-400 group-hover:scale-x-100" />
@@ -53,14 +51,6 @@ export function ProgramsPreview() {
               >
                 <ArrowRight className="text-gold-dim group-hover:text-gold group-hover:translate-x-1.5 transition-all" />
               </Link>
-              <div className="mt-4">
-                {" "}
-                {program.featured && (
-                  <div className="inline-block bg-gold text-navy text-base 2xl:text-xl uppercase tracking-[0.25em] px-3 py-1 mb-5">
-                    Most Popular
-                  </div>
-                )}
-              </div>
             </div>
           ))}
         </div>
