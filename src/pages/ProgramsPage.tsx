@@ -63,56 +63,58 @@ export function ProgramsPage() {
                       ? "lg:col-start-4 lg:col-span-2"
                       : "lg:col-span-3";
               return (
-              <article
-                key={program.name}
-                className={`reveal opacity-0 translate-y-9 transition-all duration-700 bg-navy-light border border-border p-10 hover:border-gold/40 hover:-translate-y-1 ${colClass}`}
-                style={{ transitionDelay: `${i * 80}ms` }}
-              >
-                <div className={`${isPortrait ? "aspect-[4/5]" : "aspect-video"} overflow-hidden border-b border-border`}>
-                  <img
-                    src={program.image}
-                    alt={`${program.name} — ${program.subtitle}`}
-                    className="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-                <div className="font-bebas text-base 2xl:text-xl tracking-[0.2em] text-gold mb-3">
-                  {program.age}
-                </div>
-                <h2 className="font-bebas text-3xl text-white leading-tight mb-2">
-                  {program.name}
-                </h2>
-                <p className="text-base 2xl:text-xl uppercase tracking-wider text-white mb-6">
-                  {program.subtitle}
-                </p>
-
-                <ul className="space-y-3 mb-8">
-                  {program.details.map((detail, idx) => (
-                    <li
-                      key={idx}
-                      className="flex items-start gap-3 text-base 2xl:text-xl text-white"
-                    >
-                      <Check size={16} className="text-gold flex-shrink-0 mt-0.5" />
-                      <span>{detail}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <div className="pt-6 border-t border-border space-y-2">
-                  <p className="text-base 2xl:text-xl uppercase tracking-wider text-gold">
-                    Schedule
+                <article
+                  key={program.name}
+                  className={`reveal opacity-0 translate-y-9 transition-all duration-700 bg-navy-light border border-border p-10 hover:border-gold/40 hover:-translate-y-1 ${colClass}`}
+                  style={{ transitionDelay: `${i * 80}ms` }}
+                >
+                  <div
+                    className={`${isPortrait ? "aspect-[4/5]" : "aspect-video"} overflow-hidden border-b border-border`}
+                  >
+                    <img
+                      src={program.image}
+                      alt={`${program.name} — ${program.subtitle}`}
+                      className="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                  <div className="font-bebas text-base 2xl:text-xl tracking-[0.2em] text-gold mb-3">
+                    {program.age}
+                  </div>
+                  <h2 className="font-bebas text-3xl text-white leading-tight mb-2">
+                    {program.name}
+                  </h2>
+                  <p className="text-base 2xl:text-xl uppercase tracking-wider text-white mb-6">
+                    {program.subtitle}
                   </p>
-                  {program.schedule.split("|").map((time, idx) => {
-                    return (
-                      <p key={idx} className="text-base 2xl:text-xl text-white">
-                        {time.trim()}
-                      </p>
-                    );
-                  })}
-                  {program.price && (
-                    <p className="text-base 2xl:text-xl text-white">{program.price}</p>
-                  )}
-                </div>
-              </article>
+
+                  <ul className="space-y-3 mb-8">
+                    {program.details.map((detail, idx) => (
+                      <li
+                        key={idx}
+                        className="flex items-start gap-3 text-base 2xl:text-xl text-white"
+                      >
+                        <Check size={16} className="text-gold flex-shrink-0 mt-0.5" />
+                        <span>{detail}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <div className="pt-6 border-t border-border space-y-2">
+                    <p className="text-base 2xl:text-xl uppercase tracking-wider text-gold">
+                      Schedule
+                    </p>
+                    {program.schedule.split("|").map((time, idx) => {
+                      return (
+                        <p key={idx} className="text-base 2xl:text-xl text-white">
+                          {time.trim()}
+                        </p>
+                      );
+                    })}
+                    {program.price && (
+                      <p className="text-base 2xl:text-xl text-white">{program.price}</p>
+                    )}
+                  </div>
+                </article>
               );
             })}
           </div>
@@ -142,20 +144,20 @@ export function ProgramsPage() {
         </div>
       </section>
 
-      {/* Summer Promo */}
+      {/* Promo */}
       <section className="py-24 lg:py-32 px-6 lg:px-16 3xl:px-32 bg-gradient-to-br from-martial-red/20 via-navy to-navy-light border-t border-martial-red/20">
         <div className="max-w-4xl mx-auto text-center reveal opacity-0 translate-y-9 transition-all duration-700">
           <div className="inline-block bg-martial-red text-white text-base 2xl:text-xl uppercase tracking-wider px-4 py-2 mb-6">
             Limited Time Offer
           </div>
           <h2 className="font-bebas text-[clamp(3.25rem,7vw,5.5rem)] leading-[0.9] text-white mb-6">
-            Winter <span className="text-martial-red-bright">Promotion</span>
+            Summer <span className="text-martial-red-bright">Promotion</span>
           </h2>
           <div className="font-bebas text-7xl text-martial-red-bright mb-4">
-            <sup className="text-3xl align-super">$</sup>199
+            <sup className="text-3xl align-super">$</sup>69
           </div>
-          <p className="text-xl text-white mb-3">6 weeks · 2 classes per week</p>
-          <p className="text-xl text-white mb-10">Includes TaekwonMaru t-shirt</p>
+          <p className="text-xl text-white mb-3">3 weeks · 2 classes per week</p>
+          {/* <p className="text-xl text-white mb-10">Includes TaekwonMaru t-shirt</p> */}
           <Link to="/contact" aria-label="Go to the contact page to claim the winter promotion">
             <Button variant="red" size="lg">
               Claim This Offer →

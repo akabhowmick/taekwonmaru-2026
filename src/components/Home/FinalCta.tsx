@@ -19,9 +19,9 @@ export function FinalCta() {
           Your journey starts now
         </p>
         <h2 className="font-bebas text-[clamp(3.5rem,8vw,7.5rem)] leading-[0.9] text-white mb-7">
-          First Class.
+          First Program.
           <br />
-          <span className="text-gold">$10.</span>
+          <span className="text-gold">$69.</span>
         </h2>
         <p className="text-xl leading-[1.8] text-white max-w-[500px] mx-auto mb-14">
           Meet the masters, train with the team, and see exactly why TaekwonMaru has been Bethpage's
