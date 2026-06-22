@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import adImage from "@/assets/programs/AD for Website.png";
 
 /**
  * TrialCtaBand
@@ -26,19 +27,18 @@ export function TrialCtaBand() {
               One class is all it takes to see the difference a great school makes.
             </p>
           </div>
-          <div className="text-center flex-shrink-0">
-            <div className="font-bebas text-[6.25rem] text-gold leading-none mb-2">
-              <sup className="text-4xl align-super">$</sup>69
-            </div>
-            <p className="text-base 2xl:text-xl uppercase tracking-[0.2em] text-white mb-6">
-              3 weeks · 2 classes/week · Free T-Shirt
-            </p>
-            <p className="text-base 2xl:text-xl uppercase tracking-[0.2em] text-white mb-6">
-              Any Age Group
-            </p>
-
-            <Link aria-label="Go to the contact page to schedule a trial class!" to="/contact">
-              <Button variant="red" size="lg" className="w-full lg:w-auto">
+          <div className="flex flex-col gap-6 flex-shrink-0 w-[14rem] sm:w-[16rem] xl:w-[18rem]">
+            <img
+              src={adImage}
+              alt="$69 for 3 weeks with free T-shirts — TaekwonMaru trial offer"
+              className="w-full rounded-xl shadow-2xl"
+            />
+            <Link
+              aria-label="Go to the contact page to schedule a trial class!"
+              to="/contact"
+              className="w-full"
+            >
+              <Button variant="red" size="lg" className="w-full">
                 Claim Your Trial Spot →
               </Button>
             </Link>
