@@ -27,7 +27,7 @@ export function TrialCtaBand() {
               One class is all it takes to see the difference a great school makes.
             </p>
           </div>
-          <div className="flex flex-col gap-5 flex-shrink-0 w-[14rem] sm:w-[16rem] lg:w-[18rem] xl:w-[20rem]">
+          <div className="flex flex-col gap-5 flex-shrink-0 w-full max-w-[20rem] sm:max-w-[22rem] mx-auto lg:mx-0">
             <div className="relative w-full rounded-xl overflow-hidden">
               <img
                 src={adImage}
@@ -44,7 +44,7 @@ export function TrialCtaBand() {
               to="/contact"
               className="block w-full"
             >
-              <Button variant="red" size="default" className="w-full whitespace-nowrap">
+              <Button variant="red" size="sm" className="w-full whitespace-nowrap py-4 text-sm">
                 Claim Your Trial Spot →
               </Button>
             </Link>
