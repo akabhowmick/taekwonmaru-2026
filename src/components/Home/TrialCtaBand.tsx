@@ -44,7 +44,7 @@ export function TrialCtaBand() {
               to="/contact"
               className="block w-full"
             >
-              <Button variant="red" size="sm" className="w-full whitespace-nowrap py-4 text-sm">
+              <Button variant="red" size="sm" className="w-full py-4 text-[clamp(0.7rem,0.9vw,0.875rem)]">
                 Claim Your Trial Spot →
               </Button>
             </Link>
