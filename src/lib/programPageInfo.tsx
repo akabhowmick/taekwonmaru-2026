@@ -20,7 +20,6 @@ export const allPrograms = [
       "Dedicated belt system for clarity and progress",
       "Builds confidence through board breaking and loud, respectful answers",
     ],
-    schedule: "Mon/Wed/Thu/Fri: 3:40-4:10 PM | Sat: 10:30-11:00 AM",
   },
   {
     name: "Children's Class",
@@ -33,7 +32,6 @@ export const allPrograms = [
       "Early exposure accelerates progression",
       "Maintains fun learning environment",
     ],
-    schedule: "Mon-Fri: 4:15-4:55 PM & 5:00-5:40 PM | Sat: 11:05-11:45 AM",
   },
   {
     name: "Pre-Teen",
@@ -46,8 +44,6 @@ export const allPrograms = [
       "Can join Black Hawk Demo Team",
       "Leadership roles and mentorship opportunities",
     ],
-    schedule:
-      "PreTeen: Mon/Tue: 5:45-6:30 PM| Teenager: Wed: 6:35-7:20 PM | Thu/Fri: 5:45-6:30 PM | Sat: 11:50 AM-12:40 PM",
   },
   {
     name: "Advanced Teen",
@@ -60,7 +56,6 @@ export const allPrograms = [
       "Stress relief and personal development",
       "Leadership opportunities through Junior Leader Program",
     ],
-    schedule: "Mon: 7:30-8:10 PM | Thu: 8:10-9:00 PM | Wed: 8:10-9:00 PM (w/ Adult)",
   },
   {
     name: "Adult",
@@ -73,8 +68,6 @@ export const allPrograms = [
       "Train alongside your children",
       "Welcoming community environment",
     ],
-    schedule:
-      "Mon: 8:10-9:00 PM (Cardio) | Wed: 8:10-9:00 PM (w/ Advanced Teen) | Sat: 11:50 AM-12:40 PM",
   },
   {
     name: "KPOP Dance",
@@ -87,7 +80,6 @@ export const allPrograms = [
       "4-week sessions for each song",
       "Auditions available for ONE BEAT DANCE CREW",
     ],
-    schedule: "Friday: 6:45-7:45 PM | Saturday: 1:30-2:20 PM",
     price: "$25 trial, $80/month",
   },
   {
@@ -101,7 +93,6 @@ export const allPrograms = [
       "Compete in taekwondo competitions",
       "Community performances at hospitals, schools, and events",
     ],
-    schedule: "Thursday: 7:30-8:10 PM | Audition-based",
   },
   {
     name: "Sparring Class",
@@ -114,7 +105,6 @@ export const allPrograms = [
       "Develops precision, agility, and discipline",
       "One class per week — consult Master Choi for details",
     ],
-    schedule: "Wed: 5:45-6:30 PM (Children) | Wed: 7:30-8:10 PM (Teen)",
   },
   {
     name: "Junior Leader",
@@ -127,6 +117,5 @@ export const allPrograms = [
       "Exemplify discipline and commitment",
       "Foster positive learning environment",
     ],
-    schedule: "By invitation — Monthly meetings",
   },
 ];

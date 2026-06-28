@@ -99,21 +99,11 @@ export function ProgramsPage() {
                     ))}
                   </ul>
 
-                  <div className="pt-6 border-t border-border space-y-2">
-                    <p className="text-base 2xl:text-xl uppercase tracking-wider text-gold">
-                      Schedule
-                    </p>
-                    {program.schedule.split("|").map((time, idx) => {
-                      return (
-                        <p key={idx} className="text-base 2xl:text-xl text-white">
-                          {time.trim()}
-                        </p>
-                      );
-                    })}
-                    {program.price && (
+                  {program.price && (
+                    <div className="pt-6 border-t border-border">
                       <p className="text-base 2xl:text-xl text-white">{program.price}</p>
-                    )}
-                  </div>
+                    </div>
+                  )}
                 </article>
               );
             })}

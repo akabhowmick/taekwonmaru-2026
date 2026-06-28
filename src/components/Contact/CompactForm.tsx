@@ -12,8 +12,10 @@ export function CompactTrialForm() {
 
   return (
     <div className="bg-navy/80 backdrop-blur-sm border border-border p-8">
-      <h2 className="font-bebas text-2xl text-white mb-1">Book Your Trial</h2>
-      <p className="text-base 2xl:text-xl text-white mb-6">$69 trial · Any program · All ages</p>
+      <h2 className="font-bebas text-[clamp(2.5rem,4vw,4rem)] leading-[0.9] text-white mb-1">
+        Begin Your<br /><span className="text-gold">Journey.</span>
+      </h2>
+      <p className="text-base 2xl:text-xl text-white mb-5">$69 trial · Any program · All ages</p>
 
       {submitStatus === "success" && (
         <div
@@ -32,11 +34,17 @@ export function CompactTrialForm() {
         </div>
       )}
 
-      <form onSubmit={handleSubmit} className="space-y-4">
+      <form onSubmit={handleSubmit} className="space-y-3">
         {/* FormSubmit hidden fields */}
         <input type="hidden" name="_subject" value="New Trial Class Booking" />
         <input type="hidden" name="_template" value="table" />
         <input type="hidden" name="_captcha" value="false" />
+
+        {/* Section 01 */}
+        <div className="flex items-baseline gap-3 pb-1">
+          <span className="font-bebas text-3xl text-gold/50 leading-none">01</span>
+          <span className="font-bebas text-sm tracking-[0.2em] text-gold/70 uppercase">About You</span>
+        </div>
 
         {/* Row 1: Student Name + Parent Name */}
         <div className="grid grid-cols-2 gap-4">
@@ -70,6 +78,12 @@ export function CompactTrialForm() {
               className="w-full bg-navy border border-border text-white px-3 py-2.5 text-base 2xl:text-xl focus:outline-none focus:border-gold transition-colors"
             />
           </div>
+        </div>
+
+        {/* Section 02 */}
+        <div className="flex items-baseline gap-3 pt-2 pb-1">
+          <span className="font-bebas text-3xl text-gold/50 leading-none">02</span>
+          <span className="font-bebas text-sm tracking-[0.2em] text-gold/70 uppercase">How to Reach You</span>
         </div>
 
         {/* Row 2: Email + Phone */}
@@ -106,6 +120,12 @@ export function CompactTrialForm() {
               className="w-full bg-navy border border-border text-white px-3 py-2.5 text-base 2xl:text-xl focus:outline-none focus:border-gold transition-colors"
             />
           </div>
+        </div>
+
+        {/* Section 03 */}
+        <div className="flex items-baseline gap-3 pt-2 pb-1">
+          <span className="font-bebas text-3xl text-gold/50 leading-none">03</span>
+          <span className="font-bebas text-sm tracking-[0.2em] text-gold/70 uppercase">Your Class</span>
         </div>
 
         {/* Row 3: Class + Age */}
@@ -150,32 +170,17 @@ export function CompactTrialForm() {
           </div>
         </div>
 
-        {/* Row 4: Message */}
-        <div>
-          <label
-            htmlFor="compact_message"
-            className="block text-base 2xl:text-xl uppercase tracking-wider text-gold mb-1.5"
+        <div className="pt-1">
+          <Button
+            type="submit"
+            variant="primary"
+            size="lg"
+            disabled={isSubmitting}
+            className="w-full"
           >
-            Message
-          </label>
-          <textarea
-            id="compact_message"
-            name="message"
-            rows={3}
-            className="w-full bg-navy border border-border text-white px-3 py-2.5 text-base 2xl:text-xl focus:outline-none focus:border-gold transition-colors resize-none"
-            placeholder="Any questions or special requests?"
-          />
+            {isSubmitting ? "Sending..." : "Book My $69 Trial →"}
+          </Button>
         </div>
-
-        <Button
-          type="submit"
-          variant="primary"
-          size="lg"
-          disabled={isSubmitting}
-          className="w-full"
-        >
-          {isSubmitting ? "Sending..." : "Book My $69 Trial →"}
-        </Button>
       </form>
     </div>
   );

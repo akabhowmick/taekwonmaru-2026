@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useEffect, useRef } from "react";
 import { events, weeklySchedule } from "@/lib/schedulePageInfo";
+import summer2026Img from "@/assets/Schedule/summer-2026.png";
 
 export function SchedulePage() {
   const observerRef = useRef<IntersectionObserver | null>(null);
@@ -116,6 +117,14 @@ export function SchedulePage() {
             </h2>
           </div>
 
+          <div className="mb-10 reveal opacity-0 translate-y-9 transition-all duration-700">
+            <img
+              src={summer2026Img}
+              alt="Summer 2026 class schedule"
+              className="w-full border border-border"
+            />
+          </div>
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {weeklySchedule.map((day, i) => (
               <article
@@ -145,7 +154,7 @@ export function SchedulePage() {
                           {cls.time}
                         </p>
                         <p className="text-base 2xl:text-xl text-white">
-                          {cls.name} · {cls.age}
+                          {cls.name}
                         </p>
                       </div>
                     </div>
