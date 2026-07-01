@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { CompactTrialForm } from "../Contact/CompactForm";
+import adImage from "@/assets/programs/AD for Website.png";
 
 const trustStats = [
   { value: "25+", label: "Years of Excellence" },
@@ -52,29 +52,29 @@ export function HomeHero() {
               black belt character — forged one class at a time at TaekwonMaru.
             </p>
 
-            {/* Mobile CTAs (form is hidden on mobile) */}
-            <div className="flex flex-wrap items-center gap-6 lg:hidden">
+            <div className="flex flex-wrap items-center gap-6">
               <Link aria-label="Go to the contact page to schedule a trial class!" to="/contact">
                 <Button variant="primary" size="lg">
                   Book a $69 Trial Program →
                 </Button>
               </Link>
               <Link aria-label="Read over our programs" to="/programs">
-                <Button variant="red">See All Programs</Button>
-              </Link>
-            </div>
-
-            {/* Desktop secondary CTA below form column */}
-            <div className="hidden lg:flex items-center gap-6">
-              <Link aria-label="Read over our programs" to="/programs">
                 <Button variant="red">See All Programs →</Button>
               </Link>
             </div>
           </div>
 
-          {/* Right: compact form — desktop only */}
-          <div className="hidden lg:block">
-            <CompactTrialForm />
+          {/* Right: ad image */}
+          <div className="relative w-full max-w-[560px] mx-auto lg:mx-0 rounded-xl overflow-hidden">
+            <img
+              src={adImage}
+              alt="$69 for 3 weeks with free T-shirts — TaekwonMaru trial offer"
+              className="w-full block"
+            />
+            {/* bottom fade into hero background */}
+            <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#0d1a35] to-transparent pointer-events-none" />
+            {/* edge vignette */}
+            <div className="absolute inset-0 shadow-[inset_0_0_28px_rgba(7,15,35,0.55)] pointer-events-none" />
           </div>
         </div>
       </div>

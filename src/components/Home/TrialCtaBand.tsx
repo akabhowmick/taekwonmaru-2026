@@ -1,6 +1,4 @@
-import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-import adImage from "@/assets/programs/AD for Website.png";
+import { CompactTrialForm } from "../Contact/CompactForm";
 
 /**
  * TrialCtaBand
@@ -10,7 +8,7 @@ export function TrialCtaBand() {
   return (
     <section className="bg-gradient-to-r from-navy-light to-[#0d1f40] border-t border-b border-border py-20 lg:py-24 px-6 lg:px-16 3xl:px-32">
       <div className="max-w-5xl 3xl:max-w-[1200px] mx-auto">
-        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-12 lg:gap-16 reveal opacity-0 translate-y-9 transition-all duration-700">
+        <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-12 lg:gap-16 reveal opacity-0 translate-y-9 transition-all duration-700">
           <div className="lg:max-w-[480px]">
             <p className="text-base 2xl:text-xl uppercase tracking-[0.35em] text-gold mb-4">
               Start Here
@@ -27,27 +25,8 @@ export function TrialCtaBand() {
               One class is all it takes to see the difference a great school makes.
             </p>
           </div>
-          <div className="flex flex-col gap-5 flex-shrink-0 w-full max-w-[20rem] sm:max-w-[22rem] mx-auto lg:mx-0">
-            <div className="relative w-full rounded-xl overflow-hidden">
-              <img
-                src={adImage}
-                alt="$69 for 3 weeks with free T-shirts — TaekwonMaru trial offer"
-                className="w-full block"
-              />
-              {/* bottom fade into section background */}
-              <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#0d1f40] to-transparent pointer-events-none" />
-              {/* edge vignette */}
-              <div className="absolute inset-0 shadow-[inset_0_0_28px_rgba(7,15,35,0.55)] pointer-events-none" />
-            </div>
-            <Link
-              aria-label="Go to the contact page to schedule a trial class!"
-              to="/contact"
-              className="block w-full"
-            >
-              <Button variant="red" size="sm" className="w-full py-4 text-[clamp(0.7rem,0.9vw,0.875rem)]">
-                Claim Your Trial Spot →
-              </Button>
-            </Link>
+          <div className="w-full max-w-[560px] mx-auto lg:mx-0 flex-shrink-0">
+            <CompactTrialForm />
           </div>
         </div>
       </div>
