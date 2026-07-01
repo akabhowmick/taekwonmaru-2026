@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import adImage from "@/assets/programs/AD for Website.png";
+import adImage from "@/assets/programs/ChatGPT Image Jun 29, 2026 at 10_12_41 PM.png";
 
 const trustStats = [
   { value: "25+", label: "Years of Excellence" },
@@ -65,16 +65,12 @@ export function HomeHero() {
           </div>
 
           {/* Right: ad image */}
-          <div className="relative w-full max-w-[560px] mx-auto lg:mx-0 rounded-xl overflow-hidden">
+          <div className="w-full max-w-[560px] mx-auto lg:mx-0 rounded-xl bg-white p-3 shadow-[0_20px_60px_rgba(0,0,0,0.35)]">
             <img
               src={adImage}
-              alt="$69 for 3 weeks with free T-shirts — TaekwonMaru trial offer"
-              className="w-full block"
+              alt="Summer promotion — $69 for a 3-week program with a free t-shirt, and a free parent class"
+              className="w-full block rounded-lg"
             />
-            {/* bottom fade into hero background */}
-            <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#0d1a35] to-transparent pointer-events-none" />
-            {/* edge vignette */}
-            <div className="absolute inset-0 shadow-[inset_0_0_28px_rgba(7,15,35,0.55)] pointer-events-none" />
           </div>
         </div>
       </div>
