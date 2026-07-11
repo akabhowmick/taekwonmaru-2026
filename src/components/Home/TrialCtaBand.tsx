@@ -1,4 +1,5 @@
 import { CompactTrialForm } from "../Contact/CompactForm";
+import buddyWeekImage from "@/assets/programs/Buddy Week.png";
 
 /**
  * TrialCtaBand
@@ -24,6 +25,13 @@ export function TrialCtaBand() {
               Come meet our masters, train with our students, and experience TaekwonMaru firsthand.
               One class is all it takes to see the difference a great school makes.
             </p>
+            <div className="mt-8 max-w-[460px] rounded-xl bg-white p-3 shadow-[0_20px_60px_rgba(0,0,0,0.35)]">
+              <img
+                src={buddyWeekImage}
+                alt="Buddy Week promotion"
+                className="w-full block rounded-lg"
+              />
+            </div>
           </div>
           <div className="w-full max-w-[560px] mx-auto lg:mx-0 flex-shrink-0">
             <CompactTrialForm />
