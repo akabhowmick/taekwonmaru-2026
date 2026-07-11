@@ -65,7 +65,7 @@ export function HomeHero() {
           </div>
 
           {/* Right: ad image */}
-          <div className="w-full max-w-[560px] mx-auto lg:mx-0 rounded-xl bg-white p-3 shadow-[0_20px_60px_rgba(0,0,0,0.35)]">
+          <div className="w-full mx-auto lg:mx-0 rounded-xl bg-white p-3 shadow-[0_20px_60px_rgba(0,0,0,0.35)]">
             <img
               src={adImage}
               alt="Summer promotion — $69 for a 3-week program with a free t-shirt, and a free parent class"

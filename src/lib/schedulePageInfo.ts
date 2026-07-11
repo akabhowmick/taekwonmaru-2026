@@ -2,10 +2,10 @@ export const events = [
   {
     title: "KPOP Dance Class",
     details: [
-      "Friday 6:25–7:25 PM",
-      "LNGSHOT - Moonwalkin'",
+      "Friday 6:45–7:45 PM",
+      "BOYNEXTDOOR - Ddok Ddok Ddok'",
       "Saturday 1:30–2:20 PM",
-      "TXT - STICK WITH YOU ",
+      "Cortis - TNT ",
     ],
   },
   {
@@ -13,7 +13,7 @@ export const events = [
     details: [
       "July 01: Promotion Test (No Regular Classes)",
       "July 04: Independence Day (No Classes)",
-      "",
+      "July 13 - 25 Buddy Week",
       "",
     ],
   },
