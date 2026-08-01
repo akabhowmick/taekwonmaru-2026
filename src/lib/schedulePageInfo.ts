@@ -9,12 +9,10 @@ export const events = [
     ],
   },
   {
-    title: "July Events",
+    title: "August Events",
     details: [
-      "July 01: Promotion Test (No Regular Classes)",
-      "July 04: Independence Day (No Classes)",
-      "July 13 - 25 Buddy Week",
-      "",
+      "August 19: Promotion Test (No Regular Classes)",
+      "August 24-29: School Vacation (No Classes)",
     ],
   },
   {
