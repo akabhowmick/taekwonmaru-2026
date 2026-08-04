@@ -121,18 +121,29 @@ export function Footer() {
 
           {/* Bottom */}
           <div className="flex flex-col md:flex-row items-center justify-between gap-6 border-t border-border pt-8">
-            <p className="text-base 2xl:text-xl text-white">
-              © 2026 TaekwonMaru. All rights reserved. Made by{" "}
-              <a
-                href="https://akashbhowmick.com/"
-                className="text-gold-light transition-colors"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                AB Codes
-              </a>
-              .
-            </p>
+            <div className="flex flex-col items-center md:items-start gap-3">
+              <p className="text-base 2xl:text-xl text-white">
+                © 2026 TaekwonMaru. All rights reserved. Made by{" "}
+                <a
+                  href="https://akashbhowmick.com/"
+                  className="text-gold-light transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  AB Codes
+                </a>
+                .
+              </p>
+              <div className="flex items-center gap-2 text-sm text-muted">
+                <Link to="/accessibility" className="hover:text-gold transition-colors">
+                  Accessibility
+                </Link>
+                <span aria-hidden="true">·</span>
+                <Link to="/privacy" className="hover:text-gold transition-colors">
+                  Privacy Policy
+                </Link>
+              </div>
+            </div>
             <div className="flex gap-5">
               <a
                 href="https://www.facebook.com/profile.php?id=100057127915552"
