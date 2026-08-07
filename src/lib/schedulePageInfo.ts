@@ -27,10 +27,9 @@ export const weeklySchedule = [
     classes: [
       { time: "3:30–4:00", name: "Little Tiger" },
       { time: "4:05–4:45", name: "Children — All Belts" },
-      { time: "4:50–5:35", name: "Pre-Teen — All Belts" },
-      { time: "5:40–6:30", name: "Advanced Teenager" },
-      { time: "6:35–7:15", name: "L.T & Children" },
-      { time: "7:20–8:10", name: "Adult Only" },
+      { time: "4:50–5:35", name: "All Teenager" },
+      { time: "5:40–6:20", name: "L.T & Children" },
+      { time: "6:25–7:15", name: "Adult Only" },
     ],
   },
   {
