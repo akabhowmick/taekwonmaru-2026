@@ -1,18 +1,19 @@
 export const events = [
   {
-    title: "KPOP Dance Class",
+    title: "New Fall Schedule",
     details: [
-      "Friday 6:45–7:45 PM",
-      "BOYNEXTDOOR - Ddok Ddok Ddok'",
-      "Saturday 1:30–2:20 PM",
-      "Cortis - TNT ",
+      "Effective Monday, September 1",
+      "New class times for every age group",
+      "Sparring now has its own weekly class",
     ],
   },
   {
-    title: "August Events",
+    title: "KPOP Dance Class",
     details: [
-      "August 19: Promotion Test (No Regular Classes)",
-      "August 24-29: School Vacation (No Classes)",
+      "Friday 6:45–7:45 PM",
+      "BOYNEXTDOOR — 'Ddok Ddok Ddok'",
+      "Saturday 1:30–2:20 PM",
+      "Cortis — 'TNT'",
     ],
   },
   {
@@ -21,57 +22,70 @@ export const events = [
   },
 ];
 
+export const ageGroups = [
+  { name: "Little Tiger", ages: "Ages 2–5" },
+  { name: "Children", ages: "Grades 1–4" },
+  { name: "Pre-Teenager", ages: "Grades 5–8" },
+  { name: "Advanced Teenager", ages: "Grades 8–12" },
+];
+
 export const weeklySchedule = [
   {
     day: "Monday",
     classes: [
-      { time: "3:30–4:00", name: "Little Tiger" },
-      { time: "4:05–4:45", name: "Children — All Belts" },
-      { time: "4:50–5:35", name: "All Teenager" },
-      { time: "5:40–6:20", name: "L.T & Children" },
-      { time: "6:25–7:15", name: "Adult Only" },
+      { time: "3:40–4:10", name: "Little Tiger" },
+      { time: "4:15–4:55", name: "Children" },
+      { time: "5:00–5:40", name: "Children" },
+      { time: "5:45–6:30", name: "Pre-Teenager" },
+      { time: "6:35–7:15", name: "L.T & Children" },
+      { time: "7:20–8:10", name: "Adult" },
+      { time: "By Appt", name: "Private Lesson" },
     ],
   },
   {
     day: "Tuesday",
     classes: [
-      { time: "3:30–4:00", name: "Private Lesson" },
-      { time: "4:05–4:45", name: "Children — All Belts" },
-      { time: "4:50–5:35", name: "Teenager — All Belts" },
-      { time: "5:40–6:20", name: "L.T & Children" },
       { time: "By Appt", name: "Private Lesson" },
+      { time: "4:15–4:55", name: "Children" },
+      { time: "5:00–5:45", name: "All Teenager" },
+      { time: "5:50–6:40", name: "Teen Sparring" },
+      { time: "6:45–7:25", name: "L.T & Children" },
+      { time: "7:30–8:10", name: "Junior Leader" },
+      { time: "After Class", name: "Master Train" },
     ],
   },
   {
     day: "Wednesday",
     classes: [
-      { time: "3:30–4:00", name: "Little Tiger" },
-      { time: "4:05–4:50", name: "All Ages — White to Red" },
-      { time: "4:55–5:40", name: "Sparring — Children" },
-      { time: "5:45–6:30", name: "All Ages — Brown to Black" },
-      { time: "6:35–7:25", name: "Sparring — Teenager" },
-      { time: "7:30–8:20", name: "Advanced Teen" },
+      { time: "3:40–4:10", name: "Little Tiger" },
+      { time: "4:15–4:55", name: "Beginner — White to High Red" },
+      { time: "4:55–5:40", name: "Beginner Sparring" },
+      { time: "5:45–6:30", name: "Advanced — Brown to Black" },
+      { time: "6:30–7:15", name: "Adv. Children Sparring" },
+      { time: "7:20–8:10", name: "Adv. Teenager" },
+      { time: "8:10–9:00", name: "Adult" },
     ],
   },
   {
     day: "Thursday",
     classes: [
-      { time: "3:30–4:00", name: "Little Tiger" },
-      { time: "4:05–4:50", name: "All Ages — Brown to Black" },
-      { time: "4:55–5:40", name: "All Ages — White to Red" },
-      { time: "5:45–6:25", name: "L.T & Children" },
-      { time: "6:30–7:20", name: "Team Demo" },
-      { time: "7:25–8:15", name: "Adv Teen & Adult" },
+      { time: "3:40–4:10", name: "Little Tiger" },
+      { time: "4:15–5:00", name: "Advanced — Brown to Black" },
+      { time: "5:00–5:40", name: "Beginner — White to High Red" },
+      { time: "5:45–6:30", name: "Pre-Teenager" },
+      { time: "6:35–7:15", name: "L.T & Children" },
+      { time: "7:20–8:10", name: "Demo Team" },
+      { time: "8:10–9:00", name: "Adv. Teenager" },
     ],
   },
   {
     day: "Friday",
     classes: [
-      { time: "3:30–4:00", name: "Little Tiger" },
-      { time: "4:05–4:45", name: "Children — All Belts" },
-      { time: "4:50–5:35", name: "Teenager — All Belts" },
-      { time: "5:40–6:20", name: "Junior Leader Training" },
-      { time: "6:25–7:25", name: "Dance" },
+      { time: "3:40–4:10", name: "Little Tiger" },
+      { time: "4:15–4:55", name: "Children" },
+      { time: "5:00–5:40", name: "Children" },
+      { time: "5:45–6:30", name: "All Teenager" },
+      { time: "6:45–7:45", name: "K-Pop Dance" },
     ],
   },
   {
@@ -79,9 +93,9 @@ export const weeklySchedule = [
     classes: [
       { time: "By Appt", name: "Private Lesson" },
       { time: "10:30–11:00", name: "Little Tiger" },
-      { time: "11:05–11:45", name: "Children — All Ages" },
-      { time: "11:50–12:40", name: "Teenagers & Adult" },
-      { time: "1:30–2:20", name: "Dance" },
+      { time: "11:05–11:45", name: "Children" },
+      { time: "11:50–12:40", name: "All Teenager & Adult" },
+      { time: "1:30–2:20", name: "K-Pop Dance" },
     ],
   },
 ];

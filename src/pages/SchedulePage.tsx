@@ -2,8 +2,8 @@ import { Calendar, Clock, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useEffect, useRef } from "react";
-import { events, weeklySchedule } from "@/lib/schedulePageInfo";
-import summer2026Img from "@/assets/Schedule/summer-2026.png";
+import { ageGroups, events, weeklySchedule } from "@/lib/schedulePageInfo";
+import fall2026Img from "@/assets/Schedule/fall-2026.png";
 
 export function SchedulePage() {
   const observerRef = useRef<IntersectionObserver | null>(null);
@@ -45,8 +45,8 @@ export function SchedulePage() {
             Class <span className="text-gold">Schedule</span>
           </h1>
           <p className="text-lg leading-relaxed text-white max-w-2xl mx-auto mb-10">
-            Find the perfect class time for your family. Classes run Monday through Saturday with
-            programs for all ages and skill levels.
+            Our new schedule takes effect September 1, 2026. Classes run Monday through Saturday
+            with programs for all ages and skill levels — from Little Tigers to adults.
           </p>
           <div className="flex items-center justify-center gap-2 text-base 2xl:text-xl text-white">
             <MapPin size={16} className="text-gold" />
@@ -62,7 +62,7 @@ export function SchedulePage() {
             <div className="flex items-center gap-3.5 mb-5">
               <span className="w-8 h-px bg-gold" />
               <span className="text-base 2xl:text-xl uppercase tracking-[0.35em] text-gold">
-                This Month
+                What's New
               </span>
             </div>
             <h2 className="font-bebas text-[clamp(2.75rem,5vw,4rem)] leading-[0.95] text-white">
@@ -115,12 +115,25 @@ export function SchedulePage() {
             <h2 className="font-bebas text-[clamp(2.75rem,5vw,4rem)] leading-[0.95] text-white">
               Weekly <span className="text-gold">Classes</span>
             </h2>
+            <p className="text-base 2xl:text-xl text-white leading-relaxed max-w-3xl mt-5">
+              Effective September 1, 2026. Sparring meets once a week for each group — ask Master
+              Choi which sparring class is right for your student.
+            </p>
+          </div>
+
+          <div className="mb-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-4 reveal opacity-0 translate-y-9 transition-all duration-700">
+            {ageGroups.map((group) => (
+              <div key={group.name} className="bg-navy-light border border-border p-5">
+                <h3 className="font-bebas text-xl text-gold mb-1">{group.name}</h3>
+                <p className="text-base 2xl:text-xl text-white">{group.ages}</p>
+              </div>
+            ))}
           </div>
 
           <div className="mb-10 reveal opacity-0 translate-y-9 transition-all duration-700">
             <img
-              src={summer2026Img}
-              alt="Summer 2026 class schedule"
+              src={fall2026Img}
+              alt="Maru Taekwondo weekly class schedule effective September 1, 2026"
               className="w-full border border-border"
             />
           </div>
