@@ -1,5 +1,5 @@
 import { CompactTrialForm } from "../Contact/CompactForm";
-import buddyWeekImage from "@/assets/programs/Buddy Week.png";
+import buddyWeekImage from "@/assets/programs/Buddy week (1).png";
 
 /**
  * TrialCtaBand
@@ -28,7 +28,7 @@ export function TrialCtaBand() {
             <div className="mt-8 max-w-[460px] rounded-xl bg-white p-3 shadow-[0_20px_60px_rgba(0,0,0,0.35)]">
               <img
                 src={buddyWeekImage}
-                alt="Buddy Week promotion"
+                alt="Buddy Week promotion — bring up to 2 friends, 9/21 to 9/30, back to school promotion"
                 className="w-full block rounded-lg"
               />
             </div>

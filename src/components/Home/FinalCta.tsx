@@ -15,9 +15,6 @@ export function FinalCta() {
         TKD
       </div>
       <div className="relative z-10 max-w-2xl mx-auto reveal opacity-0 translate-y-9 transition-all duration-700">
-        <p className="text-base 2xl:text-xl uppercase tracking-[0.35em] text-gold mb-6">
-          Your journey starts now
-        </p>
         <h2 className="font-bebas text-[clamp(3.5rem,8vw,7.5rem)] leading-[0.9] text-white mb-7">
           First Program.
           <br />

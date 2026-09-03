@@ -1,10 +1,10 @@
 export const events = [
   {
-    title: "New Fall Schedule",
+    title: "September Events",
     details: [
-      "Effective Monday, September 1",
-      "New class times for every age group",
-      "Sparring now has its own weekly class",
+      "09/01 - New Schedule from",
+      "09/12 - Arundaun Church Performance",
+      "09/21-30 - Buddy Week",
     ],
   },
   {

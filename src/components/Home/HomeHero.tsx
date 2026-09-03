@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import adImage from "@/assets/programs/ChatGPT Image Jun 29, 2026 at 10_12_41 PM.png";
+import adImage from "@/assets/Promo/bts.png";
 
 const trustStats = [
   { value: "25+", label: "Years of Excellence" },
@@ -68,7 +68,7 @@ export function HomeHero() {
           <div className="w-full mx-auto lg:mx-0 rounded-xl bg-white p-3 shadow-[0_20px_60px_rgba(0,0,0,0.35)]">
             <img
               src={adImage}
-              alt="Summer promotion — $69 for a 3-week program with a free t-shirt, and a free parent class"
+              alt="Back 2 School promotion — 2 weeks for $20, 2 classes per week"
               className="w-full block rounded-lg"
             />
           </div>
