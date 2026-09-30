@@ -11,7 +11,7 @@ export const events = [
     title: "KPOP Dance Class",
     details: [
       "Friday 6:45–7:45 PM",
-      "Aespa - WDA",
+      "Aespa ft G-Dragon - WDA",
       "Saturday 1:30–2:20 PM",
       "Enhypen - Bloody Paradise",
     ],
