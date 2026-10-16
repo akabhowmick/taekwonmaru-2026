@@ -1,10 +1,10 @@
 export const events = [
   {
-    title: "September Events",
+    title: "October Events",
     details: [
-      "09/01 - New Schedule from",
-      "09/12 - Arundaun Church Performance",
-      "09/21-30 - Buddy Week",
+      "10/12 - School Closed",
+      "10/21 & 28 - Modified Wednesday Schedule",
+      "10/26 - Promotion Test",
     ],
   },
   {
