@@ -5,6 +5,7 @@ export const events = [
       "10/12 - School Closed",
       "10/21 & 28 - Modified Wednesday Schedule",
       "10/26 - Promotion Test",
+      "10/30 - Halloween Classes",
     ],
   },
   {
