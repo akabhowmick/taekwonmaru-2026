@@ -1,11 +1,10 @@
 export const events = [
   {
-    title: "October Events",
+    title: "November Events",
     details: [
-      "10/12 - School Closed",
-      "10/21 & 28 - Modified Wednesday Schedule",
-      "10/26 - Promotion Test",
-      "10/30 - Halloween Classes",
+      "11/15 - Championship",
+      "11/16 - School closed to Long Island Nets Performance",
+      "11/26 - 28 Thanksgiving Break",
     ],
   },
   {
