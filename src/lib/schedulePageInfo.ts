@@ -4,6 +4,7 @@ export const events = [
     details: [
       "11/15 - Championship",
       "11/16 - School closed to Long Island Nets Performance",
+      "11/18 - Normal Wednesday Schedule Resumes",
       "11/26 - 28 Thanksgiving Break",
     ],
   },
