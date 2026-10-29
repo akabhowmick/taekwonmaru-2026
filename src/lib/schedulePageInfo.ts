@@ -14,7 +14,7 @@ export const events = [
       "Friday 6:45–7:45 PM",
       "A20 LITE - Neon",
       "Saturday 1:30–2:20 PM",
-      "Enhypen - Bloody Paradise",
+      "A20 SOUL - Super Star",
     ],
   },
   {
